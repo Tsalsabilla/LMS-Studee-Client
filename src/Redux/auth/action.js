@@ -75,6 +75,32 @@ export const studentLogin = (data) => async (dispatch) => {
   }
 };
 
+export const studentRegister = (data) => async (dispatch) => {
+  console.log("this is data", data);
+  try {
+    dispatch({ type: types.REGISTER_STUDENT_REQUEST });
+    const res = await axios.post(`${url}/student/register`, data);
+    console.log(res);
+    dispatch({
+      type: types.REGISTER_STUDENT_REQUEST,
+      payload: {
+        message: res.data.message,
+        user: res.data.user,
+        token: res.data.token,
+      },
+    });
+    return res.data;
+  }
+  catch (error) {
+    dispatch({
+      type: types.LOGIN_STUDENT_ERROR,
+      payload: {
+        message: "error",
+      },
+    });
+  }
+}
+
 // logout user
 export const authLogout = () => async (dispatch) => {
   try {

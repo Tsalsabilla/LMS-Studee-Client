@@ -1,11 +1,14 @@
-import "./Register.css";
 import { message, Space, Spin } from "antd";
-import coverImage from "../../assets/images/cover.jpg";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { studentRegister } from "../../Redux/auth/action";
+import { useNavigate } from "react-router-dom";
+import coverImage from '/img/cover.png';
+import "./Register.css";
 
 const Register = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const auth = useSelector((store) => store.auth);
 
     //alert api
     const [messageApi, contextHolder] = message.useMessage();
@@ -15,15 +18,41 @@ const Register = () => {
 
     //form state
     const [formData, setFormData] = useState({
-        type: "",
         email: "",
         name: "",
         password: "",
+        studentClass: "",
     });
 
     const handleFormChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     }
+
+    // handle submit 
+    const handleFormSubmit = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        
+        dispatch(studentRegister(formData)).then((res) => {
+            if (res.message === "Error") {
+                setLoading(false);
+                messageApi.open({
+                    type: "info",
+                    content: "Error",
+                    duration: 3,
+                });
+            } else {
+                setLoading(false);
+                messageApi.open({
+                    type: "info",
+                    content: res.message,
+                    duration: 3,
+                });
+                navigate("/login");
+            }
+        }
+        );
+    };
 
     return (
         <div className="login">
@@ -34,16 +63,25 @@ const Register = () => {
           </div>
           <div className="loginDetail">
             <div>
-            <h3 className="text-gray-700 text-xl font-medium">Studee</h3>
+            <h3 className="text-gray-700 text-xl font-medium">Register Studee</h3>
             </div>
   
             <div>
               {/* login form  */}
               <form onSubmit={handleFormSubmit}>
+              <input
+                  required
+                  name="name"
+                  value={formData.name}
+                  onChange={handleFormChange}
+                  type="text"
+                  placeholder="Enter full name"
+                  className="p-2 my-2"
+                />
                 <input
                   required
                   name="email"
-                  value={formData.id}
+                  value={formData.email}
                   onChange={handleFormChange}
                   type="email"
                   placeholder="Enter email"
@@ -58,18 +96,16 @@ const Register = () => {
                   placeholder="Enter password"
                   className="p-2 my-2"
                 />
-                <select
-                  name="type"
+                <input
+                  required
+                  name="studentClass"
+                  value={formData.studentClass}
                   onChange={handleFormChange}
+                  type="text"
+                  placeholder="Enter class"
                   className="p-2 my-2"
-                  // Anda juga dapat menambahkan kelas Tailwind pada elemen select
-                >
-                  <option value="">Select user type</option>
-                  <option value="admin">Admin</option>
-                  <option value="student">Student</option>
-                  <option value="tutor">Guest</option>
-                </select>
-                <button type="submit" className="p-2 my-2">LOGIN</button>
+                />
+                <button type="submit" className="p-2 my-2">REGISTER</button>
               </form>
             </div>
           </div>
