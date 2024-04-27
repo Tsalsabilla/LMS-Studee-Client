@@ -20,6 +20,7 @@ import User from "../Pages/User/User";
 import Quiz from "../Pages/Quiz/Quiz";
 import { useContext } from "react";
 import QuizContext from "../contexts/QuizContext"
+import Register from "../Pages/Register/Register";
 
 const Router = () => {
   const { userQuiz } = useContext(QuizContext)
@@ -46,6 +47,7 @@ const Router = () => {
         <Route path="*" element={<Home />} />
         <Route path="/test/:id" element={userQuiz ? <Navigate to="/user" /> : <Quiz />} />
         <Route path="/user" element={userQuiz === null ? <Navigate to="/test/:id" /> : <User />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </div>
   );
