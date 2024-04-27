@@ -3,6 +3,7 @@ const initialState = {
   load: false,
   error: false,
   scratch: [],
+  singleScratch: {},
 };
 export default function scratchReducer(state = initialState, { type, payload }) {
   switch (type) {
@@ -41,6 +42,24 @@ export default function scratchReducer(state = initialState, { type, payload }) 
         load: false,
         error: true,
       };
+    case types.GET_SINGLE_SCRATCH_REQUEST:
+      return {
+        ...state,
+        load: true,
+        error: false,
+      };
+    case types.GET_SINGLE_SCRATCH_SUCCESS:
+      return {
+        ...state,
+        singleScratch: payload.scratch,
+        load: false,
+      };
+    case types.GET_SINGLE_SCRATCH_ERROR:
+      return {
+        ...state,
+        load: false,
+        error: true,
+      };
     case types.DELETE_SCRATCH_REQUEST:
       return {
         ...state,
@@ -59,7 +78,48 @@ export default function scratchReducer(state = initialState, { type, payload }) 
         load: false,
         error: true,
       };
-    default:
-      return state;
-  }
+      // case types.RESOLVE_SCRATCH_REQUEST:
+      //   return {
+      //     ...state,
+      //     load: true,
+      //     error: false,
+      //   };
+      // case types.RESOLVE_SCRATCH_SUCCESS:
+      //   return {
+      //     ...state,
+      //     scratch: state.scratch.map((elem) => {
+      //       if (elem._id == payload.id) {
+      //         return payload.scratch;
+      //       }
+      //       return elem;
+      //     }),
+      //     load: false,
+      //   };
+      // case types.RESOLVE_SCRATCH_ERROR:
+      //   return {
+      //     ...state,
+      //     load: false,
+      //     error: true,
+      //   };
+      case types.ADD_SCRATCH_RESPONSE_REQUEST:
+        return {
+          ...state,
+          load: true,
+          error: false,
+        };
+      case types.ADD_SCRATCH_RESPONSE_SUCCESS:
+        return {
+          ...state,
+          singleScratch: payload.scratch,
+          load: false,
+        };
+      case types.ADD_SCRATCH_RESPONSE_ERROR:
+        return {
+          ...state,
+          load: false,
+          error: true,
+        };
+      default:
+        return state;
+    }
 }

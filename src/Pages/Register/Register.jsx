@@ -70,7 +70,7 @@ const Register = () => {
           </div>
           <div className="loginDetail">
             <div>
-            <h3 className="text-gray-700 text-xl font-medium">Register Studee</h3>
+            <h3 className="text-gray-700 text-xl font-medium">Studee</h3>
             </div>
   
             <div>
@@ -112,7 +112,11 @@ const Register = () => {
                   placeholder="Enter class"
                   className="p-2 my-2"
                 />
-                <button type="submit" className="p-2 my-2">REGISTER</button>
+                <div style={{ textAlign: 'center' }}>
+                  <button type="submit" className="p-2 my-2" style={{ backgroundColor: '#FF869E' }}>Sign up</button>
+                  <h3 className="text-gray-700 text-l font-medium" style={{ fontSize: 'medium', fontWeight: 'normal' }}>Have an account?</h3>
+                  <button onClick={() => navigate('/')} className="p-2 my-2" style={{ backgroundColor: '#920000' }}>Log in</button>
+                </div>
               </form>
             </div>
           </div>

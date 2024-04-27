@@ -68,12 +68,31 @@ const SingleContent = () => {
         </div>
 
         <div className="singleContentDetails">
-          <p>Topic : {singleContent?.title}</p>
-          <p>Class : {singleContent?.class}</p>
-          <p>Subject : {singleContent?.subject}</p>
-          <p>Content Type : {singleContent?.type}</p>
-          <p>Tutor : {singleContent?.creator}</p>
+          <p>{singleContent?.title}</p>
+          <p>{singleContent?.class}</p>
+          <p>{singleContent?.subject}</p>
+          {/* <p>Content Type : {singleContent?.type}</p>
+          <p>Tutor : {singleContent?.creator}</p> */}
         </div>
+
+        <div class="mx-auto w-full max-w-screen-xl">
+        <h3 className="text-gray-700 text-l font-medium" style={{ fontSize: 'medium', fontWeight: 'normal' }}>Percabangan if</h3>
+          <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
+            <iframe src="https://www.youtube.com/embed/G-c0KnAgucc"
+            title="YouTube video player"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
+          </div>
+          <h3 className="text-gray-700 text-l font-medium" style={{ fontSize: 'medium', fontWeight: 'normal' }}>Percabangan if-else </h3>
+          <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
+            <iframe src="https://www.youtube.com/embed/G-c0KnAgucc"
+            title="YouTube video player"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
+          </div>
+        </div>
+
+
       </div>
     </Navbar>
   );

@@ -24,6 +24,25 @@ export const createScratch = (data) => async (dispatch) => {
   }
 };
 
+//add response
+export const addResponse = (id, desc) => async (dispatch) => {
+  try {
+    dispatch({ type: types.ADD_SCRATCH_RESPONSE_REQUEST });
+    const res = await axios.post(`${url}/scratch/add`, { id, desc });
+    dispatch({
+      type: types.ADD_SCRATCH_RESPONSE_SUCCESS,
+      payload: { scratch: res.data.scratch },
+    });
+  } catch (error) {
+    dispatch({
+      type: types.ADD_SCRATCH_RESPONSE_ERROR,
+      payload: {
+        message: "error",
+      },
+    });
+  }
+};
+
 //get all scratch data
 export const getScratchData = () => async (dispatch) => {
   try {
@@ -36,6 +55,25 @@ export const getScratchData = () => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: types.GET_SCRATCH_ERROR,
+      payload: {
+        message: "error",
+      },
+    });
+  }
+};
+
+//get single scratch data
+export const getSingleScratchData = (scratchId) => async (dispatch) => {
+  try {
+    dispatch({ type: types.GET_SINGLE_SCRATCH_REQUEST });
+    const res = await axios.get(`${url}/scratch/${scratchId}`);
+    dispatch({
+      type: types.GET_SINGLE_SCRATCH_SUCCESS,
+      payload: { scratch: res.data.scratch },
+    });
+  } catch (error) {
+    dispatch({
+      type: types.GET_SINGLE_SCRATCH_ERROR,
       payload: {
         message: "error",
       },

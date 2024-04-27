@@ -44,8 +44,8 @@ const Content = () => {
     title: "",
     class: "",
     subject: "",
-    type: "",
-    creator: user?.name,
+    // type: "",
+    // creator: user?.name,
   };
   const [formData, setFormData] = useState(initialFormData);
   const handleFormChange = (e) => {
@@ -173,7 +173,21 @@ const Content = () => {
               value={formData.title}
               onChange={(e) => handleFormChange(e)}
             />
-            <select name="class" onChange={(e) => handleFormChange(e)}>
+            <input
+              placeholder="Class"
+              type="text"
+              name="class"
+              value={formData.class}
+              onChange={(e) => handleFormChange(e)}
+            />
+            <input
+              placeholder="Subject"
+              type="text"
+              name="subject"
+              value={formData.subject}
+              onChange={(e) => handleFormChange(e)}
+            />
+            {/* <select name="class" onChange={(e) => handleFormChange(e)}>
               <option value="">Choose Class</option>
               <option value={5}>X PPLG 1</option>
               <option value={6}>X PPLG 2</option>
@@ -196,7 +210,7 @@ const Content = () => {
               <option value="Assignment">Video</option>
               <option value="Project">Book</option>
               <option value="Practice">LKPD</option>
-            </select>
+            </select> */}
           </form>
           {size ? (
             <div className="uploadedImgDiv">

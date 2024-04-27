@@ -178,7 +178,12 @@ const Login = () => {
                 <option value="student">Student</option>
                 <option value="tutor">Guest</option>
               </select>
-              <button type="submit" className="p-2 my-2">LOGIN</button>
+              {/* <button type="submit" className="p-2 my-2">LOGIN</button> */}
+              <div style={{ textAlign: 'center' }}>
+                <button type="submit" className="p-2 my-2">Log in</button>
+                <h3 className="text-gray-700 text-l font-medium" style={{ fontSize: 'medium', fontWeight: 'normal' }}>Don't have an account?</h3>
+                <button onClick={() => navigate('/register')} className="p-2 my-2" style={{ backgroundColor: '#FF869E' }}>Sign up</button>
+              </div>
             </form>
           </div>
         </div>

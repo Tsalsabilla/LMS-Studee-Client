@@ -6,6 +6,7 @@ import Admin from "../Pages/Admin/Admin";
 import Tutor from "../Pages/Tutor/Tutor";
 import Student from "../Pages/Student/Student";
 import Scratchs from "../Pages/Scratchs/Scratchs";
+import SingleScratch from "../Pages/SingleScratch/SingleScratch";
 import Lessons from "../Pages/Lessons/Lessons";
 import Content from "../Pages/Contents/Content";
 import Assignment from "../Pages/Assignments/Assignment";
@@ -34,6 +35,7 @@ const Router = () => {
         <Route path="/tutor" element={<Tutor />} />
         <Route path="/student" element={<Student />} />
         <Route path="/scratchs" element={<Scratchs />} />
+        <Route path="/scratch/:id" element={<SingleScratch />} />
         <Route path="/lessons" element={<Lessons />} />
         <Route path="/leaderboard" element={<LeaderBoard />} />
         <Route path="/content/:id" element={<SingleContent />} />
