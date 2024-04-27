@@ -42,7 +42,7 @@ const Assignment = () => {
   //form states and functions
   const initialFormData = {
     title: "",
-    class: "",
+    // class: "",
     subject: "",
     type: "",
     creator: user?.name,
@@ -173,7 +173,21 @@ const Assignment = () => {
               value={formData.title}
               onChange={(e) => handleFormChange(e)}
             />
-            <select name="class" onChange={(e) => handleFormChange(e)}>
+            <input
+              placeholder="Description"
+              type="text"
+              name="type"
+              value={formData.type}
+              onChange={(e) => handleFormChange(e)}
+            />
+            <input
+              placeholder="Description"
+              type="text"
+              name="subject"
+              value={formData.subject}
+              onChange={(e) => handleFormChange(e)}
+            />
+            {/* <select name="class" onChange={(e) => handleFormChange(e)}>
               <option value="">Choose Class</option>
               <option value={5}>X PPLG 1</option>
               <option value={6}>X PPLG 2</option>
@@ -196,7 +210,7 @@ const Assignment = () => {
               <option value="Assignment">Video</option>
               <option value="Project">Book</option>
               <option value="Practice">LKPD</option>
-            </select>
+            </select> */}
           </form>
           {size ? (
             <div className="uploadedImgDiv">

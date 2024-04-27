@@ -32,9 +32,10 @@ const DoubtBox = ({ data }) => {
       <div>
         <div>
           <p>{data.title}</p>
+          <p>{data.description}</p>
           <p>{data.subject}</p>
-          <p>Class {data.class}</p>
-          <p>Resolved : {data.resolved == "Yes" ? "Yes" : "No"}</p>
+          {/* <p>Class {data.class}</p> */}
+          {/* <p>Resolved : {data.resolved == "Yes" ? "Yes" : "No"}</p> */}
         </div>
         <div>
           {user?.userType == "Admin" || user?.userType == "Tutor" ? (

@@ -31,24 +31,24 @@ const Scratchs = () => {
     setOpen(false);
   };
 
-  const showChildrenDrawer = () => {
-    setChildrenDrawer(true);
-  };
+  // const showChildrenDrawer = () => {
+  //   setChildrenDrawer(true);
+  // };
 
-  const onChildrenDrawerClose = () => {
-    setChildrenDrawer(false);
-  };
+  // const onChildrenDrawerClose = () => {
+  //   setChildrenDrawer(false);
+  // };
 
   const initialFormData = {
     title: "",
     thumbnail: "",
-    class: "",
+    // class: "",
     subject: "",
     noOfQuestions: "",
     pointPerQuestion: "",
-    negativeMarking: "No",
-    negativeMarkingPerQuestion: "No",
-    totalTime: "",
+    // negativeMarking: "No",
+    // negativeMarkingPerQuestion: "No",
+    // totalTime: "",
   };
 
   const questionData = {
@@ -68,33 +68,33 @@ const Scratchs = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleQuestionChange = (e) => {
-    setQuestion({ ...question, [e.target.name]: e.target.value });
-  };
+  // const handleQuestionChange = (e) => {
+  //   setQuestion({ ...question, [e.target.name]: e.target.value });
+  // };
 
-  const addQuestion = (e) => {
-    e.preventDefault();
-    if (formData.noOfQuestions == "") {
-      return messageApi.open({
-        type: "info",
-        content: "Please enter the no.of questions value above",
-        duration: 3,
-      });
-    }
-    if (formData.noOfQuestions <= allQuestions.length) {
-      return messageApi.open({
-        type: "info",
-        content: "You already added required no.of questions",
-        duration: 3,
-      });
-    }
-    setAllQuestions([...allQuestions, question]);
-    setQuestion(questionData);
-  };
+  // const addQuestion = (e) => {
+  //   e.preventDefault();
+  //   if (formData.noOfQuestions == "") {
+  //     return messageApi.open({
+  //       type: "info",
+  //       content: "Please enter the no.of questions value above",
+  //       duration: 3,
+  //     });
+  //   }
+  //   if (formData.noOfQuestions <= allQuestions.length) {
+  //     return messageApi.open({
+  //       type: "info",
+  //       content: "You already added required no.of questions",
+  //       duration: 3,
+  //     });
+  //   }
+  //   setAllQuestions([...allQuestions, question]);
+  //   setQuestion(questionData);
+  // };
 
-  const removeQuestion = (i) => {
-    setAllQuestions(allQuestions.filter((elem, index) => index != i));
-  };
+  // const removeQuestion = (i) => {
+  //   setAllQuestions(allQuestions.filter((elem, index) => index != i));
+  // };
 
   const submitScratch = () => {
     for (let keys in formData) {
@@ -106,27 +106,27 @@ const Scratchs = () => {
         });
       }
     }
-    if (allQuestions.length === 0) {
-      return messageApi.open({
-        type: "info",
-        content: "No questions were entered",
-        duration: 3,
-      });
-    }
-    if (formData.noOfQuestions > allQuestions.length) {
-      return messageApi.open({
-        type: "info",
-        content: `You only added ${allQuestions.length} out of ${formData.noOfQuestions} questions`,
-        duration: 3,
-      });
-    }
-    if (formData.noOfQuestions < allQuestions.length) {
-      return messageApi.open({
-        type: "info",
-        content: `You have added more than ${formData.noOfQuestions} questions, Please remove some questions`,
-        duration: 3,
-      });
-    }
+    // if (allQuestions.length === 0) {
+    //   return messageApi.open({
+    //     type: "info",
+    //     content: "No questions were entered",
+    //     duration: 3,
+    //   });
+    // }
+    // if (formData.noOfQuestions > allQuestions.length) {
+    //   return messageApi.open({
+    //     type: "info",
+    //     content: `You only added ${allQuestions.length} out of ${formData.noOfQuestions} questions`,
+    //     duration: 3,
+    //   });
+    // }
+    // if (formData.noOfQuestions < allQuestions.length) {
+    //   return messageApi.open({
+    //     type: "info",
+    //     content: `You have added more than ${formData.noOfQuestions} questions, Please remove some questions`,
+    //     duration: 3,
+    //   });
+    // }
 
     let obj = {
       ...formData,
@@ -215,7 +215,14 @@ const Scratchs = () => {
               value={formData.thumbnail}
               onChange={(e) => handleFormChange(e)}
             />
-            <select name="class" onChange={(e) => handleFormChange(e)}>
+            <input
+              placeholder="Description"
+              type="text"
+              name="subject"
+              value={formData.subject}
+              onChange={(e) => handleFormChange(e)}
+            />
+            {/* <select name="class" onChange={(e) => handleFormChange(e)}>
               <option value="">Choose Class</option>
               <option value={5}>X PPLG 1</option>
               <option value={6}>X PPLG 2</option>
@@ -232,7 +239,7 @@ const Scratchs = () => {
               <option value="Biology">Flowchart</option>
               <option value="Political science">Pemrograman, Tipe data, Variabel dan Operator</option>
               <option value="History">Percabangan dan Perulangan</option>
-            </select>
+            </select> */}
             <input
               placeholder="No.of Questions"
               type="number"
@@ -255,7 +262,7 @@ const Scratchs = () => {
               name="totalPoints"
               onChange={(e) => handleFormChange(e)}
             />
-            <select
+            {/* <select
               name="negativeMarking"
               onChange={(e) => handleFormChange(e)}
             >
@@ -280,9 +287,9 @@ const Scratchs = () => {
               name="totalTime"
               value={formData.totalTime}
               onChange={(e) => handleFormChange(e)}
-            />
+            /> */}
           </form>
-          <form onSubmit={(e) => addQuestion(e)}>
+          {/* <form onSubmit={(e) => addQuestion(e)}>
             <label>Question</label>
             <input
               required
@@ -338,16 +345,16 @@ const Scratchs = () => {
               value="Save"
               onChange={() => console.log("Question added")}
             />
-          </form>
-          <button className="Review" onClick={showChildrenDrawer}>
+          </form> */}
+          {/* <button className="Review" onClick={showChildrenDrawer}>
             Review
           </button>
-          <br></br>
+          <br></br> */}
           <button className="Submit" onClick={() => submitScratch()}>
             Add Scratch
           </button>
 
-          <Drawer
+          {/* <Drawer
             title="Scratch Questions"
             width={320}
             closable={false}
@@ -374,7 +381,7 @@ const Scratchs = () => {
                 );
               })
             )}
-          </Drawer>
+          </Drawer> */}
           {loading ? (
             <Space
               style={{

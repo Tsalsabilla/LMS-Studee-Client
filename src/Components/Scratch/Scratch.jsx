@@ -33,8 +33,8 @@ const Scratch = ({ data }) => {
         <div>
           <p>{data.title}</p>
           <p>{data.subject}</p>
-          <p>Class {data.class}</p>
-          <p className="scratchTime">{data.totalTime} mins</p>
+          {/* <p>Class {data.class}</p> */}
+          {/* <p className="scratchTime">{data.totalTime} mins</p> */}
         </div>
         <div className= "scratchRight">
           <p className="scratchPoint"><img src={questionImage}/>Questions : {data.noOfQuestions}</p>

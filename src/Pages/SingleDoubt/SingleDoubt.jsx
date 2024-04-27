@@ -64,14 +64,38 @@ const SingleDoubt = () => {
         </div>
 
         <div className="doubtResponses">
-          <p>Topic : {singleDoubt?.title}</p>
-          <p>Class : {singleDoubt?.class}</p>
-          <p>Subject : {singleDoubt?.subject}</p>
-          <p>Description : {singleDoubt?.description}</p>
-          <p>Resolved : {singleDoubt?.resolved == "Yes" ? "Yes" : "No"}</p>
+          <p>{singleDoubt?.title}</p>
+          {/* <p>Class : {singleDoubt?.class}</p> */}
+          <p>{singleDoubt?.subject}</p>
+          <p>{singleDoubt?.description}</p>
+          {/* <p>Resolved : {singleDoubt?.resolved == "Yes" ? "Yes" : "No"}</p> */}
         </div>
         <div className="doubtResponses">
-          <h3>Responses</h3>
+          <h3>Pengetahuan Awal</h3>
+        </div>
+        {singleDoubt?.response?.map((data, i) => {
+          return (
+            <div key={i} className="doubtResponses">
+              <p>Absen no. : {i + 1}</p>
+              <p>{data}</p>
+            </div>
+          );
+        })}
+
+        <div className="doubtResponses">
+          <p>Input Link Google Drive</p>
+          <form className="responseForm" onSubmit={(e) => handleSubmit(e)}>
+            <input
+              name="desc"
+              value={desc}
+              onChange={(e) => setDesc(e.target.value)}
+              placeholder="Description"
+            />
+            <input type="submit" />
+          </form>
+        </div>
+        <div className="doubtResponses">
+          <h3>Fase Penstrukturan Ide</h3>
         </div>
         {singleDoubt?.response?.map((data, i) => {
           return (
@@ -83,7 +107,31 @@ const SingleDoubt = () => {
         })}
 
         <div className="doubtResponses">
-          <p>Add New Response</p>
+          <p>Input Link Google Drive</p>
+          <form className="responseForm" onSubmit={(e) => handleSubmit(e)}>
+            <input
+              name="desc"
+              value={desc}
+              onChange={(e) => setDesc(e.target.value)}
+              placeholder="Description"
+            />
+            <input type="submit" />
+          </form>
+        </div>
+        <div className="doubtResponses">
+          <h3>Pengetahuan Akhir</h3>
+        </div>
+        {singleDoubt?.response?.map((data, i) => {
+          return (
+            <div key={i} className="doubtResponses">
+              <p>Response no. : {i + 1}</p>
+              <p>Description : {data}</p>
+            </div>
+          );
+        })}
+
+        <div className="doubtResponses">
+          <p>Input Link Google Drive</p>
           <form className="responseForm" onSubmit={(e) => handleSubmit(e)}>
             <input
               name="desc"

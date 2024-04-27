@@ -29,12 +29,11 @@ const AssignmentBox = ({ data }) => {
         <div>
           <p>{data.title}</p>
           <p>{data.subject}</p>
-          <p>Class {data.class}</p>
+          <p>{data.type}</p>
         </div>
         <div>
           {user.userType == "Admin" || user.userType == "Tutor" ? (
             <div className="assignmentOption">
-              <p>{data.type}</p>
               <button onClick={() => handleClick(data._id)}><img src={viewImage}/> </button>
               <button onClick={() => handleDelete(data._id)}><img src={deleteImage}/></button>
             </div>

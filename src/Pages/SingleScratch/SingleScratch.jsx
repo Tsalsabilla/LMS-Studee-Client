@@ -101,11 +101,11 @@ const SingleScratch = () => {
         </div>
 
         <div className="scratchResponses">
-          <p>Topic : {singleScratch?.title}</p>
-          <p>Class : {singleScratch?.class}</p>
-          <p>Subject : {singleScratch?.subject}</p>
-          <p>Description : {singleScratch?.description}</p>
-          <p>Resolved : {singleScratch?.resolved == "Yes" ? "Yes" : "No"}</p>
+          <p>{singleScratch?.title}</p>
+          {/* <p>Class : {singleScratch?.class}</p> */}
+          <p>{singleScratch?.subject}</p>
+          <p>{singleScratch?.description}</p>
+          {/* <p>Resolved : {singleScratch?.resolved == "Yes" ? "Yes" : "No"}</p> */}
         </div>
 
         <div class="mx-auto w-full max-w-screen-xl">
