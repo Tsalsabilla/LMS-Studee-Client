@@ -7,7 +7,7 @@ const LeaderboardRow = ({ data }) => {
       <td>{data.name}</td>
       <td>{data.email}</td>
       <td>{data.class}</td>
-      <td>{data.totalScratch}</td>
+      {/* <td>{data.totalScratch}</td> */}
       <td>{data.totalPoints}</td>
     </tr>
   );
