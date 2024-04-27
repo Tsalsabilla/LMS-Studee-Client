@@ -41,6 +41,13 @@ const Register = () => {
                     content: "Error",
                     duration: 3,
                 });
+            } else if (res.message === "User already registered") {
+                setLoading(false);
+                messageApi.open({
+                    type: "info",
+                    content: "User already registered",
+                    duration: 3,
+                });
             } else {
                 setLoading(false);
                 messageApi.open({
