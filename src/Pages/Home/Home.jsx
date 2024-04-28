@@ -44,6 +44,7 @@ import heroImage from '/img/hero.png';
 
 //Data imports
 import { barData, pieData, COLORS } from "../../data.js";
+import StudentRow from "../../Components/Table/StudentRow.jsx";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -195,7 +196,7 @@ const Home = () => {
                   <tbody>
                     {students
                       .map((data, i) => (
-                        <LeaderboardRow key={i} data={data} />
+                        <StudentRow key={i} data={data} />
                       ))}
                   </tbody>
                 </table>

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getStudentData } from "../../Redux/student/action";
+import { getTestResult } from "../../Redux/testresult/action";
 
 //component imports
 import Navbar from "../../Components/Sidebar/Navbar";
@@ -15,14 +15,45 @@ const LeaderBoard = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  let decodedToken = null
+
   //redux states
   const {
     data: { isAuthenticated },
   } = useSelector((store) => store.auth);
-  const { students } = useSelector((store) => store.student);
+
+  const { testResults } = useSelector((store) => store.testResult);
+
+  const { token } = useSelector((store) => store.auth.data);
+
+  // Decode JWT token
+  const decodeToken = (token) => {
+    const base64Url = token.split('.')[1];
+    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    const jsonPayload = decodeURIComponent(
+      atob(base64)
+        .split('')
+        .map((c) => `%${`00${c.charCodeAt(0).toString(16)}`.slice(-2)}`)
+        .join('')
+    );
+    return JSON.parse(jsonPayload);
+  };
+
+  if (!token) {
+    return navigate("/");
+  }
+
+  decodedToken = decodeToken(token);
+
+  const data = {
+    token,
+    query: {
+      studentId: decodedToken.userId
+    }
+  };
 
   useEffect(() => {
-    dispatch(getStudentData());
+    dispatch(getTestResult(data));
   }, []);
 
   useEffect(() => {
@@ -44,16 +75,15 @@ const LeaderBoard = () => {
           <table>
             <thead>
               <tr>
-                <th>Title</th>
+                <th>Assignment</th>
                 <th>Timestamp</th>
+                <th>Score</th>
                 <th>Details</th>
                 {/* <th>Scratch attended</th> */}
-                <th>Score</th>
               </tr>
             </thead>
             <tbody>
-              {students
-                .sort((a, b) => (a.totalPoints > b.totalPoints ? -1 : 1))
+              {testResults
                 .map((data, i) => (
                   <LeaderboardRow key={i} data={data} />
                 ))}

@@ -10,6 +10,7 @@ import assignmentReducer from "./assignment/reducer";
 import testReducer from "./test/reducer";
 import doubtReducer from "./doubt/reducer";
 import dashboardReducer from "./dashboard/reducer";
+import testResultReducer from "./testresult/reducer";
 
 export const rootReducer = combineReducers({
   auth: authReducer,
@@ -23,4 +24,5 @@ export const rootReducer = combineReducers({
   test: testReducer,
   doubt: doubtReducer,
   dashboard: dashboardReducer,
+  testResult: testResultReducer,
 });

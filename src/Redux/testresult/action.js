@@ -29,3 +29,29 @@ export const saveTestResult = (data) => async (dispatch) => {
     });
   }
 };
+
+// get test result data 
+export const getTestResult = (data) => async (dispatch) => {
+  const {query, token} = data
+  try {
+    dispatch({ type: types.GET_TEST_RESULT_REQUEST });
+    const res = await axios.get(`${url}/test-result`, {
+      params: query,
+      headers: {
+      Authorization: `Bearer ${token}`
+      }
+    });
+
+    dispatch({
+      type: types.GET_TEST_RESULT,
+      payload: res.data,
+    });
+  } catch (error) {
+    dispatch({
+      type: types.GET_TEST_RESULT_ERROR,
+      payload: {
+        message: "error",
+      },
+    });
+  }
+};

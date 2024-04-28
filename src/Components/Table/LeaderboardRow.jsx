@@ -1,14 +1,22 @@
 import React from "react";
 
+const handleDetail = (data) => {
+  // Implement your logic here
+  console.log("Detail clicked", data);
+  // Add your code to handle the detail functionality
+};
+
 const LeaderboardRow = ({ data }) => {
 
   return (
     <tr className="tableRow">
-      <td>{data.name}</td>
-      <td>{data.email}</td>
-      <td>{data.class}</td>
+      <td>{data.testId.title}</td>
+      <td>{data.testId.createdAt}</td>
+      <td>{data.score}</td>
       {/* <td>{data.totalScratch}</td> */}
-      <td>{data.totalScore}</td>
+      <td>
+        <button onClick={() => handleDetail(data)} className="btn-primary">Detail</button>
+      </td>
     </tr>
   );
 };
