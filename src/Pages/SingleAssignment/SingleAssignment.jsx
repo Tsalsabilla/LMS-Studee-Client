@@ -23,6 +23,17 @@ const SingleAssignment = () => {
 
   const [desc, setDesc] = useState("");
 
+    // form states
+    const [descFaseAplikasi, setDescFaseAplikasi] = useState("");
+
+      const handleSubmit = (e, type) => {
+    e.preventDefault();
+    if (type === "FaseAplikasi") {
+      dispatch(addResponse(singleDoubt?._id, descFaseAplikasi));
+      setDescFaseAplikasi("");
+    }
+  };
+
   // disabling right click
   useEffect(() => {
     const handleContextmenu = (e) => {
@@ -36,6 +47,7 @@ const SingleAssignment = () => {
 
   useEffect(() => {
     dispatch(getSingleAssignmentData(params.id));
+    setDescFaseAplikasi("");
   }, []);
 
   useEffect(() => {
@@ -77,9 +89,14 @@ const SingleAssignment = () => {
           {/* <p>Tutor : {singleAssignment?.creator}</p> */}
         </div>
 
-        <div className="assignmentResponses">
-          <h3>Fase Aplikasi</h3>
+        <div className="assignmentResponses bg-red-900 rounded-lg p-4 my-2">
+          <h3 className="text-white">Fase Aplikasi</h3>
         </div>
+
+        <div className="assignmentResponses bg-white rounded-lg p-4 my-2">
+          <h3 className="text-black">Setelah itu silahkan jawab pertanyaan dibawah ini secara individu untuk mengukur pengetahuan awal mengenai Percabangan dan Perulangan!</h3>
+        </div>
+
         {singleAssignment?.response?.map((data, i) => {
           return (
             <div key={i} className="assignmentResponses">
@@ -89,13 +106,16 @@ const SingleAssignment = () => {
           );
         })}
 
-        <div className="assignmentResponses">
-          <p>Input Link Google Drive</p>
-          <form className="responseForm" onSubmit={(e) => handleSubmit(e)}>
-            <input
+<div className="doubtResponses bg-white rounded-lg p-4 my-2">
+          <p>Input Link Google Drive</p>             
+          <form
+            className="responseForm"
+            onSubmit={(e) => handleSubmit(e, "FaseAplikasi")}
+          >       
+           <input
               name="desc"
-              value={desc}
-              onChange={(e) => setDesc(e.target.value)}
+              value={descFaseAplikasi}
+              onChange={(e) => setDescFaseAplikasi(e.target.value)}
               placeholder="Description"
             />
             <input type="submit" />

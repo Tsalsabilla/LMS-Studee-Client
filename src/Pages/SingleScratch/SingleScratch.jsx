@@ -84,7 +84,7 @@ const SingleScratch = () => {
             <div>Loading...</div>
           )} */}
           <div className="fileContainer">
-            {singleScratch?.fileType === "jpg" || singleScratch?.fileType === "jpeg" || singleScratch?.fileType === "png" ? (
+            {/* {singleScratch?.fileType === "jpg" || singleScratch?.fileType === "jpeg" || singleScratch?.fileType === "png" ? (
               <img src={singleScratch.fileUrl} alt="" />
             ) : (
               <video
@@ -96,7 +96,20 @@ const SingleScratch = () => {
               >
                 <source src={singleScratch.fileUrl} />
               </video>
-            )}
+            )} */}
+            {singleScratch && (singleScratch.fileType === "jpg" || singleScratch.fileType === "jpeg" || singleScratch.fileType === "png") ? (
+    <img src={singleScratch.fileUrl} alt="" />
+) : (
+    <video
+        allow="fullscreen"
+        frameBorder="0"
+        width="100%"
+        controls
+        controlsList="nodownload"
+    >
+        <source src={singleScratch && singleScratch.fileUrl} />
+    </video>
+)}
           </div>
         </div>
 

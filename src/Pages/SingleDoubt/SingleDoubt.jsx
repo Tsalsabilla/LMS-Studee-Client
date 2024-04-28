@@ -16,16 +16,22 @@ const SingleDoubt = () => {
   const params = useParams();
   const navigate = useNavigate();
 
+  const {
+    user: { userType, name, premium },
+  } = useSelector((store) => store.auth.data);
+
   // redux states
   const {
     data: { isAuthenticated },
   } = useSelector((store) => store.auth);
   const { singleDoubt, load } = useSelector((store) => store.doubt);
 
+  // const {
+  //   user: { name },
+  // } = useSelector((store) => store.auth.data);
+
   // form states
   const [descPengetahuanAwal, setDescPengetahuanAwal] = useState("");
-  const [descFasePenstrukturan, setDescFasePenstrukturan] = useState("");
-  const [descPengetahuanAkhir, setDescPengetahuanAkhir] = useState("");
 
   const handleSubmit = (e, type) => {
     e.preventDefault();
@@ -44,8 +50,6 @@ const SingleDoubt = () => {
   useEffect(() => {
     dispatch(getSingleDoubtData(params.id));
     setDescPengetahuanAwal("");
-    setDescFasePenstrukturan("");
-    setDescPengetahuanAkhir("");
   }, []);
 
   useEffect(() => {
@@ -88,19 +92,54 @@ const SingleDoubt = () => {
         <div className="doubtResponses bg-red-900 rounded-lg p-4 my-2">
           <h3 className="text-white">Pengetahuan Awal</h3>
         </div>
-        {singleDoubt?.response?.map((data, i) => {
-          return (
-            <div
-              key={i}
-              className="doubtResponses bg-red-100 rounded-lg p-4 my-2"
-            >
-              <p>Absen no. : {i + 1}</p>
-              <p>{data}</p>
-            </div>
-          );
-        })}
+
         <div className="doubtResponses bg-white rounded-lg p-4 my-2">
-          <p>Input Link Google Drive</p>
+          <h3 className="text-black">Setelah itu silahkan jawab pertanyaan dibawah ini secara individu untuk mengukur pengetahuan awal mengenai Percabangan dan Perulangan!</h3>
+        </div>
+
+        <div className="doubtResponses bg-red-900 rounded-lg p-4 my-2">
+          <h3 className="text-white">Fase Penstrukturan Ide</h3>
+        </div>
+
+        <div className="doubtResponses bg-white rounded-lg p-4 my-2">
+          <h3 className="text-black">Lakukanlah diskusi secara berkelompok untuk mencari informasi tambahan, bertanya pertanyaan, atau mencoba berbagai pendekatan guna menambah pengetahuan baru mengenai Percabangan dan Perulangan. Lalu jawablah pertanyaan di bawah ini dengan tepat!</h3>
+        </div>
+
+        <div className="doubtResponses bg-red-900 rounded-lg p-4 my-2">
+          <h3 className="text-white">Pengetahuan Akhir</h3>
+        </div>
+
+        <div className="doubtResponses bg-white rounded-lg p-4 my-2">
+          <h3 className="text-black">Setelah itu silahkan jawab pertanyaan dibawah ini secara individu untuk mengukur pengetahuan baru mengenai Percabangan dan Perulangan!</h3>
+        </div>
+
+        {/* {role === "admin" &&
+          singleDoubt?.response?.map((data, i) => {
+            return (
+              <div
+                key={i}
+                className="doubtResponses bg-red-100 rounded-lg p-4 my-2"
+              >
+                <p>Name :{name}</p>
+                <p>{data}</p>
+              </div>
+            );
+          })} */}
+          {userType === "Admin"
+          ?singleDoubt?.response?.map((data, i) => {
+            return (
+              <div
+                key={i}
+                className="doubtResponses bg-red-100 rounded-lg p-4 my-2"
+              >
+                <p>Name :{name}</p>
+                <p>{data}</p>
+              </div>
+            );
+          })
+          : ""}
+        <div className="doubtResponses bg-white rounded-lg p-4 my-2">
+          <p>Input Link Google Drive</p>             
           <form
             className="responseForm"
             onSubmit={(e) => handleSubmit(e, "PengetahuanAwal")}
@@ -109,66 +148,6 @@ const SingleDoubt = () => {
               name="desc"
               value={descPengetahuanAwal}
               onChange={(e) => setDescPengetahuanAwal(e.target.value)}
-              placeholder="Description"
-            />
-            <input type="submit" />
-          </form>
-        </div>
-
-        <div className="doubtResponses bg-red-900 rounded-lg p-4 my-2">
-          <h3 className="text-white">Fase Penstrukturan Ide</h3>
-        </div>
-        {singleDoubt?.response?.map((data, i) => {
-          return (
-            <div
-              key={i}
-              className="doubtResponses bg-red-100 rounded-lg p-4 my-2"
-            >
-              <p>Absen no. : {i + 1}</p>
-              <p>{data}</p>
-            </div>
-          );
-        })}
-        <div className="doubtResponses bg-white rounded-lg p-4 my-2">
-          <p>Input Link Google Drive</p>
-          <form
-            className="responseForm"
-            onSubmit={(e) => handleSubmit(e, "FasePenstrukturan")}
-          >
-            <input
-              name="desc"
-              value={descFasePenstrukturan}
-              onChange={(e) => setDescFasePenstrukturan(e.target.value)}
-              placeholder="Description"
-            />
-            <input type="submit" />
-          </form>
-        </div>
-
-        <div className="doubtResponses bg-red-900 rounded-lg p-4 my-2">
-          <h3 className="text-white">Pengetahuan Akhir</h3>
-        </div>
-        {singleDoubt?.response?.map((data, i) => {
-          return (
-            <div
-              key={i}
-              className="doubtResponses bg-red-100 rounded-lg p-4 my-2"
-            >
-              <p>Absen no. : {i + 1}</p>
-              <p>{data}</p>
-            </div>
-          );
-        })}
-        <div className="doubtResponses bg-white rounded-lg p-4 my-2">
-          <p>Input Link Google Drive</p>
-          <form
-            className="responseForm"
-            onSubmit={(e) => handleSubmit(e, "PengetahuanAkhir")}
-          >
-            <input
-              name="desc"
-              value={descPengetahuanAkhir}
-              onChange={(e) => setDescPengetahuanAkhir(e.target.value)}
               placeholder="Description"
             />
             <input type="submit" />

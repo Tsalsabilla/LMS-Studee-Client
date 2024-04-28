@@ -183,7 +183,7 @@ const Quiz = () => {
 
         <div className="singleTestData">
           <div className="fileContainer">
-            {singleTest?.fileType === "jpg" || singleTest?.fileType === "jpeg" || singleTest?.fileType === "png" ? (
+            {/* {singleTest?.fileType === "jpg" || singleTest?.fileType === "jpeg" || singleTest?.fileType === "png" ? (
               <img src={singleTest.fileUrl} alt="" />
             ) : (
               <video
@@ -195,7 +195,24 @@ const Quiz = () => {
               >
                 <source src={singleTest.fileUrl} />
               </video>
-            )}
+            )} */}
+            {singleTest && (
+  <div className="fileContainer">
+    {singleTest.fileType === "jpg" || singleTest.fileType === "jpeg" || singleTest.fileType === "png" ? (
+      <img src={singleTest.fileUrl} alt="" />
+    ) : (
+      <video
+        allow="fullscreen"
+        frameBorder="0"
+        width="100%"
+        controls
+        controlsList="nodownload"
+      >
+        <source src={singleTest.fileUrl} />
+      </video>
+    )}
+  </div>
+)}
           </div>
         </div>
 
