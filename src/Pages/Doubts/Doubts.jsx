@@ -70,7 +70,7 @@ const Doubts = () => {
       }
     }
     if (size == "" || fileType == "" || fileUrl == "" || thumbnailUrl == "") {
-      return alert("Please pls upload a file explaining your doubt");
+      return alert("Please upload a file explaining your doubt");
     }
     let obj = { ...formData, size, fileType, thumbnailUrl, fileUrl };
     console.log(obj);

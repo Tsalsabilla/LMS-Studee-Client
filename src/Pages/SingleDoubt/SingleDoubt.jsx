@@ -22,16 +22,30 @@ const SingleDoubt = () => {
   } = useSelector((store) => store.auth);
   const { singleDoubt, load } = useSelector((store) => store.doubt);
 
-  //form states
-  const [desc, setDesc] = useState("");
-  const handleSubmit = (e) => {
+  // form states
+  const [descPengetahuanAwal, setDescPengetahuanAwal] = useState("");
+  const [descFasePenstrukturan, setDescFasePenstrukturan] = useState("");
+  const [descPengetahuanAkhir, setDescPengetahuanAkhir] = useState("");
+
+  const handleSubmit = (e, type) => {
     e.preventDefault();
-    dispatch(addResponse(singleDoubt?._id, desc));
+    if (type === "PengetahuanAwal") {
+      dispatch(addResponse(singleDoubt?._id, descPengetahuanAwal));
+      setDescPengetahuanAwal("");
+    } else if (type === "FasePenstrukturan") {
+      dispatch(addResponse(singleDoubt?._id, descFasePenstrukturan));
+      setDescFasePenstrukturan("");
+    } else if (type === "PengetahuanAkhir") {
+      dispatch(addResponse(singleDoubt?._id, descPengetahuanAkhir));
+      setDescPengetahuanAkhir("");
+    }
   };
 
   useEffect(() => {
     dispatch(getSingleDoubtData(params.id));
-    setDesc("");
+    setDescPengetahuanAwal("");
+    setDescFasePenstrukturan("");
+    setDescPengetahuanAkhir("");
   }, []);
 
   useEffect(() => {
@@ -70,78 +84,97 @@ const SingleDoubt = () => {
           <p>{singleDoubt?.description}</p>
           {/* <p>Resolved : {singleDoubt?.resolved == "Yes" ? "Yes" : "No"}</p> */}
         </div>
-        <div className="doubtResponses">
-          <h3>Pengetahuan Awal</h3>
+
+        <div className="doubtResponses bg-red-900 rounded-lg p-4 my-2">
+          <h3 className="text-white">Pengetahuan Awal</h3>
         </div>
         {singleDoubt?.response?.map((data, i) => {
           return (
-            <div key={i} className="doubtResponses">
+            <div
+              key={i}
+              className="doubtResponses bg-red-100 rounded-lg p-4 my-2"
+            >
               <p>Absen no. : {i + 1}</p>
               <p>{data}</p>
             </div>
           );
         })}
-
-        <div className="doubtResponses">
+        <div className="doubtResponses bg-white rounded-lg p-4 my-2">
           <p>Input Link Google Drive</p>
-          <form className="responseForm" onSubmit={(e) => handleSubmit(e)}>
+          <form
+            className="responseForm"
+            onSubmit={(e) => handleSubmit(e, "PengetahuanAwal")}
+          >
             <input
               name="desc"
-              value={desc}
-              onChange={(e) => setDesc(e.target.value)}
+              value={descPengetahuanAwal}
+              onChange={(e) => setDescPengetahuanAwal(e.target.value)}
               placeholder="Description"
             />
             <input type="submit" />
           </form>
         </div>
-        <div className="doubtResponses">
-          <h3>Fase Penstrukturan Ide</h3>
+
+        <div className="doubtResponses bg-red-900 rounded-lg p-4 my-2">
+          <h3 className="text-white">Fase Penstrukturan Ide</h3>
         </div>
         {singleDoubt?.response?.map((data, i) => {
           return (
-            <div key={i} className="doubtResponses">
-              <p>Response no. : {i + 1}</p>
-              <p>Description : {data}</p>
+            <div
+              key={i}
+              className="doubtResponses bg-red-100 rounded-lg p-4 my-2"
+            >
+              <p>Absen no. : {i + 1}</p>
+              <p>{data}</p>
             </div>
           );
         })}
-
-        <div className="doubtResponses">
+        <div className="doubtResponses bg-white rounded-lg p-4 my-2">
           <p>Input Link Google Drive</p>
-          <form className="responseForm" onSubmit={(e) => handleSubmit(e)}>
+          <form
+            className="responseForm"
+            onSubmit={(e) => handleSubmit(e, "FasePenstrukturan")}
+          >
             <input
               name="desc"
-              value={desc}
-              onChange={(e) => setDesc(e.target.value)}
+              value={descFasePenstrukturan}
+              onChange={(e) => setDescFasePenstrukturan(e.target.value)}
               placeholder="Description"
             />
             <input type="submit" />
           </form>
         </div>
-        <div className="doubtResponses">
-          <h3>Pengetahuan Akhir</h3>
+
+        <div className="doubtResponses bg-red-900 rounded-lg p-4 my-2">
+          <h3 className="text-white">Pengetahuan Akhir</h3>
         </div>
         {singleDoubt?.response?.map((data, i) => {
           return (
-            <div key={i} className="doubtResponses">
-              <p>Response no. : {i + 1}</p>
-              <p>Description : {data}</p>
+            <div
+              key={i}
+              className="doubtResponses bg-red-100 rounded-lg p-4 my-2"
+            >
+              <p>Absen no. : {i + 1}</p>
+              <p>{data}</p>
             </div>
           );
         })}
-
-        <div className="doubtResponses">
+        <div className="doubtResponses bg-white rounded-lg p-4 my-2">
           <p>Input Link Google Drive</p>
-          <form className="responseForm" onSubmit={(e) => handleSubmit(e)}>
+          <form
+            className="responseForm"
+            onSubmit={(e) => handleSubmit(e, "PengetahuanAkhir")}
+          >
             <input
               name="desc"
-              value={desc}
-              onChange={(e) => setDesc(e.target.value)}
+              value={descPengetahuanAkhir}
+              onChange={(e) => setDescPengetahuanAkhir(e.target.value)}
               placeholder="Description"
             />
             <input type="submit" />
           </form>
         </div>
+
         {load ? (
           <Space
             style={{
