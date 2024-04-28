@@ -43,9 +43,9 @@ const Doubts = () => {
   const initialFormData = {
     title: "",
     description: "",
-    class: "",
+    // class: "",
     subject: "",
-    name: user?.name,
+    // name: user?.name,
     studentId: user?._id,
   };
   const [formData, setFormData] = useState(initialFormData);
@@ -139,7 +139,7 @@ const Doubts = () => {
       <div className="content">
         <Header Title={"Knowledge"} Address={"Knowledge"} />
 
-        <h3>Unsolved Doubts</h3>
+        {/* <h3>Unsolved Doubts</h3> */}
         <div className="contentData">
           {doubt
             ?.filter((elem) => elem.resolved == "No")
@@ -147,15 +147,15 @@ const Doubts = () => {
               return <DoubtBox data={data} key={i} />;
             })}
         </div>
-        <h3>Resolved Doubts</h3>
+        {/* <h3>Resolved Doubts</h3> */}
 
-        <div className="contentData">
+        {/* <div className="contentData">
           {doubt
             ?.filter((elem) => elem.resolved == "Yes")
             .map((data, i) => {
               return <DoubtBox data={data} key={i} />;
             })}
-        </div>
+        </div> */}
 
         <div onClick={showDrawer}>
           <AddIcon />
@@ -188,7 +188,14 @@ const Doubts = () => {
               value={formData.description}
               onChange={(e) => handleFormChange(e)}
             />
-            <select name="class" onChange={(e) => handleFormChange(e)}>
+            <input
+              placeholder="Description"
+              type="text"
+              name="subject"
+              value={formData.subject}
+              onChange={(e) => handleFormChange(e)}
+            />
+            {/* <select name="class" onChange={(e) => handleFormChange(e)}>
               <option value="">Choose Class</option>
               <option value={5}>X PPLG 1</option>
               <option value={6}>X PPLG 2</option>
@@ -205,7 +212,7 @@ const Doubts = () => {
               <option value="Biology">Flowchart</option>
               <option value="Political science">Pemrograman, Tipe data, Variabel dan Operator</option>
               <option value="History">Percabangan dan Perulangan</option>
-            </select>
+            </select> */}
           </form>
           {size ? (
             <div className="uploadedImgDiv">

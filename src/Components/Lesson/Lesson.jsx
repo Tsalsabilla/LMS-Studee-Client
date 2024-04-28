@@ -27,21 +27,27 @@ const Lesson = ({ data }) => {
         <div>
           <p>{data.title}</p>
           <p>{data.subject}</p>
-          <p>Class {data.class}</p>
-          <p className="lessonTime">{data.totalTime} mins</p>
+          {/* <p>Class {data.class}</p> */}
+          {/* <p className="lessonTime">{data.totalTime} mins</p> */}
         </div>
         <div className= "lessonRight">
-          <p className="lessonPoint"><img src={questionImage}/>Questions : {data.noOfQuestions}</p>
-          <p className="lessonPoint"><img src={starImage}/>Points : {data.totalPoint}</p>
+          {/* <p className="lessonPoint"><img src={questionImage}/>Questions : {data.noOfQuestions}</p> */}
+          {/* <p className="lessonPoint"><img src={starImage}/>Points : {data.totalPoint}</p> */}
           {userType == "Admin" || userType == "Tutor" ? (
+            <>
+            <button type="submit"><a href="../../../public/img/modul.pdf" download="">Download</a></button>
             <button
               className="deleteLesson"
               onClick={() => deleteLessonFunc(data._id)}
             >
               <img src={deleteImage}/>
             </button>
+            </>
           ) : (
+            <>
             <button className="startLesson"><img src={startImage}/></button>
+            <button type="submit"><a href="../../../public/img/modul.pdf" download="">Download</a></button>
+            </>
           )}
         </div>
       </div>

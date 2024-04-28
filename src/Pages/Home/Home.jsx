@@ -7,6 +7,7 @@ import { getDashboardData } from "../../Redux/dashboard/action";
 import Navbar from "../../Components/Sidebar/Navbar";
 import SalesDiv from "../../Components/SalesDiv/SalesDiv";
 import Header from "../../Components/Header/Header";
+import LeaderboardRow from "../../Components/Table/LeaderboardRow";
 
 // Icons import
 import { PiKeyReturnThin, PiCurrencyCircleDollarLight } from "react-icons/pi";
@@ -87,6 +88,9 @@ const Home = () => {
     },
   ];
 
+  const { students } = useSelector((store) => store.student);
+
+
   useEffect(() => {
     dispatch(getDashboardData());
   }, []);
@@ -128,7 +132,7 @@ const Home = () => {
 
           {/* Bar nd Pie Chart */}
           <div className="charts">
-            <div className="lineChart">
+            {/* <div className="lineChart">
               <div className="chartHead">
                 <p>Top Score</p>
               </div>
@@ -174,12 +178,41 @@ const Home = () => {
                   </div>
                 </div>
               </div>
+            </div> */}
+            <div className="leaderboardData m-0 w-3/4">
+              {/* table */}
+              <section className="tableBody">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Class</th>
+                      {/* <th>Scratch attended</th> */}
+                      <th>Points</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {students
+                      .sort((a, b) => (a.totalPoints > b.totalPoints ? -1 : 1))
+                      .map((data, i) => (
+                        <LeaderboardRow key={i} data={data} />
+                      ))}
+                  </tbody>
+                </table>
+              </section>
             </div>
-            <div className="pieChart">
+            <div className="pieChart w-1/4">
               <div className="chartHead">
                 <p>Announcement</p>
               </div>
               <div className="pieBox">
+                <div className="pieData">
+                  <span>Week 3</span>
+                  <p>Jangan lupa mendownload Dev C++</p>
+                </div>
+              </div>
+              {/* <div className="pieBox">
                 <ResponsiveContainer>
                   <PieChart width={800} height={400}>
                     <Pie
@@ -203,7 +236,7 @@ const Home = () => {
                   <span>100</span>
                   <p>Total Profit</p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="homeFooter">

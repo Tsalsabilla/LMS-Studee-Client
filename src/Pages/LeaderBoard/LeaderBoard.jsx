@@ -44,11 +44,11 @@ const LeaderBoard = () => {
           <table>
             <thead>
               <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Class</th>
-                <th>Scratch attended</th>
-                <th>Points</th>
+                <th>Title</th>
+                <th>Timestamp</th>
+                <th>Details</th>
+                {/* <th>Scratch attended</th> */}
+                <th>Score</th>
               </tr>
             </thead>
             <tbody>

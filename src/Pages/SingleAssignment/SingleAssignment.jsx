@@ -21,6 +21,8 @@ const SingleAssignment = () => {
   } = useSelector((store) => store.auth);
   const { singleAssignment } = useSelector((store) => store.assignment);
 
+  const [desc, setDesc] = useState("");
+
   // disabling right click
   useEffect(() => {
     const handleContextmenu = (e) => {
@@ -68,11 +70,36 @@ const SingleAssignment = () => {
         </div>
 
         <div className="singleAssignmentDetails">
-          <p>Topic : {singleAssignment?.title}</p>
-          <p>Class : {singleAssignment?.class}</p>
-          <p>Subject : {singleAssignment?.subject}</p>
-          <p>Assignment Type : {singleAssignment?.type}</p>
-          <p>Tutor : {singleAssignment?.creator}</p>
+          <p>{singleAssignment?.title}</p>
+          {/* <p>Class : {singleAssignment?.class}</p> */}
+          <p>{singleAssignment?.subject}</p>
+          <p>{singleAssignment?.type}</p>
+          {/* <p>Tutor : {singleAssignment?.creator}</p> */}
+        </div>
+
+        <div className="assignmentResponses">
+          <h3>Fase Aplikasi</h3>
+        </div>
+        {singleAssignment?.response?.map((data, i) => {
+          return (
+            <div key={i} className="assignmentResponses">
+              <p>Absen no. : {i + 1}</p>
+              <p>{data}</p>
+            </div>
+          );
+        })}
+
+        <div className="assignmentResponses">
+          <p>Input Link Google Drive</p>
+          <form className="responseForm" onSubmit={(e) => handleSubmit(e)}>
+            <input
+              name="desc"
+              value={desc}
+              onChange={(e) => setDesc(e.target.value)}
+              placeholder="Description"
+            />
+            <input type="submit" />
+          </form>
         </div>
       </div>
     </Navbar>
