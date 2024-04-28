@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getDashboardData } from "../../Redux/dashboard/action";
+import { getStudentData } from "../../Redux/student/action";
 
 //Component imports
 import Navbar from "../../Components/Sidebar/Navbar";
@@ -53,6 +54,7 @@ const Home = () => {
   } = useSelector((store) => store.auth);
 
   const { dashboard } = useSelector((store) => store.dashboard);
+  const { students } = useSelector((store) => store.student)
 
   //overview data
   const overviewData = [
@@ -88,11 +90,9 @@ const Home = () => {
     },
   ];
 
-  const { students } = useSelector((store) => store.student);
-
-
   useEffect(() => {
     dispatch(getDashboardData());
+    dispatch(getStudentData());
   }, []);
 
   useEffect(() => {
@@ -194,7 +194,6 @@ const Home = () => {
                   </thead>
                   <tbody>
                     {students
-                      .sort((a, b) => (a.totalPoints > b.totalPoints ? -1 : 1))
                       .map((data, i) => (
                         <LeaderboardRow key={i} data={data} />
                       ))}

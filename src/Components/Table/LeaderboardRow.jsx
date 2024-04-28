@@ -8,7 +8,7 @@ const LeaderboardRow = ({ data }) => {
       <td>{data.email}</td>
       <td>{data.class}</td>
       {/* <td>{data.totalScratch}</td> */}
-      <td>{data.totalPoints}</td>
+      <td>{data.totalScore}</td>
     </tr>
   );
 };
