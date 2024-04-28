@@ -175,12 +175,11 @@ const Test = () => {
             />
             <select name="class" onChange={(e) => handleFormChange(e)}>
               <option value="">Choose Class</option>
-              <option value="Chemistry">X PPLG 1</option>
-              <option value="Chemistry">X PPLG 2</option>
-              <option value="Chemistry">X PPLG 3</option>
-              <option value="Chemistry">X PPLG 4</option>
-              <option value="Chemistry">X PPLG 5</option>
-              <option value="XI PPLG">XI PPLG</option>
+              <option value="X PPLG 1">X PPLG 1</option>
+              <option value="X PPLG 2">X PPLG 2</option>
+              <option value="X PPLG 3">X PPLG 3</option>
+              <option value="X PPLG 4">X PPLG 4</option>
+              <option value="X PPLG 5">X PPLG 5</option>
             </select>
             {/* <select name="subject" onChange={(e) => handleFormChange(e)}>
               <option value="">Choose Subject</option>
