@@ -12,6 +12,7 @@ import Header from "../../Components/Header/Header";
 
 //css imports
 import "./Quiz.css";
+import BackendURL from "../../BackendURL";
 
 const Quiz = () => {
   const dispatch = useDispatch();
@@ -35,7 +36,7 @@ const Quiz = () => {
   let [option, setOption] = useState("");
   let [label] = useState(["A", "B", "C", "D", "E"]);
   let [progressBarWidth, setProgressBarWidth] = useState(0);
-  let API_URL = 'http://localhost:4500/test/api/quiz/js';
+  let API_URL = `${BackendURL}/test/api/quiz/js`;
 
   useEffect(() => {
     const handleContextmenu = (e) => {
