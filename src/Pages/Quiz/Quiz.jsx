@@ -202,6 +202,7 @@ const Quiz = () => {
         <div className="singleTestDetails">
           <p>{singleTest?.title}</p>
           <p>Class : {singleTest?.class}</p>
+          <p>Link Google Form :{singleTest?.subject}</p>
         </div>
         
         <div className="quiz-wrapper w-full min-h-[100vh]">
