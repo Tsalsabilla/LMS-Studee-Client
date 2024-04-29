@@ -82,7 +82,7 @@ const LeaderBoard = () => {
               </tr>
             </thead>
             <tbody>
-              {data.studentId.title && testResults.map((data, i) => (
+              {data.testId.title && testResults.map((data, i) => (
                 <LeaderboardRow key={i} data={data} />
               ))}
             </tbody>
