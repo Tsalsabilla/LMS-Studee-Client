@@ -202,7 +202,7 @@ const Quiz = () => {
         <div className="singleTestDetails">
           <p>{singleTest?.title}</p>
           <p>Class : {singleTest?.class}</p>
-          <a>{singleTest?.subject}</a>
+          <p>{singleTest?.subject}</p>
         </div>
         
         <div className="quiz-wrapper w-full min-h-[100vh]">
