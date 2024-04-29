@@ -193,18 +193,15 @@
   height: 270px;
 }
 .main .charts .pieChart .pieBox .pieData {
-  position: absolute;
-  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   height: 100px;
-  width: 150px;
   top: calc(50% - 50px);
   left: calc(50% - 76px);
 }
 .main .charts .pieChart .pieBox .pieData span {
-  font-size: 25px;
+  font-size: 16px;
 }
 .main .charts .pieChart .pieBox .pieData p {
   color: grey;

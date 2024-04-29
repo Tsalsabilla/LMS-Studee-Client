@@ -181,6 +181,9 @@ const Home = () => {
               </div>
             </div> */}
             <div className="leaderboardData m-0 w-3/4">
+            <div className="chartHead bg-#920000 px-4 py-2 rounded-t-lg">
+        <p className="text-gray-800 font-bold">Leader Board</p>
+    </div>
               {/* table */}
               <section className="tableBody">
                 <table>
@@ -207,22 +210,29 @@ const Home = () => {
                 </table>
               </section>
             </div>
-            <div className="pieChart w-1/4">
-              <div className="chartHead">
-                <p>Announcement</p>
-              </div>
-              <div className="pieBox">
-                <div className="pieData">
-                  <span>Last Week</span>
-                  <p>1. laptop (disarankan) atau handphone <br></br>
-2. ⁠koneksi internet yg stabil
-3. ⁠microsoft word
-4. ⁠dev C++ *optional
-5. ⁠posisi meja dan bangku menyesuaikan kelompok dari 1-6
-6. ⁠baterai laptop/handphone yang cukup</p>
-                </div>
-              </div>
-            </div>
+            <div className="pieChart w-1/4 bg-white border border-gray-200 rounded-lg shadow-md float-left">
+    <div className="chartHead bg-#920000 px-4 py-2 rounded-t-lg">
+        <p className="text-gray-800 font-bold">Announcement</p>
+    </div>
+    <div className="pieBox p-4">
+        <div className="pieData">
+            <span className="block font-bold text-left">sarana dan prasarana pembelajaran :</span>
+            <p className="text-sm text-gray-600 text-left">
+                <ol className="list-decimal pl-4">
+                    <li>laptop (disarankan) atau handphone</li>
+                    <li>koneksi internet yang stabil</li>
+                    <li>microsoft word</li>
+                    <li>dev C++ *optional</li>
+                    <li>posisi meja dan bangku menyesuaikan kelompok dari 1-6</li>
+                    <li>baterai laptop/handphone yang cukup</li>
+                </ol>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
           </div>
           <div className="homeFooter">
           © 2024 studee | All Rights Reserved | Created by salsa💖
