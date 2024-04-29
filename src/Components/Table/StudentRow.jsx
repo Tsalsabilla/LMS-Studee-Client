@@ -9,7 +9,6 @@ const StudentRow = ({ data }) => {
       <td>{data.class}</td>
       <td>{data.access}</td>
       {/* <td>{data.totalScratch}</td> */}
-      <td>{data.totalScore}</td>
     </tr>
   );
 };
