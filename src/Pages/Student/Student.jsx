@@ -7,7 +7,7 @@ import { getStudentData, studentRegister } from "../../Redux/student/action";
 import Header from "../../Components/Header/Header";
 import Navbar from "../../Components/Sidebar/Navbar";
 import AddIcon from "../../Components/AddIcon/AddIcon";
-import StudentRow from "../../Components/Table/studentRow";
+import StudentRow from "../../Components/Table/StudentRow";
 
 //css imports
 import { Button, Drawer, Space, Spin, message } from "antd";
