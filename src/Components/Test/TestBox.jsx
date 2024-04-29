@@ -28,7 +28,7 @@ const TestBox = ({ data }) => {
       <div>
         <div>
           <p>{data.title}</p>
-          <p>{data.subject}</p>
+          {/* <p>{data.subject}</p> */}
           <p>{data.class}</p>
         </div>
         <div>
