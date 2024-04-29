@@ -83,8 +83,7 @@ const LeaderBoard = () => {
               </tr>
             </thead>
             <tbody>
-              {testResults
-                .map((data, i) => (
+              {testResults.map((data, i) => (
                   <LeaderboardRow key={i} data={data} />
                 ))}
             </tbody>
