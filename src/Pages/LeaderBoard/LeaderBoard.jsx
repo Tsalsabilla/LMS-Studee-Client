@@ -79,7 +79,6 @@ const LeaderBoard = () => {
                 <th>Timestamp</th>
                 <th>Score</th>
                 <th>Details</th>
-                {/* <th>Scratch attended</th> */}
               </tr>
             </thead>
             <tbody>
