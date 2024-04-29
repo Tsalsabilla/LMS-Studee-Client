@@ -207,42 +207,17 @@ const Home = () => {
                 </table>
               </section>
             </div>
-            <div className="pieChart w-1/4">
-              <div className="chartHead">
-                <p>Announcement</p>
-              </div>
-              <div className="pieBox">
-                <div className="pieData">
-                  <span>Week 3</span>
-                  <p>Jangan lupa mendownload Dev C++</p>
-                </div>
-              </div>
-              {/* <div className="pieBox">
-                <ResponsiveContainer>
-                  <PieChart width={800} height={400}>
-                    <Pie
-                      data={pieData}
-                      innerRadius={80}
-                      outerRadius={100}
-                      fill="#8884d8"
-                      paddingAngle={5}
-                      dataKey="value"
-                    >
-                      {pieData.map((entry, index) => (
-                        <Cell
-                          key={`cell-${index}`}
-                          fill={COLORS[index % COLORS.length]}
-                        />
-                      ))}
-                    </Pie>
-                  </PieChart>
-                </ResponsiveContainer>
-                <div className="pieData">
-                  <span>100</span>
-                  <p>Total Profit</p>
-                </div>
-              </div> */}
-            </div>
+            <div className="pieChart w-1/4 bg-white border border-gray-200 rounded-lg shadow-md">
+    <div className="chartHead bg-gray-200 px-4 py-2 rounded-t-lg">
+        <p className="text-gray-800 font-bold">Announcement</p>
+    </div>
+    <div className="pieBox p-4">
+        <div className="pieData">
+            <span className="block text-sm font-bold">Week 3</span>
+            <p className="text-sm text-gray-600">Jangan lupa mendownload Dev C++</p>
+        </div>
+    </div>
+</div>
           </div>
           <div className="homeFooter">
           © 2024 studee | All Rights Reserved | Created by salsa💖
