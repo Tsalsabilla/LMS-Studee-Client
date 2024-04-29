@@ -83,7 +83,7 @@ const SingleScratch = () => {
           ) : (
             <div>Loading...</div>
           )} */}
-          <div className="fileContainer">
+          {/* <div className="fileContainer">
             {singleScratch?.fileType === "jpg" || singleScratch?.fileType === "jpeg" || singleScratch?.fileType === "png" ? (
               <img src={singleScratch.fileUrl} alt="" />
             ) : (
@@ -97,7 +97,7 @@ const SingleScratch = () => {
                 <source src={singleScratch.fileUrl} />
               </video>
             )}
-          </div>
+          </div> */}
         </div>
 
         <div className="scratchResponses">
@@ -110,7 +110,7 @@ const SingleScratch = () => {
 
         <div class="mx-auto w-full max-w-screen-xl">
           <div class="relative" style={{ paddingTop: "75%" }}>
-            <iframe src="https://quizizz.com/join/quiz/6567386479e8ba07f42d2720/start" allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
+            <iframe src="https://quizizz.com/join?gc=84045886" allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
           </div>
         </div>
 

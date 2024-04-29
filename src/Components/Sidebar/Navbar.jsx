@@ -67,7 +67,7 @@ const Navbar = ({ children }) => {
       { icon: <AiOutlinePlayCircle />, title: "Videos", address: "/contents" },
       { icon: <IoBulbOutline />, title: "Knowledge", address: "/doubts" },
       { icon: <MdOutlineAssignment />, title: "Assignments", address: "/assignments" },
-      { icon: <CgGames />, title: "Scratchs", address: "/scratchs" },
+      { icon: <CgGames />, title: "Quiz", address: "/scratchs" },
     ]},
     { icon: <GoTrophy />, title: "Grades", address: "/leaderboard" },
   ];
