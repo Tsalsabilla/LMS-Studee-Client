@@ -46,7 +46,7 @@ const Lesson = ({ data }) => {
             </>
           ) : (
             <>
-      <button className="startLesson"><img src={startImage} alt="Start" /></button>
+      {/* <button className="startLesson"><img src={startImage} alt="Start" /></button> */}
       {/* <button type="button" onClick={() => window.open("../../../public/img/modul.pdf", "_blank")}>Download</button> */}
     </>
           )}
