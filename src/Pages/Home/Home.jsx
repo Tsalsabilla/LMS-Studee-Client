@@ -196,7 +196,12 @@ const Home = () => {
                   <tbody>
                     {students
                       .map((data, i) => (
-                        <StudentRow key={i} data={data} />
+                        <tr className="tableRow">
+                          <td>{data.name}</td>
+                          <td>{data.email}</td>
+                          <td>{data.class}</td>
+                          <td>{data.totalScore}</td>
+                        </tr>
                       ))}
                   </tbody>
                 </table>

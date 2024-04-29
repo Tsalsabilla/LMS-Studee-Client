@@ -79,14 +79,12 @@ const LeaderBoard = () => {
                 <th>Timestamp</th>
                 <th>Score</th>
                 <th>Details</th>
-                {/* <th>Scratch attended</th> */}
               </tr>
             </thead>
             <tbody>
-              {testResults
-                .map((data, i) => (
-                  <LeaderboardRow key={i} data={data} />
-                ))}
+              {data.testId.title && testResults.map((data, i) => (
+                <LeaderboardRow key={i} data={data} />
+              ))}
             </tbody>
           </table>
         </section>

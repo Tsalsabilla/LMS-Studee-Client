@@ -91,7 +91,7 @@ const Quiz = () => {
     dispatch(saveTestResult(data))
       .then((res) => {
         if (res.code === 200) {
-          window.location.href = "/tests";
+          window.location.href = "/user";
         }
       })
       .catch((error) => {
