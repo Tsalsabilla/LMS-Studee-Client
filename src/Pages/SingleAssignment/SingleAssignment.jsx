@@ -77,9 +77,10 @@ const SingleAssignment = () => {
           {/* <p>Tutor : {singleAssignment?.creator}</p> */}
         </div>
 
-        <div className="assignmentResponses">
-          <h3>Fase Aplikasi</h3>
+        <div className="assignmentResponses bg-red-900 rounded-lg p-4 my-2">
+          <h3 className="text-white">Fase Aplikasi</h3>
         </div>
+        
         {singleAssignment?.response?.map((data, i) => {
           return (
             <div key={i} className="assignmentResponses">

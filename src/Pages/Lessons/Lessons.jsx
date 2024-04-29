@@ -42,7 +42,7 @@ const Lessons = () => {
   const initialFormData = {
     title: "",
     thumbnail: "",
-    // class: "",
+    class: "",
     subject: "",
     // noOfQuestions: "",
     // pointPerQuestion: "",
@@ -216,10 +216,17 @@ const Lessons = () => {
               onChange={(e) => handleFormChange(e)}
             />
             <input
-              placeholder="Subject Thumbnail"
+              placeholder="Subject"
               type="text"
               name="subject"
               value={formData.subject}
+              onChange={(e) => handleFormChange(e)}
+            />
+            <input
+              placeholder="Pdf file"
+              type="text"
+              name="class"
+              value={formData.class}
               onChange={(e) => handleFormChange(e)}
             />
           </form>

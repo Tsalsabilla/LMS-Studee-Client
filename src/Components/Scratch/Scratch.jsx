@@ -37,8 +37,8 @@ const Scratch = ({ data }) => {
           {/* <p className="scratchTime">{data.totalTime} mins</p> */}
         </div>
         <div className= "scratchRight">
-          <p className="scratchPoint"><img src={questionImage}/>Questions : {data.noOfQuestions}</p>
-          <p className="scratchPoint"><img src={starImage}/>Points : {data.totalPoint}</p>
+          {/* <p className="scratchPoint"><img src={questionImage}/>Questions : {data.noOfQuestions}</p>
+          <p className="scratchPoint"><img src={starImage}/>Points : {data.totalPoint}</p> */}
           {userType == "Admin" || userType == "Tutor" ? (
             <>
             <button

@@ -24,18 +24,19 @@ const Lesson = ({ data }) => {
         <img src={data.thumbnail} alt="thumbnail" />
       </div>
       <div>
-        <div>
-          <p>{data.title}</p>
-          <p>{data.subject}</p>
-          {/* <p>Class {data.class}</p> */}
-          {/* <p className="lessonTime">{data.totalTime} mins</p> */}
-        </div>
+      <div>
+  <p>{data.title}</p>
+  <p>{data.subject}</p>
+  <a href={data.class} className="inline-block bg-red-800 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-2xl">Download</a>
+  {/* <p className="lessonTime">{data.totalTime} mins</p> */}
+</div>
+
         <div className= "lessonRight">
           {/* <p className="lessonPoint"><img src={questionImage}/>Questions : {data.noOfQuestions}</p> */}
           {/* <p className="lessonPoint"><img src={starImage}/>Points : {data.totalPoint}</p> */}
           {userType == "Admin" || userType == "Tutor" ? (
             <>
-            <button type="submit"><a href="../../../public/img/modul.pdf" download="">Download</a></button>
+            {/* <button type="submit"><a href="../../../public/img/modul.pdf" download="">Download</a></button> */}
             <button
               className="deleteLesson"
               onClick={() => deleteLessonFunc(data._id)}
@@ -45,9 +46,9 @@ const Lesson = ({ data }) => {
             </>
           ) : (
             <>
-            <button className="startLesson"><img src={startImage}/></button>
-            <button type="submit"><a href="../../../public/img/modul.pdf" download="">Download</a></button>
-            </>
+      <button className="startLesson"><img src={startImage} alt="Start" /></button>
+      {/* <button type="button" onClick={() => window.open("../../../public/img/modul.pdf", "_blank")}>Download</button> */}
+    </>
           )}
         </div>
       </div>

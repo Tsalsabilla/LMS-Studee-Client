@@ -59,22 +59,22 @@ const SingleDoubt = () => {
       <div className="singleContent">
         <Header Title={"Doubt Details"} Address={"Doubt"} />
         <div className="singleContentData">
-          <div className="fileContainer">
-            {singleDoubt?.fileType == "jpg" ||
-            singleDoubt?.fileType == "jpeg" ? (
-              <img src={singleDoubt.fileUrl} alt="" />
-            ) : (
-              <video
-                allow="fullscreen"
-                frameBorder="0"
-                width="100%"
-                controls
-                controlsList="nodownload"
-              >
-                <source src={singleDoubt.fileUrl} />
-              </video>
-            )}
-          </div>
+        <div className="fileContainer">
+  {singleDoubt?.fileType === "jpg" || singleDoubt?.fileType === "jpeg" ? (
+    <img src={singleDoubt?.fileUrl} alt="" />
+  ) : (
+    <video
+      allow="fullscreen"
+      frameBorder="0"
+      width="100%"
+      controls
+      controlsList="nodownload"
+    >
+      <source src={singleDoubt?.fileUrl} />
+    </video>
+  )}
+</div>
+
         </div>
 
         <div className="doubtResponses">
@@ -88,79 +88,39 @@ const SingleDoubt = () => {
         <div className="doubtResponses bg-red-900 rounded-lg p-4 my-2">
           <h3 className="text-white">Pengetahuan Awal</h3>
         </div>
-        {singleDoubt?.response?.map((data, i) => {
-          return (
-            <div
-              key={i}
-              className="doubtResponses bg-red-100 rounded-lg p-4 my-2"
-            >
-              <p>Absen no. : {i + 1}</p>
-              <p>{data}</p>
-            </div>
-          );
-        })}
+
         <div className="doubtResponses bg-white rounded-lg p-4 my-2">
-          <p>Input Link Google Drive</p>
-          <form
-            className="responseForm"
-            onSubmit={(e) => handleSubmit(e, "PengetahuanAwal")}
-          >
-            <input
-              name="desc"
-              value={descPengetahuanAwal}
-              onChange={(e) => setDescPengetahuanAwal(e.target.value)}
-              placeholder="Description"
-            />
-            <input type="submit" />
-          </form>
+          <h3 className="text-black">Silahkan jawab pertanyaan yang terdapat pada LKPD | Week 2 secara individu untuk mengukur pengetahuan awal mengenai Percabangan dan Perulangan!</h3>
         </div>
 
         <div className="doubtResponses bg-red-900 rounded-lg p-4 my-2">
           <h3 className="text-white">Fase Penstrukturan Ide</h3>
         </div>
-        {singleDoubt?.response?.map((data, i) => {
-          return (
-            <div
-              key={i}
-              className="doubtResponses bg-red-100 rounded-lg p-4 my-2"
-            >
-              <p>Absen no. : {i + 1}</p>
-              <p>{data}</p>
-            </div>
-          );
-        })}
+
         <div className="doubtResponses bg-white rounded-lg p-4 my-2">
-          <p>Input Link Google Drive</p>
-          <form
-            className="responseForm"
-            onSubmit={(e) => handleSubmit(e, "FasePenstrukturan")}
-          >
-            <input
-              name="desc"
-              value={descFasePenstrukturan}
-              onChange={(e) => setDescFasePenstrukturan(e.target.value)}
-              placeholder="Description"
-            />
-            <input type="submit" />
-          </form>
+          <h3 className="text-black">Lakukanlah diskusi secara berkelompok untuk mencari informasi tambahan, bertanya pertanyaan, atau mencoba berbagai pendekatan guna menambah pengetahuan baru mengenai Percabangan dan Perulangan. Lalu jawablah pertanyaan dengan tepat</h3>
         </div>
 
         <div className="doubtResponses bg-red-900 rounded-lg p-4 my-2">
           <h3 className="text-white">Pengetahuan Akhir</h3>
         </div>
+
+        <div className="doubtResponses bg-white rounded-lg p-4 my-2">
+          <h3 className="text-black">Setelah itu silahkan jawab pertanyaan secara individu untuk mengukur pengetahuan baru mengenai Percabangan dan Perulangan!</h3>
+        </div>
         {singleDoubt?.response?.map((data, i) => {
           return (
             <div
               key={i}
               className="doubtResponses bg-red-100 rounded-lg p-4 my-2"
             >
-              <p>Absen no. : {i + 1}</p>
+              <p>Urutan no. : {i + 1}</p>
               <p>{data}</p>
             </div>
           );
         })}
         <div className="doubtResponses bg-white rounded-lg p-4 my-2">
-          <p>Input Link Google Drive</p>
+          <p>Form Pengumpulan</p>
           <form
             className="responseForm"
             onSubmit={(e) => handleSubmit(e, "PengetahuanAkhir")}
@@ -169,7 +129,7 @@ const SingleDoubt = () => {
               name="desc"
               value={descPengetahuanAkhir}
               onChange={(e) => setDescPengetahuanAkhir(e.target.value)}
-              placeholder="Description"
+              placeholder="Contoh : Tsalsabilla, https://drive.google.com/drive/u/1/folders/1ebFPtxtNU0IvqNzfZvf7SdBKD5l7P1eM"
             />
             <input type="submit" />
           </form>

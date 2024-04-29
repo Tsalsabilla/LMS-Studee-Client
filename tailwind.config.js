@@ -11,6 +11,9 @@ export default {
       },
       fontFamily:{
         montserrat:["Montserrart", "sans-serif"]
+      },
+      colors: {
+        'custom-red': '#920000',
       }
     },
   },

@@ -4,6 +4,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .custom-red {
+    @apply bg-red-900;
+  }
+}
 /* Global CSS */
 
 * {
