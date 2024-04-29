@@ -207,17 +207,22 @@ const Home = () => {
                 </table>
               </section>
             </div>
-            <div className="pieChart w-1/4 bg-white border border-gray-200 rounded-lg shadow-md">
-    <div className="chartHead bg-gray-200 px-4 py-2 rounded-t-lg">
-        <p className="text-gray-800 font-bold">Announcement</p>
-    </div>
-    <div className="pieBox p-4">
-        <div className="pieData">
-            <span className="block text-sm font-bold">Week 3</span>
-            <p className="text-sm text-gray-600">Jangan lupa mendownload Dev C++</p>
-        </div>
-    </div>
-</div>
+            <div className="pieChart w-1/4">
+              <div className="chartHead">
+                <p>Announcement</p>
+              </div>
+              <div className="pieBox">
+                <div className="pieData">
+                  <span>Last Week</span>
+                  <p>1. laptop (disarankan) atau handphone <br></br>
+2. ⁠koneksi internet yg stabil
+3. ⁠microsoft word
+4. ⁠dev C++ *optional
+5. ⁠posisi meja dan bangku menyesuaikan kelompok dari 1-6
+6. ⁠baterai laptop/handphone yang cukup</p>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="homeFooter">
           © 2024 studee | All Rights Reserved | Created by salsa💖
