@@ -91,15 +91,19 @@ const SingleAssignment = () => {
         })}
 
         <div className="assignmentResponses">
-          <p>Input Link Google Drive</p>
+          <p>Form pengumpulan LKPD</p>
+          <a href="https://bit.ly/lkpdweek2" className="inline-block bg-red-800 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-2xl">Submit</a>
+          {/* <br></br><p>Input Link Google Drive</p> */}
           <form className="responseForm" onSubmit={(e) => handleSubmit(e)}>
-            <input
+            {/* <input
               name="desc"
               value={desc}
               onChange={(e) => setDesc(e.target.value)}
               placeholder="Description"
             />
-            <input type="submit" />
+            <input type="submit" /> */}
+          {/* <p>or try this :</p>
+          <p>bit.ly/lkpdweek2</p> */}
           </form>
         </div>
       </div>

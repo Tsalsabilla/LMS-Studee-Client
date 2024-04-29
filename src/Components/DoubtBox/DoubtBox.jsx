@@ -47,13 +47,13 @@ const DoubtBox = ({ data }) => {
             <div className="contentOption">
               <p>{data.type}</p>
               <button onClick={() => handleClick(data._id)}><img src={viewImage}/></button>
-              {data?.resolved == "No" ? (
+              {/* {data?.resolved == "No" ? (
                 <button onClick={() => handleResolve(data._id)}>
                   <img src={doneImage}/>
                 </button>
               ) : (
                 <button onClick={() => handleDelete(data._id)}><img src={deleteImage}/></button>
-              )}
+              )} */}
             </div>
           )}
         </div>

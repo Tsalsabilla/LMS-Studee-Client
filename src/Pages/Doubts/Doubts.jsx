@@ -157,8 +157,22 @@ const Doubts = () => {
             })}
         </div> */}
 
-        <div onClick={showDrawer}>
-          <AddIcon />
+        <div>
+          {user?.userType == "Admin" || user?.userType == "Tutor" ? (
+            <div onClick={showDrawer}>
+            <AddIcon />
+          </div>
+          ) : (
+            <div className="contentOption">
+              {/* {data?.resolved == "No" ? (
+                <button onClick={() => handleResolve(data._id)}>
+                  <img src={doneImage}/>
+                </button>
+              ) : (
+                <button onClick={() => handleDelete(data._id)}><img src={deleteImage}/></button>
+              )} */}
+            </div>
+          )}
         </div>
 
         {/* drawer  */}
