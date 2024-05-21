@@ -43,7 +43,7 @@ const Test = () => {
   const initialFormData = {
     title: "",
     class: "",
-    subject: "",
+    // subject: "",
     // type: "",
     creator: user?.name,
   };
@@ -181,13 +181,13 @@ const Test = () => {
               <option value="X PPLG 4">X PPLG 4</option>
               <option value="X PPLG 5">X PPLG 5</option>
             </select>
-            <input
+            {/* <input
               placeholder="Link Google Form"
               type="text"
               name="subject"
               value={formData.subject}
               onChange={(e) => handleFormChange(e)}
-            />
+            /> */}
             {/* <select name="subject" onChange={(e) => handleFormChange(e)}>
               <option value="">Choose Subject</option>
               <option value="Algoritma dan Pemrograman">Algoritma dan Pemrograman</option>

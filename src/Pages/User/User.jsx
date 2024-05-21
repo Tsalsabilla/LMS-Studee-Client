@@ -214,7 +214,6 @@ const User = () => {
                                   src={option.imageUrl}
                                   alt={`Option Image ${index}`}
                                   className="object-contain max-h-72 w-full mb-4 py-2 cursor-pointer rounded-md"
-                                  onClick={(e) => handleOption(index, option, questions[currentQuestion], e)}
                                 />
                               )}
                               </span>

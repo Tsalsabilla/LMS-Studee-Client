@@ -201,7 +201,7 @@ const Quiz = () => {
 
         <div className="singleTestDetails">
           <p>{singleTest?.title}</p>
-          <p>Class : {singleTest?.class}</p>
+          <p>{singleTest?.class}</p>
           <p>{singleTest?.subject}</p>
         </div>
         

@@ -110,7 +110,7 @@ const SingleScratch = () => {
 
         <div class="mx-auto w-full max-w-screen-xl">
           <div class="relative" style={{ paddingTop: "75%" }}>
-            <iframe src="https://quizizz.com/join?gc=84045886" allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
+            <iframe src="https://quizizz.com/join/pre-game/running/U2FsdGVkX19kEg5%252FnDdKIvDfVk8cUPi%252FLfPxPTMsNARJGDbLFxsWxJOTid%252FYeoH%252FfvBx15GhHTnApKbmPuEIrg%253D%253D/start" allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
           </div>
         </div>
 
@@ -127,10 +127,10 @@ const SingleScratch = () => {
         })}
 
         <div className="scratchResponses">
-        <p>Angket Web Studee</p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdPMx18m2MKqi5S6mr_n0vwNUa9nsWo6XXCQxvxeRN8pU0_8A/viewform" className="inline-block bg-red-800 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-2xl">Go To</a>
-          {/* <br></br><p>Input Link Google Drive</p> */}
-          {/* <p>Input Score</p>
+        {/* <p>Angket Web Studee</p> */}
+          {/* <a href="https://docs.google.com/forms/d/e/1FAIpQLSdPMx18m2MKqi5S6mr_n0vwNUa9nsWo6XXCQxvxeRN8pU0_8A/viewform" className="inline-block bg-red-800 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-2xl">Go To</a> */}
+          {/* <p>Input Link Google Drive</p> */}
+          <p>Form Score</p>
           <form className="responseForm" onSubmit={(e) => handleSubmit(e)}>
             <input
               name="desc"
@@ -146,7 +146,7 @@ const SingleScratch = () => {
               placeholder="Score"
             />
             <input type="submit" />
-          </form> */}
+          </form>
         </div>
 
         {load ? (

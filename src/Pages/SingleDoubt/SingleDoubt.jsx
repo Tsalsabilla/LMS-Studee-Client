@@ -129,7 +129,7 @@ const SingleDoubt = () => {
               name="desc"
               value={descPengetahuanAkhir}
               onChange={(e) => setDescPengetahuanAkhir(e.target.value)}
-              placeholder="Contoh : Tsalsabilla, https://drive.google.com/drive/u/1/folders/1ebFPtxtNU0IvqNzfZvf7SdBKD5l7P1eM"
+              placeholder="Link Google Drive"
             />
             <input type="submit" />
           </form>
