@@ -76,7 +76,40 @@ const SingleContent = () => {
         </div>
 
         <div class="mx-auto w-full max-w-screen-xl">
-        <h3 className="text-gray-700 text-l font-medium" style={{ fontSize: 'medium', fontWeight: 'normal' }}>Percabangan if</h3>
+
+        <h3 className="text-gray-700 text-l font-medium" style={{ fontSize: 'medium', fontWeight: 'normal' }}>Algoritma</h3>
+          <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
+            <iframe src="https://www.youtube.com/embed/G-c0KnAgucc"
+            title="YouTube video player"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
+          </div>
+
+          <h3 className="text-gray-700 text-l font-medium" style={{ fontSize: 'medium', fontWeight: 'normal' }}>Naratif </h3>
+          <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
+            <iframe src="https://www.youtube.com/embed/VSL19lCLqHk"
+            title="YouTube video player"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
+          </div>
+          
+          <h3 className="text-gray-700 text-l font-medium" style={{ fontSize: 'medium', fontWeight: 'normal' }}>Pseudocode </h3>
+          <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
+            <iframe src="https://www.youtube.com/embed/_lxIFFLFdBk"
+            title="YouTube video player"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
+          </div>
+          
+          <h3 className="text-gray-700 text-l font-medium" style={{ fontSize: 'medium', fontWeight: 'normal' }}>Flowchart</h3>
+          <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
+            <iframe src="https://www.youtube.com/embed/5jbYsYj1-v0"
+            title="YouTube video player"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
+          </div>
+
+        {/* <h3 className="text-gray-700 text-l font-medium" style={{ fontSize: 'medium', fontWeight: 'normal' }}>Percabangan if</h3>
           <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
             <iframe src="https://www.youtube.com/embed/G-c0KnAgucc"
             title="YouTube video player"
@@ -138,7 +171,7 @@ const SingleContent = () => {
             title="YouTube video player"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
-          </div>
+          </div> */}
 
         </div>
 

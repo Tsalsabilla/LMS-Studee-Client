@@ -85,7 +85,7 @@ const SingleDoubt = () => {
           {/* <p>Resolved : {singleDoubt?.resolved == "Yes" ? "Yes" : "No"}</p> */}
         </div>
 
-        <div className="doubtResponses bg-red-900 rounded-lg p-4 my-2">
+        {/* <div className="doubtResponses bg-red-900 rounded-lg p-4 my-2">
           <h3 className="text-white">Pengetahuan Awal</h3>
         </div>
 
@@ -107,7 +107,16 @@ const SingleDoubt = () => {
 
         <div className="doubtResponses bg-white rounded-lg p-4 my-2">
           <h3 className="text-black">Setelah itu silahkan jawab pertanyaan secara individu untuk mengukur pengetahuan baru mengenai Percabangan dan Perulangan!</h3>
+        </div> */}
+
+        <div className="doubtResponses bg-red-900 rounded-lg p-4 my-2">
+          <h3 className="text-white">Pengetahuan Awal</h3>
         </div>
+
+        <div className="doubtResponses bg-white rounded-lg p-4 my-2">
+          <h3 className="text-black">Setelah itu, masing masing siswa silahkan tuliskan 5 kata yang sering muncul pada video pembelajaran multimedia interaktif Studee tersebut!</h3>
+        </div>
+
         {singleDoubt?.response?.map((data, i) => {
           return (
             <div
@@ -120,7 +129,6 @@ const SingleDoubt = () => {
           );
         })}
         <div className="doubtResponses bg-white rounded-lg p-4 my-2">
-          <p>Form Pengumpulan</p>
           <form
             className="responseForm"
             onSubmit={(e) => handleSubmit(e, "PengetahuanAkhir")}
@@ -129,7 +137,7 @@ const SingleDoubt = () => {
               name="desc"
               value={descPengetahuanAkhir}
               onChange={(e) => setDescPengetahuanAkhir(e.target.value)}
-              placeholder="Link Google Drive"
+              placeholder="Contoh : Salsa | Penulisan, Deklarasi, Isi, Input, Proses"
             />
             <input type="submit" />
           </form>
