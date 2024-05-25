@@ -18,6 +18,8 @@ import Doubts from "../Pages/Doubts/Doubts";
 import SingleDoubt from "../Pages/SingleDoubt/SingleDoubt";
 import Doubtsx from "../Pages/Doubts/Doubtsx";
 import SingleDoubtx from "../Pages/SingleDoubt/SingleDoubtx";
+import Doubtsz from "../Pages/Doubts/Doubtsz";
+import SingleDoubtz from "../Pages/SingleDoubt/SingleDoubtz";
 import LeaderBoard from "../Pages/LeaderBoard/LeaderBoard";
 import User from "../Pages/User/User";
 import Quiz from "../Pages/Quiz/Quiz";
@@ -50,6 +52,8 @@ const Router = () => {
         <Route path="/doubt/:id" element={<SingleDoubt />} />
         <Route path="/doubtsx" element={<Doubtsx />} />
         <Route path="/doubtx/:id" element={<SingleDoubtx />} />
+        <Route path="/doubtsz" element={<Doubtsz />} />
+        <Route path="/doubtz/:id" element={<SingleDoubtz />} />
         <Route path="*" element={<Home />} />
         <Route path="/test/:id" element={userQuiz ? <Navigate to="/user" /> : <Quiz />} />
         <Route path="/user" element={userQuiz === null ? <Navigate to="/test/:id" /> : <User />} />
