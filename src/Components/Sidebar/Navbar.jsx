@@ -53,9 +53,10 @@ const Navbar = ({ children }) => {
     { icon: <AiOutlineRead />, title: "Lessons", address: "/lessons" },
     { icon: <TbLayoutGridAdd />, title: "Activities", childrens: [
       { icon: <AiOutlinePlayCircle />, title: "Videos", address: "/contents" },
-      { icon: <IoBulbOutline />, title: "Knowledge", address: "/doubts" },
+      { icon: <IoBulbOutline />, title: "Initial Knowledge", address: "/doubts" },
+      { icon: <IoBulbOutline />, title: "Final Knowledge", address: "/doubtsx" },
       { icon: <MdOutlineAssignment />, title: "Assignments", address: "/assignments" },
-      { icon: <CgGames />, title: "Scratchs", address: "/scratchs" },
+      { icon: <CgGames />, title: "Quiz", address: "/scratchs" },
     ]},
     { icon: <GoTrophy />, title: "Grades", address: "/leaderboard" },
   ];
@@ -65,7 +66,8 @@ const Navbar = ({ children }) => {
     { icon: <AiOutlineRead />, title: "Lessons", address: "/lessons" },
     { icon: <TbLayoutGridAdd />, title: "Activities", childrens: [
       { icon: <AiOutlinePlayCircle />, title: "Videos", address: "/contents" },
-      { icon: <IoBulbOutline />, title: "Knowledge", address: "/doubts" },
+      { icon: <IoBulbOutline />, title: "Initial Knowledge", address: "/doubts" },
+      { icon: <IoBulbOutline />, title: "Final Knowledge", address: "/doubtsx" },
       { icon: <MdOutlineAssignment />, title: "Assignments", address: "/assignments" },
       { icon: <CgGames />, title: "Quiz", address: "/scratchs" },
     ]},
@@ -77,9 +79,10 @@ const Navbar = ({ children }) => {
     { icon: <AiOutlineRead />, title: "Lessons", address: "/lessons" },
     { icon: <TbLayoutGridAdd />, title: "Activities", childrens: [
       { icon: <AiOutlinePlayCircle />, title: "Videos", address: "/contents" },
-      { icon: <IoBulbOutline />, title: "Knowledge", address: "/doubts" },
+      { icon: <IoBulbOutline />, title: "Initial Knowledge", address: "/doubts" },
+      { icon: <IoBulbOutline />, title: "Final Knowledge", address: "/doubtsx" },
       { icon: <MdOutlineAssignment />, title: "Assignments", address: "/assignments" },
-      { icon: <CgGames />, title: "Scratchs", address: "/scratchs" },
+      { icon: <CgGames />, title: "Quiz", address: "/scratchs" },
     ]},
     { icon: <GoTrophy />, title: "Grades", address: "/leaderboard" },
   ];

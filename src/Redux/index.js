@@ -9,6 +9,7 @@ import contentReducer from "./content/reducer";
 import assignmentReducer from "./assignment/reducer";
 import testReducer from "./test/reducer";
 import doubtReducer from "./doubt/reducer";
+import doubtxReducer from "./doubt/reducerx";
 import dashboardReducer from "./dashboard/reducer";
 import testResultReducer from "./testresult/reducer";
 
@@ -23,6 +24,7 @@ export const rootReducer = combineReducers({
   assignment: assignmentReducer,
   test: testReducer,
   doubt: doubtReducer,
+  doubtx: doubtxReducer,
   dashboard: dashboardReducer,
   testResult: testResultReducer,
 });

@@ -16,6 +16,8 @@ import SingleAssignment from "../Pages/SingleAssignment/SingleAssignment";
 // import SingleTest from "../Pages/SingleTest/SingleTest";
 import Doubts from "../Pages/Doubts/Doubts";
 import SingleDoubt from "../Pages/SingleDoubt/SingleDoubt";
+import Doubtsx from "../Pages/Doubts/Doubtsx";
+import SingleDoubtx from "../Pages/SingleDoubt/SingleDoubtx";
 import LeaderBoard from "../Pages/LeaderBoard/LeaderBoard";
 import User from "../Pages/User/User";
 import Quiz from "../Pages/Quiz/Quiz";
@@ -46,6 +48,8 @@ const Router = () => {
         <Route path="/tests" element={<Test />} />
         <Route path="/doubts" element={<Doubts />} />
         <Route path="/doubt/:id" element={<SingleDoubt />} />
+        <Route path="/doubtsx" element={<Doubtsx />} />
+        <Route path="/doubtx/:id" element={<SingleDoubtx />} />
         <Route path="*" element={<Home />} />
         <Route path="/test/:id" element={userQuiz ? <Navigate to="/user" /> : <Quiz />} />
         <Route path="/user" element={userQuiz === null ? <Navigate to="/test/:id" /> : <User />} />
