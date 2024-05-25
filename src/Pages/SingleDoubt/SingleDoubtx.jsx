@@ -110,11 +110,11 @@ const SingleDoubtx = () => {
         </div> */}
 
         <div className="doubtResponses bg-red-900 rounded-lg p-4 my-2">
-          <h3 className="text-white">Pengetahuan Awal</h3>
+          <h3 className="text-white">Pengetahuan Akhir</h3>
         </div>
 
         <div className="doubtResponses bg-white rounded-lg p-4 my-2">
-          <h3 className="text-black">Setelah itu, masing masing siswa silahkan tuliskan 5 kata yang sering muncul pada video pembelajaran multimedia interaktif Studee tersebut!</h3>
+          <h3 className="text-black">Gabungkanlah 5 kata yang kalian tuliskan pada halaman initial knowledge bersama teman teman kelompok kalian, sehingga menjadi beberapa kalimat yang saling berhubungan satu sama lain. Lakukanlah diskusi secara berkelompok untuk mencari informasi tambahan, bertanya pertanyaan, atau mencoba berbagai pendekatan guna menambah pengetahuan baru mengenai materi yang sedang dipelajari!</h3>
         </div>
 
         {singleDoubtx?.response?.map((data, i) => {
@@ -137,7 +137,7 @@ const SingleDoubtx = () => {
               name="desc"
               value={descPengetahuanAkhir}
               onChange={(e) => setDescPengetahuanAkhir(e.target.value)}
-              placeholder="Contoh : Salsa | Penulisan, Deklarasi, Isi, Input, Proses"
+              placeholder="e.g. Kelompok 1 | Algoritma merupakan langkah sistematis, sedangkan naratif memperkenalkan konsep pengaturan langkah. Pseudocode adalah metode ..."
             />
             <input type="submit" />
           </form>

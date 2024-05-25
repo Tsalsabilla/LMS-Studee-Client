@@ -20,7 +20,7 @@ import { GoChevronDown, GoTrophy, GoHome } from "react-icons/go";
 import { RiAdminLine } from "react-icons/ri";
 import { AiOutlineSchedule, AiOutlineRead, AiOutlinePlayCircle } from "react-icons/ai";
 import { CgGames } from "react-icons/cg";
-import { IoBulbOutline } from "react-icons/io5";
+import { IoBulbOutline, IoExtensionPuzzleOutline } from "react-icons/io5";
 import { MdOutlineAssignment } from "react-icons/md";
 
 // CSS imports
@@ -53,7 +53,7 @@ const Navbar = ({ children }) => {
     { icon: <AiOutlineRead />, title: "Lessons", address: "/lessons" },
     { icon: <TbLayoutGridAdd />, title: "Activities", childrens: [
       { icon: <AiOutlinePlayCircle />, title: "Videos", address: "/contents" },
-      { icon: <IoBulbOutline />, title: "Initial Knowledge", address: "/doubts" },
+      { icon: <IoExtensionPuzzleOutline />, title: "Initial Knowledge", address: "/doubts" },
       { icon: <IoBulbOutline />, title: "Final Knowledge", address: "/doubtsx" },
       { icon: <MdOutlineAssignment />, title: "Assignments", address: "/assignments" },
       { icon: <CgGames />, title: "Quiz", address: "/scratchs" },
@@ -66,7 +66,7 @@ const Navbar = ({ children }) => {
     { icon: <AiOutlineRead />, title: "Lessons", address: "/lessons" },
     { icon: <TbLayoutGridAdd />, title: "Activities", childrens: [
       { icon: <AiOutlinePlayCircle />, title: "Videos", address: "/contents" },
-      { icon: <IoBulbOutline />, title: "Initial Knowledge", address: "/doubts" },
+      { icon: <IoExtensionPuzzleOutline />, title: "Initial Knowledge", address: "/doubts" },
       { icon: <IoBulbOutline />, title: "Final Knowledge", address: "/doubtsx" },
       { icon: <MdOutlineAssignment />, title: "Assignments", address: "/assignments" },
       { icon: <CgGames />, title: "Quiz", address: "/scratchs" },
@@ -79,7 +79,7 @@ const Navbar = ({ children }) => {
     { icon: <AiOutlineRead />, title: "Lessons", address: "/lessons" },
     { icon: <TbLayoutGridAdd />, title: "Activities", childrens: [
       { icon: <AiOutlinePlayCircle />, title: "Videos", address: "/contents" },
-      { icon: <IoBulbOutline />, title: "Initial Knowledge", address: "/doubts" },
+      { icon: <IoExtensionPuzzleOutline />, title: "Initial Knowledge", address: "/doubts" },
       { icon: <IoBulbOutline />, title: "Final Knowledge", address: "/doubtsx" },
       { icon: <MdOutlineAssignment />, title: "Assignments", address: "/assignments" },
       { icon: <CgGames />, title: "Quiz", address: "/scratchs" },

@@ -114,7 +114,7 @@ const SingleDoubt = () => {
         </div>
 
         <div className="doubtResponses bg-white rounded-lg p-4 my-2">
-          <h3 className="text-black">Setelah itu, masing masing siswa silahkan tuliskan 5 kata yang sering muncul pada video pembelajaran multimedia interaktif Studee tersebut!</h3>
+          <h3 className="text-black">Setelah menonton video, masing-masing siswa silahkan untuk menuliskan lima kata kunci yang mencerminkan inti dari seluruh materi yang dibahas dalam video pembelajaran!</h3>
         </div>
 
         {singleDoubt?.response?.map((data, i) => {
@@ -137,7 +137,7 @@ const SingleDoubt = () => {
               name="desc"
               value={descPengetahuanAkhir}
               onChange={(e) => setDescPengetahuanAkhir(e.target.value)}
-              placeholder="Contoh : Salsa | Penulisan, Deklarasi, Isi, Input, Proses"
+              placeholder="e.g. Salsa | Sistematis, Langkah, Metode, ..."
             />
             <input type="submit" />
           </form>
