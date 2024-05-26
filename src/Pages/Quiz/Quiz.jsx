@@ -208,6 +208,13 @@ const Quiz = () => {
                       <span className=""></span>{" "}
                       {questions[currentQuestion].question}
                     </h1>
+                    {questions[currentQuestion].imageUrl && (
+                        <img
+                          src={questions[currentQuestion].imageUrl}
+                          alt="Question Image"
+                          className="object-contain max-h-96 w-full mb-4"
+                        />
+                      )}
                   </div>
                   <div className="options flex flex-col gap-4">
                     {questions[currentQuestion].options.map((option, index) => {
