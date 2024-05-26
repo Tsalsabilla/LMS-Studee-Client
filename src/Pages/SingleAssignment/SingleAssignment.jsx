@@ -53,7 +53,7 @@ const SingleAssignment = () => {
         <div className="singleAssignmentData">
           <div className="fileContainer">
             {singleAssignment?.fileType == "jpg" ||
-            singleAssignment?.fileType == "jpeg" || singleTest?.fileType === "png" ? (
+            singleAssignment?.fileType == "jpeg" ? (
               <img src={singleAssignment.fileUrl} alt="" />
             ) : (
               <video
