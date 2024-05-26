@@ -47,43 +47,8 @@ const SingleScratch = () => {
     <Navbar>
       <div className="singleContent">
         <Header Title={"Scratch Details"} Address={"Scratch"} />
-        <div className="singleContentData">
-          {/* <div className="fileContainer">
-            {singleScratch?.fileType == "jpg" ||
-            singleScratch?.fileType == "jpeg" ? (
-              <img src={singleScratch.fileUrl} alt="" />
-            ) : (
-              <video
-                allow="fullscreen"
-                frameBorder="0"
-                width="100%"
-                controls
-                controlsList="nodownload"
-              >
-                <source src={singleScratch.fileUrl} />
-              </video>
-            )}
-          </div> */}
-          {/* {singleScratch ? (
-            <div className="fileContainer">
-              {singleScratch.fileType === "jpg" || singleScratch.fileType === "jpeg" ? (
-                <img src={singleScratch.fileUrl} alt="" />
-              ) : (
-                <video
-                  allow="fullscreen"
-                  frameBorder="0"
-                  width="100%"
-                  controls
-                  controlsList="nodownload"
-                >
-                  <source src={singleScratch.fileUrl} />
-                </video>
-              )}
-            </div>
-          ) : (
-            <div>Loading...</div>
-          )} */}
-          {/* <div className="fileContainer">
+        {/* <div className="singleContentData">
+          <div className="fileContainer">
             {singleScratch?.fileType === "jpg" || singleScratch?.fileType === "jpeg" || singleScratch?.fileType === "png" ? (
               <img src={singleScratch.fileUrl} alt="" />
             ) : (
@@ -97,8 +62,8 @@ const SingleScratch = () => {
                 <source src={singleScratch.fileUrl} />
               </video>
             )}
-          </div> */}
-        </div>
+          </div>
+        </div> */}
 
         <div className="scratchResponses">
           <p>{singleScratch?.title}</p>

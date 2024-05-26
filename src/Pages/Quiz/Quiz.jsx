@@ -123,7 +123,7 @@ const Quiz = () => {
       <div className="singleTest">
       <Header Title={"Test"} Address={"Tests"} />
 
-      <div className="singleTestData">
+      {/* <div className="singleTestData">
           <div className="fileContainer">
             {singleTest?.fileType === "jpg" || singleTest?.fileType === "jpeg" || singleTest?.fileType === "png" ? (
               <img src={singleTest.fileUrl} alt="" />
@@ -139,15 +139,12 @@ const Quiz = () => {
               </video>
             )}
           </div>
-        </div>
+        </div> */}
 
-        <div className="singleTestDetails">
-          <p>Topic : {singleTest?.title}</p>
-          <p>Class : {singleTest?.class}</p>
-          {/* <p>Subject : {singleTest?.subject}</p> */}
-          {/* <p>Test Type : {singleTest?.type}</p> */}
-          {/* <p>Tutor : {singleTest?.creator}</p> */}
-        </div>
+        {/* <div className="singleTestDetails">
+          <p>{singleTest?.title}</p>
+          <p>{singleTest?.class}</p>
+        </div> */}
 
         <div className="quiz-wrapper w-full min-h-[100vh]">
         <div className="md:relative quiz-content h-full col-span-2">
