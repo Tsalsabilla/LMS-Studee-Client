@@ -60,7 +60,7 @@ const SingleDoubt = () => {
         <Header Title={"Doubt Details"} Address={"Doubt"} />
         <div className="singleContentData">
         <div className="fileContainer">
-  {singleDoubt?.fileType === "jpg" || singleDoubt?.fileType === "jpeg" ? (
+  {singleDoubt?.fileType === "jpg" || singleDoubt?.fileType === "jpeg" || singleTest?.fileType === "png" ? (
     <img src={singleDoubt?.fileUrl} alt="" />
   ) : (
     <video
