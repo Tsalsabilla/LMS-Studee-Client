@@ -22,7 +22,7 @@ const Quiz = () => {
   let [label] = useState(["A", "B", "C", "D","E"]);
   let [progressBarWidth, setProgressBarWidth] = useState(0);
   const [saveQuiz] = useState([]);
-  let API_URL = 'http://localhost:4500/test/api/quiz/js';
+  let API_URL = 'https://lms-studee-server.vercel.app/test/api/quiz/js';
 
   const { singleTest } = useSelector((store) => store.test);
 
