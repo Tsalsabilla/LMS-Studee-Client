@@ -29,7 +29,7 @@ const User = () => {
             onClick={handleRetakeQuiz}
             className="fixed bottom-6 z-20 right-6 shadow-xl w-24 h-24 text-gray-100 px-4 py-2 bg-red-500 rounded-full flex justify-center items-center"
           >
-            Retake Quiz
+            Close
           </button>
           <div className="indicators flex justify-center items-center gap-2 mt-8">
             <div className="flex justify-center items-center"><span className="w-4 h-4 flex rounded-full bg-green-200 mr-2"></span> Correct</div>

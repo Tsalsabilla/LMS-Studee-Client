@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import "./Quiz.css";
-import Img from "../../assets/quiz-pic.jpg";
+//hapus img kuis
 import QuizContext from "../../contexts/QuizContext";
 import Spiner from "../../Components/Spiner/Spiner";
 
