@@ -129,7 +129,7 @@ const User = () => {
   const handleRetakeQuiz = (e) => {
     e.preventDefault();
     localStorage.removeItem("quiz");
-    window.location.replace("/");
+    window.location.replace("/tests");
   };
 
   let [label] = useState(["A", "B", "C", "D", "E"]);
