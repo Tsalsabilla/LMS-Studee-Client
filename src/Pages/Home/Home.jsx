@@ -216,16 +216,12 @@ const Home = () => {
     </div>
     <div className="pieBox p-4">
         <div className="pieData">
-            <span className="block font-bold text-left">sarana dan prasarana pembelajaran :</span>
+        <span className="block font-bold text-left">
+              Exciting New Learning Opportunities!</span>
             <p className="text-sm text-gray-600 text-left">
-                <ol className="list-decimal pl-4">
-                    <li>laptop (disarankan) atau handphone</li>
-                    <li>koneksi internet yang stabil</li>
-                    <li>microsoft word</li>
-                    <li>dev C++ *optional</li>
-                    <li>posisi meja dan bangku menyesuaikan kelompok dari 1-6</li>
-                    <li>baterai laptop/handphone yang cukup</li>
-                </ol>
+                Dear Learners,
+                We are thrilled to announce the launch of exciting new learning opportunities on our Studee!
+                Get ready to embark on a journey of knowledge and skill enhancement like never before.
             </p>
         </div>
     </div>
