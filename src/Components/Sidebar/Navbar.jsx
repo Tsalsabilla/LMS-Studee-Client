@@ -7,11 +7,9 @@ import { Dropdown } from "antd";
 
 import SidebarItem from "./SideBarItem"
 
-// Image imports
 import user from "../../Assets/useravatar.png";
 import logo from "../../Assets/logo.png";
 
-// Icon imports
 import { BiLogOut } from "react-icons/bi";
 import { TbLayoutGridAdd } from "react-icons/tb";
 import { LuLayoutGrid } from "react-icons/lu";
@@ -23,7 +21,6 @@ import { CgGames } from "react-icons/cg";
 import { IoBulbOutline, IoExtensionPuzzleOutline } from "react-icons/io5";
 import { MdOutlineAssignment } from "react-icons/md";
 
-// CSS imports
 import "./Navbar.css";
 
 const Navbar = ({ children }) => {
@@ -31,7 +28,6 @@ const Navbar = ({ children }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  //redux state
   const auth = useSelector((store) => store.auth);
   if (!auth.data.isAuthenticated) {
     return navigate("/");
@@ -40,10 +36,8 @@ const Navbar = ({ children }) => {
     user: { userType, name, premium },
   } = useSelector((store) => store.auth.data);
 
-  //Sidebar toggle state
   const [toggle, setToggle] = useState(true);
 
-  //Sidebar menu
   const adminData = [
     { icon: <GoHome />, title: "Dashboard", address: "/home" },
     { icon: <RiAdminLine />, title: "Admin", address: "/admin" },
@@ -56,7 +50,6 @@ const Navbar = ({ children }) => {
       { icon: <IoExtensionPuzzleOutline />, title: "Initial Knowledge", address: "/doubts" },
       { icon: <IoBulbOutline />, title: "Final Knowledge", address: "/doubtsx" },
       { icon: <MdOutlineAssignment />, title: "Assignments", address: "/doubtsz" },
-      // { icon: <MdOutlineAssignment />, title: "Assignments", address: "/assignments" },
       { icon: <CgGames />, title: "Quiz", address: "/scratchs" },
     ]},
     { icon: <GoTrophy />, title: "Grades", address: "/leaderboard" },
@@ -70,7 +63,6 @@ const Navbar = ({ children }) => {
       { icon: <IoExtensionPuzzleOutline />, title: "Initial Knowledge", address: "/doubts" },
       { icon: <IoBulbOutline />, title: "Final Knowledge", address: "/doubtsx" },
       { icon: <MdOutlineAssignment />, title: "Assignments", address: "/doubtsz" },
-      // { icon: <MdOutlineAssignment />, title: "Assignments", address: "/assignments" },
       { icon: <CgGames />, title: "Quiz", address: "/scratchs" },
     ]},
     { icon: <GoTrophy />, title: "Grades", address: "/leaderboard" },
@@ -84,13 +76,11 @@ const Navbar = ({ children }) => {
       { icon: <IoExtensionPuzzleOutline />, title: "Initial Knowledge", address: "/doubts" },
       { icon: <IoBulbOutline />, title: "Final Knowledge", address: "/doubtsx" },
       { icon: <MdOutlineAssignment />, title: "Assignments", address: "/doubtsz" },
-      // { icon: <MdOutlineAssignment />, title: "Assignments", address: "/assignments" },
       { icon: <CgGames />, title: "Quiz", address: "/scratchs" },
     ]},
     { icon: <GoTrophy />, title: "Grades", address: "/leaderboard" },
   ];
 
-  // Dropdown menu
   const items = [
     {
       key: "1",
@@ -98,14 +88,12 @@ const Navbar = ({ children }) => {
     },
   ];
 
-  //logout function
   const handleLogout = () => {
     dispatch(authLogout());
   };
   
   return (
     <>
-      {/* Side Bar */}
       <div id="sidebar" className={toggle ? "hide" : ""}>
         <Link href="/" className="logo">
           <div className="logoBox">
@@ -117,7 +105,6 @@ const Navbar = ({ children }) => {
           </div>
         </Link>
 
-        {/* Side bar menu */}
         <ul className="side-menu top">
           {userType === "Tutor"
             ? tutorData?.map((data, i) => {
@@ -140,22 +127,12 @@ const Navbar = ({ children }) => {
               );
               })
             : ""}
-          {/* {userType == "Student" && premium == "false" ? (
-            <Menu
-              Icon={<MdOutlineWorkspacePremium />}
-              Title={"Premium"}
-              Address={"/premium"}
-            />
-          ) : (
-            ""
-          )} */}
           <span onClick={() => handleLogout()}>
             <Menu Icon={<BiLogOut />} Title={"Logout"} Address={""} />
           </span>
         </ul>
       </div>
 
-      {/* Top Bar */}
       <div id="content">
         <nav>
           <div>
@@ -178,10 +155,6 @@ const Navbar = ({ children }) => {
             )}
           </div>
           <div>
-            {/* <Link href="/" className="notification">
-              <BsBell />
-              <span className="num number">4</span>
-            </Link> */}
             <Dropdown menu={{ items }} placement="bottomLeft" arrow>
               <Link href="/" className="profile">
                 <img src={user} />

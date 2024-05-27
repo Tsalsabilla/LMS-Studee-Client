@@ -3,11 +3,9 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addResponse, getSingleScratchData } from "../../Redux/scratch/action";
 
-// component imports
 import Navbar from "../../Components/Sidebar/Navbar";
 import Header from "../../Components/Header/Header";
 
-//css imports
 import { Space, Spin } from "antd";
 import "./SingleScratch.css";
 
@@ -16,13 +14,11 @@ const SingleScratch = () => {
   const params = useParams();
   const navigate = useNavigate();
 
-  // redux states
   const {
     data: { isAuthenticated },
   } = useSelector((store) => store.auth);
   const { singleScratch, load } = useSelector((store) => store.scratch);
 
-  //form states
   const [desc, setDesc] = useState("");
   const [numberValue, setNumberValue] = useState("");
 
@@ -47,30 +43,11 @@ const SingleScratch = () => {
     <Navbar>
       <div className="singleContent">
         <Header Title={"Scratch Details"} Address={"Scratch"} />
-        {/* <div className="singleContentData">
-          <div className="fileContainer">
-            {singleScratch?.fileType === "jpg" || singleScratch?.fileType === "jpeg" || singleScratch?.fileType === "png" ? (
-              <img src={singleScratch.fileUrl} alt="" />
-            ) : (
-              <video
-                allow="fullscreen"
-                frameBorder="0"
-                width="100%"
-                controls
-                controlsList="nodownload"
-              >
-                <source src={singleScratch.fileUrl} />
-              </video>
-            )}
-          </div>
-        </div> */}
 
         <div className="scratchResponses">
           <p>{singleScratch?.title}</p>
-          {/* <p>Class : {singleScratch?.class}</p> */}
           <p>{singleScratch?.subject}</p>
           <p>{singleScratch?.description}</p>
-          {/* <p>Resolved : {singleScratch?.resolved == "Yes" ? "Yes" : "No"}</p> */}
         </div>
 
         <div class="mx-auto w-full max-w-screen-xl">
@@ -92,9 +69,6 @@ const SingleScratch = () => {
         })}
 
         <div className="scratchResponses">
-        {/* <p>Angket Web Studee</p> */}
-          {/* <a href="https://docs.google.com/forms/d/e/1FAIpQLSdPMx18m2MKqi5S6mr_n0vwNUa9nsWo6XXCQxvxeRN8pU0_8A/viewform" className="inline-block bg-red-800 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-2xl">Go To</a> */}
-          {/* <p>Input Link Google Drive</p> */}
           <p>Form Score</p>
           <form className="responseForm" onSubmit={(e) => handleSubmit(e)}>
             <input
@@ -131,8 +105,6 @@ const SingleScratch = () => {
             <Spin size="large"></Spin>
           </Space>
         ) : null}
-        {/* <iframe src="https://scratch.mit.edu/projects/36385774/embed" allowtransparency="true" width="100%"
-            height="800px" frameBorder="0" scrolling="yes" allowFullScreen></iframe> */}
       </div>
     </Navbar>
   );

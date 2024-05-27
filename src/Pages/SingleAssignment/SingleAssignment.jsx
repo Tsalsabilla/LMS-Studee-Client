@@ -3,11 +3,9 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getSingleAssignmentData } from "../../Redux/assignment/action";
 
-//component imports
 import Navbar from "../../Components/Sidebar/Navbar";
 import Header from "../../Components/Header/Header";
 
-//css imports
 import "./SingleAssignment.css";
 
 const SingleAssignment = () => {
@@ -15,7 +13,6 @@ const SingleAssignment = () => {
   const params = useParams();
   const navigate = useNavigate();
 
-  //redux states
   const {
     data: { isAuthenticated },
   } = useSelector((store) => store.auth);
@@ -23,7 +20,6 @@ const SingleAssignment = () => {
 
   const [desc, setDesc] = useState("");
 
-  // disabling right click
   useEffect(() => {
     const handleContextmenu = (e) => {
       e.preventDefault();
@@ -49,7 +45,6 @@ const SingleAssignment = () => {
       <div className="singleAssignment">
         <Header Title={"Assignment"} Address={"Assignments"} />
 
-        {/* media component  */}
         <div className="singleAssignmentData">
           <div className="fileContainer">
             {singleAssignment?.fileType == "jpg" ||
@@ -72,10 +67,8 @@ const SingleAssignment = () => {
 
         <div className="singleAssignmentDetails">
           <p>{singleAssignment?.title}</p>
-          {/* <p>Class : {singleAssignment?.class}</p> */}
           <p>{singleAssignment?.subject}</p>
           <p>{singleAssignment?.type}</p>
-          {/* <p>Tutor : {singleAssignment?.creator}</p> */}
         </div>
 
         <div className="assignmentResponses bg-red-900 rounded-lg p-4 my-2">
@@ -93,8 +86,6 @@ const SingleAssignment = () => {
 
         <div className="assignmentResponses">
           <p>Form pengumpulan</p>
-          {/* <a href="https://bit.ly/lkpdweek2" className="inline-block bg-red-800 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-2xl">Submit</a> */}
-          {/* <br></br><p>Input Link Google Drive</p> */}
           <form className="responseForm" onSubmit={(e) => handleSubmit(e)}>
             <input
               name="desc"
@@ -103,8 +94,6 @@ const SingleAssignment = () => {
               placeholder="Link Google Drive"
             />
             <input type="submit" />
-          {/* <p>or try this :</p>
-          <p>bit.ly/lkpdweek2</p> */}
           </form>
         </div>
       </div>

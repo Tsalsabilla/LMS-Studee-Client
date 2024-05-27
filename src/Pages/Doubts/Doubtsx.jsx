@@ -3,13 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { createDoubtx, getDoubtxData } from "../../Redux/doubt/actionx";
 
-//component imports
 import Navbar from "../../Components/Sidebar/Navbar";
 import Header from "../../Components/Header/Header";
 import AddIcon from "../../Components/AddIcon/AddIcon";
 import DoubtxBox from "../../Components/DoubtBox/DoubtxBox";
 
-//css imports
 import { Button, Drawer, Space, Spin, message } from "antd";
 import "./Doubts.css";
 
@@ -17,20 +15,16 @@ const Doubtsx = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  //redux states
   const {
     data: { isAuthenticated },
   } = useSelector((store) => store.auth);
   const { user } = useSelector((store) => store.auth.data);
   const { doubtx, load } = useSelector((store) => store.doubtx);
 
-  //alert api antd
   const [messageApi, contextHolder] = message.useMessage();
 
-  //loading state
   const [loading, setLoading] = useState(false);
 
-  //drawer states and functions
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
     setOpen(true);
@@ -39,13 +33,10 @@ const Doubtsx = () => {
     setOpen(false);
   };
 
-  //form states and functions
   const initialFormData = {
     title: "",
     description: "",
-    // class: "",
     subject: "",
-    // name: user?.name,
     studentId: user?._id,
   };
   const [formData, setFormData] = useState(initialFormData);
@@ -53,13 +44,11 @@ const Doubtsx = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  //upload states
   const [size, setSize] = useState("");
   const [fileType, setFileType] = useState("");
   const [fileUrl, setFileUrl] = useState("");
   const [thumbnailUrl, setThumbnailUrl] = useState("");
 
-  //upload refs
   const UploadRef = useRef();
   const WidgetRef = useRef();
 
@@ -95,7 +84,6 @@ const Doubtsx = () => {
     });
   };
 
-  //cloudinary upload settings
   useEffect(() => {
     UploadRef.current = window.cloudinary;
     WidgetRef.current = UploadRef.current.createUploadWidget(
@@ -139,7 +127,6 @@ const Doubtsx = () => {
       <div className="content">
         <Header Title={"Knowledge"} Address={"Knowledge"} />
 
-        {/* <h3>Unsolved Doubts</h3> */}
         <div className="contentData">
           {doubtx
             ?.filter((elem) => elem.resolved == "No")
@@ -147,15 +134,6 @@ const Doubtsx = () => {
               return <DoubtxBox data={data} key={i} />;
             })}
         </div>
-        {/* <h3>Resolved Doubts</h3> */}
-
-        {/* <div className="contentData">
-          {doubt
-            ?.filter((elem) => elem.resolved == "Yes")
-            .map((data, i) => {
-              return <DoubtBox data={data} key={i} />;
-            })}
-        </div> */}
 
         <div>
           {user?.userType == "Admin" || user?.userType == "Tutor" ? (
@@ -164,18 +142,10 @@ const Doubtsx = () => {
           </div>
           ) : (
             <div className="contentOption">
-              {/* {data?.resolved == "No" ? (
-                <button onClick={() => handleResolve(data._id)}>
-                  <img src={doneImage}/>
-                </button>
-              ) : (
-                <button onClick={() => handleDelete(data._id)}><img src={deleteImage}/></button>
-              )} */}
             </div>
           )}
         </div>
 
-        {/* drawer  */}
         <Drawer
           title="Create Doubts"
           width={720}
@@ -209,24 +179,6 @@ const Doubtsx = () => {
               value={formData.subject}
               onChange={(e) => handleFormChange(e)}
             />
-            {/* <select name="class" onChange={(e) => handleFormChange(e)}>
-              <option value="">Choose Class</option>
-              <option value={5}>X PPLG 1</option>
-              <option value={6}>X PPLG 2</option>
-              <option value={7}>X PPLG 3</option>
-              <option value={8}>X PPLG 4</option>
-              <option value={9}>X PPLG 5</option>
-              <option value={10}>X PPLG 6</option>
-            </select>
-            <select name="subject" onChange={(e) => handleFormChange(e)}>
-              <option value="">Choose Subject</option>
-              <option value="Maths">Algoritma</option>
-              <option value="Physics">Naratif</option>
-              <option value="Chemistry">Pseudocode</option>
-              <option value="Biology">Flowchart</option>
-              <option value="Political science">Pemrograman, Tipe data, Variabel dan Operator</option>
-              <option value="History">Percabangan dan Perulangan</option>
-            </select> */}
           </form>
           {size ? (
             <div className="uploadedImgDiv">
@@ -248,7 +200,6 @@ const Doubtsx = () => {
             Add Doubt
           </button>
 
-          {/* drawer loading indicator */}
           {loading ? (
             <Space
               style={{
@@ -268,7 +219,6 @@ const Doubtsx = () => {
           ) : null}
         </Drawer>
 
-        {/* main loading indicator  */}
         {contextHolder}
         {load ? (
           <Space

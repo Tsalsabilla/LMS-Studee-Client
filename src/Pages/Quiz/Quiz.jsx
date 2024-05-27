@@ -1,11 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import "./Quiz.css";
-//hapus img kuis
 import QuizContext from "../../contexts/QuizContext";
 import Spiner from "../../Components/Spiner/Spiner";
 
-//component imports
 import Navbar from "../../Components/Sidebar/Navbar";
 import Header from "../../Components/Header/Header";
 
@@ -123,29 +121,6 @@ const Quiz = () => {
       <div className="singleTest">
       <Header Title={"Test"} Address={"Tests"} />
 
-      {/* <div className="singleTestData">
-          <div className="fileContainer">
-            {singleTest?.fileType === "jpg" || singleTest?.fileType === "jpeg" || singleTest?.fileType === "png" ? (
-              <img src={singleTest.fileUrl} alt="" />
-            ) : (
-              <video
-                allow="fullscreen"
-                frameBorder="0"
-                width="100%"
-                controls
-                controlsList="nodownload"
-              >
-                <source src={singleTest.fileUrl} />
-              </video>
-            )}
-          </div>
-        </div> */}
-
-        {/* <div className="singleTestDetails">
-          <p>{singleTest?.title}</p>
-          <p>{singleTest?.class}</p>
-        </div> */}
-
         <div className="quiz-wrapper w-full min-h-[100vh]">
         <div className="md:relative quiz-content h-full col-span-2">
           {isLoading ? (
@@ -156,14 +131,6 @@ const Quiz = () => {
                 window.location.replace("/user")
               ) : (
                 <div className="quiz h-full md:px-16 px-8 flex gap-4 flex-col justify-center">
-                  {/* <div className="score flex justify-center mb-8">
-                    <button className="bg-green-100 border-2 border-green-700 py-2 px-8 flex items-center gap-4 text-2xl rounded-lg text-green-800">
-                      <span>Score: </span>
-                      <span className="">{score}</span>
-                      <span>of</span>
-                      <span>{questions.length}</span>
-                    </button>
-                  </div> */}
                   <div className="max-md:flex hidden">
                     <div className="bar shadow-inner w-full bg-gray-100 flex border rounded-3xl">
                       <div

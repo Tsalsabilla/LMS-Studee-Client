@@ -44,11 +44,6 @@ const Lessons = () => {
     thumbnail: "",
     class: "",
     subject: "",
-    // noOfQuestions: "",
-    // pointPerQuestion: "",
-    // negativeMarking: "No",
-    // negativeMarkingPerQuestion: "No",
-    // totalTime: "",
   };
 
   const questionData = {
@@ -68,30 +63,6 @@ const Lessons = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // const handleQuestionChange = (e) => {
-  //   setQuestion({ ...question, [e.target.name]: e.target.value });
-  // };
-
-  // const addQuestion = (e) => {
-  //   e.preventDefault();
-  //   if (formData.noOfQuestions == "") {
-  //     return messageApi.open({
-  //       type: "info",
-  //       content: "Please enter the no.of questions value above",
-  //       duration: 3,
-  //     });
-  //   }
-  //   if (formData.noOfQuestions <= allQuestions.length) {
-  //     return messageApi.open({
-  //       type: "info",
-  //       content: "You already added required no.of questions",
-  //       duration: 3,
-  //     });
-  //   }
-  //   setAllQuestions([...allQuestions, question]);
-  //   setQuestion(questionData);
-  // };
-
   const removeQuestion = (i) => {
     setAllQuestions(allQuestions.filter((elem, index) => index != i));
   };
@@ -106,27 +77,6 @@ const Lessons = () => {
         });
       }
     }
-    // if (allQuestions.length === 0) {
-    //   return messageApi.open({
-    //     type: "info",
-    //     content: "No questions were entered",
-    //     duration: 3,
-    //   });
-    // }
-    // if (formData.noOfQuestions > allQuestions.length) {
-    //   return messageApi.open({
-    //     type: "info",
-    //     content: `You only added ${allQuestions.length} out of ${formData.noOfQuestions} questions`,
-    //     duration: 3,
-    //   });
-    // }
-    // if (formData.noOfQuestions < allQuestions.length) {
-    //   return messageApi.open({
-    //     type: "info",
-    //     content: `You have added more than ${formData.noOfQuestions} questions, Please remove some questions`,
-    //     duration: 3,
-    //   });
-    // }
 
     let obj = {
       ...formData,
@@ -196,7 +146,6 @@ const Lessons = () => {
           open={open}
           extra={
             <Space>
-               {/* <Button onClick={onClose}>X</Button> */}
             </Space>
           }
         >

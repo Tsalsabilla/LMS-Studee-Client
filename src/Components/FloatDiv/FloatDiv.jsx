@@ -1,11 +1,9 @@
 import React from "react";
 
-// Icons import
 import { CiSettings, CiMedicalCase, CiShoppingCart } from "react-icons/ci";
 import { PiPaintBucketThin } from "react-icons/pi";
 import { MdOutlineTune } from "react-icons/md";
 
-//CSS imports
 import { Tooltip } from "antd";
 import "./float.css";
 

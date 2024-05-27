@@ -3,12 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getTestResult } from "../../Redux/testresult/action";
 
-//component imports
 import Navbar from "../../Components/Sidebar/Navbar";
 import Header from "../../Components/Header/Header";
 import LeaderboardRow from "../../Components/Table/LeaderboardRow";
 
-//css imports
 import "./LeaderBoard.css";
 
 const LeaderBoard = () => {
@@ -17,7 +15,6 @@ const LeaderBoard = () => {
 
   let decodedToken = null
 
-  //redux states
   const {
     data: { isAuthenticated },
   } = useSelector((store) => store.auth);
@@ -26,7 +23,6 @@ const LeaderBoard = () => {
 
   const { token } = useSelector((store) => store.auth.data);
 
-  // Decode JWT token
   const decodeToken = (token) => {
     const base64Url = token.split('.')[1];
     const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
@@ -64,13 +60,11 @@ const LeaderBoard = () => {
 
   return (
     <Navbar>
-      {/* header  */}
       <div className="leaderboard">
         <Header Title={"Grade"} Address={"Grade"} />
       </div>
 
       <div className="leaderboardData">
-        {/* table */}
         <section className="tableBody">
           <table>
             <thead>

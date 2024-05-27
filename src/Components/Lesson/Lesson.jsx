@@ -2,9 +2,6 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteLesson } from "../../Redux/lesson/action";
 import "./Lesson.css";
-import startImage from '/img/start.png';
-import questionImage from '/img/question.png';
-import starImage from '/img/star.png';
 import deleteImage from '/img/deletec.png';
 
 const Lesson = ({ data }) => {
@@ -28,15 +25,11 @@ const Lesson = ({ data }) => {
           <p>{data.title}</p>
           <p>{data.subject}</p>
           <a target="_blank" href={data.class} className="inline-block bg-red-800 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-2xl">Download</a>
-          {/* <p className="lessonTime">{data.totalTime} mins</p> */}
         </div>
 
         <div className= "lessonRight">
-          {/* <p className="lessonPoint"><img src={questionImage}/>Questions : {data.noOfQuestions}</p> */}
-          {/* <p className="lessonPoint"><img src={starImage}/>Points : {data.totalPoint}</p> */}
           {userType == "Admin" || userType == "Tutor" ? (
             <>
-            {/* <button type="submit"><a href="../../../public/img/modul.pdf" download="">Download</a></button> */}
             <button
               className="deleteLesson"
               onClick={() => deleteLessonFunc(data._id)}
@@ -46,8 +39,6 @@ const Lesson = ({ data }) => {
             </>
           ) : (
             <>
-            {/* <button className="startLesson"><img src={startImage} alt="Start" /></button> */}
-            {/* <button type="button" onClick={() => window.open("../../../public/img/modul.pdf", "_blank")}>Download</button> */}
             </>
           )}
         </div>

@@ -3,13 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { createAssignment, getAssignmentData } from "../../Redux/assignment/action";
 
-//components
 import Navbar from "../../Components/Sidebar/Navbar";
 import Header from "../../Components/Header/Header";
 import AssignmentBox from "../../Components/Assignment/AssignmentBox";
 import AddIcon from "../../Components/AddIcon/AddIcon";
 
-//css imports
 import { Button, Drawer, Space, Spin, message } from "antd";
 import "./Assignment.css";
 
@@ -17,20 +15,16 @@ const Assignment = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  //redux states
   const {
     data: { isAuthenticated },
   } = useSelector((store) => store.auth);
   const { user } = useSelector((store) => store.auth.data);
   const { assignment, load } = useSelector((store) => store.assignment);
 
-  //loading state
   const [loading, setLoading] = useState(false);
 
-  //alert api
   const [messageApi, contextHolder] = message.useMessage();
 
-  //drawer states and functions
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
     setOpen(true);
@@ -39,10 +33,8 @@ const Assignment = () => {
     setOpen(false);
   };
 
-  //form states and functions
   const initialFormData = {
     title: "",
-    // class: "",
     subject: "",
     type: "",
     creator: user?.name,
@@ -52,17 +44,14 @@ const Assignment = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  //upload file states
   const [size, setSize] = useState("");
   const [fileType, setFileType] = useState("");
   const [fileUrl, setFileUrl] = useState("");
   const [thumbnailUrl, setThumbnailUrl] = useState("");
 
-  //upload refs
   const UploadRef = useRef();
   const WidgetRef = useRef();
 
-  //upload and add assignment function
   const handleSubmit = () => {
     for (let keys in formData) {
       if (formData[keys] == "") {
@@ -94,7 +83,6 @@ const Assignment = () => {
     });
   };
 
-  // cloudinary upload settings
   useEffect(() => {
     UploadRef.current = window.cloudinary;
     WidgetRef.current = UploadRef.current.createUploadWidget(
@@ -136,10 +124,8 @@ const Assignment = () => {
   return (
     <Navbar>
       <div className="assignment">
-        {/* header component */}
         <Header Title={"Assignment"} Address={"Assignment"} />
 
-        {/* assignment component */}
         <div className="assignmentData">
           {assignment?.map((data, i) => {
             return <AssignmentBox data={data} key={i} />;
@@ -153,7 +139,6 @@ const Assignment = () => {
           ""
         )}
 
-        {/* create assignment drawer */}
         <Drawer
           title="Create Assignment"
           width={720}
@@ -187,30 +172,6 @@ const Assignment = () => {
               value={formData.subject}
               onChange={(e) => handleFormChange(e)}
             />
-            {/* <select name="class" onChange={(e) => handleFormChange(e)}>
-              <option value="">Choose Class</option>
-              <option value={5}>X PPLG 1</option>
-              <option value={6}>X PPLG 2</option>
-              <option value={7}>X PPLG 3</option>
-              <option value={8}>X PPLG 4</option>
-              <option value={9}>X PPLG 5</option>
-              <option value={10}>X PPLG 6</option>
-            </select>
-            <select name="subject" onChange={(e) => handleFormChange(e)}>
-              <option value="">Choose Subject</option>
-              <option value="Maths">Algoritma</option>
-              <option value="Physics">Naratif</option>
-              <option value="Chemistry">Pseudocode</option>
-              <option value="Biology">Flowchart</option>
-              <option value="Political science">Pemrograman, Tipe data, Variabel dan Operator</option>
-              <option value="History">Percabangan dan Perulangan</option>
-            </select>
-            <select name="type" onChange={(e) => handleFormChange(e)}>
-              <option value="">Choose Assignment Type</option>
-              <option value="Assignment">Video</option>
-              <option value="Project">Book</option>
-              <option value="Practice">LKPD</option>
-            </select> */}
           </form>
           {size ? (
             <div className="uploadedImgDiv">
@@ -232,7 +193,6 @@ const Assignment = () => {
             Add Assignment
           </button>
 
-          {/* drawer loading indicator  */}
           {loading ? (
             <Space
               style={{
@@ -252,7 +212,6 @@ const Assignment = () => {
           ) : null}
         </Drawer>
 
-        {/* main loading indicator  */}
         {contextHolder}
         {load ? (
           <Space

@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { deleteDoubt, resolveDoubt } from "../../Redux/doubt/action";
 import viewImage from '/img/view.png';
 import deleteImage from '/img/deletec.png';
-import doneImage from '/img/done.png';
 
 import "./DoubtBox.css";
 
@@ -34,8 +33,6 @@ const DoubtBox = ({ data }) => {
           <p>{data.title}</p>
           <p>{data.description}</p>
           <p>{data.subject}</p>
-          {/* <p>Class {data.class}</p> */}
-          {/* <p>Resolved : {data.resolved == "Yes" ? "Yes" : "No"}</p> */}
         </div>
         <div>
           {user?.userType == "Admin" || user?.userType == "Tutor" ? (
@@ -47,13 +44,6 @@ const DoubtBox = ({ data }) => {
             <div className="contentOption">
               <p>{data.type}</p>
               <button onClick={() => handleClick(data._id)}><img src={viewImage}/></button>
-              {/* {data?.resolved == "No" ? (
-                <button onClick={() => handleResolve(data._id)}>
-                  <img src={doneImage}/>
-                </button>
-              ) : (
-                <button onClick={() => handleDelete(data._id)}><img src={deleteImage}/></button>
-              )} */}
             </div>
           )}
         </div>

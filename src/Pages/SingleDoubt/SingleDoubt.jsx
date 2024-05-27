@@ -3,11 +3,9 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addResponse, getSingleDoubtData } from "../../Redux/doubt/action";
 
-// component imports
 import Navbar from "../../Components/Sidebar/Navbar";
 import Header from "../../Components/Header/Header";
 
-//css imports
 import { Space, Spin } from "antd";
 import "./SingleDoubt.css";
 
@@ -16,13 +14,11 @@ const SingleDoubt = () => {
   const params = useParams();
   const navigate = useNavigate();
 
-  // redux states
   const {
     data: { isAuthenticated },
   } = useSelector((store) => store.auth);
   const { singleDoubt, load } = useSelector((store) => store.doubt);
 
-  // form states
   const [descPengetahuanAwal, setDescPengetahuanAwal] = useState("");
   const [descFasePenstrukturan, setDescFasePenstrukturan] = useState("");
   const [descPengetahuanAkhir, setDescPengetahuanAkhir] = useState("");
@@ -79,35 +75,9 @@ const SingleDoubt = () => {
 
         <div className="doubtResponses">
           <p>{singleDoubt?.title}</p>
-          {/* <p>Class : {singleDoubt?.class}</p> */}
           <p>{singleDoubt?.subject}</p>
           <p>{singleDoubt?.description}</p>
-          {/* <p>Resolved : {singleDoubt?.resolved == "Yes" ? "Yes" : "No"}</p> */}
         </div>
-
-        {/* <div className="doubtResponses bg-red-900 rounded-lg p-4 my-2">
-          <h3 className="text-white">Pengetahuan Awal</h3>
-        </div>
-
-        <div className="doubtResponses bg-white rounded-lg p-4 my-2">
-          <h3 className="text-black">Silahkan jawab pertanyaan yang terdapat pada LKPD | Week 2 secara individu untuk mengukur pengetahuan awal mengenai Percabangan dan Perulangan!</h3>
-        </div>
-
-        <div className="doubtResponses bg-red-900 rounded-lg p-4 my-2">
-          <h3 className="text-white">Fase Penstrukturan Ide</h3>
-        </div>
-
-        <div className="doubtResponses bg-white rounded-lg p-4 my-2">
-          <h3 className="text-black">Lakukanlah diskusi secara berkelompok untuk mencari informasi tambahan, bertanya pertanyaan, atau mencoba berbagai pendekatan guna menambah pengetahuan baru mengenai Percabangan dan Perulangan. Lalu jawablah pertanyaan dengan tepat</h3>
-        </div>
-
-        <div className="doubtResponses bg-red-900 rounded-lg p-4 my-2">
-          <h3 className="text-white">Pengetahuan Akhir</h3>
-        </div>
-
-        <div className="doubtResponses bg-white rounded-lg p-4 my-2">
-          <h3 className="text-black">Setelah itu silahkan jawab pertanyaan secara individu untuk mengukur pengetahuan baru mengenai Percabangan dan Perulangan!</h3>
-        </div> */}
 
         <div className="doubtResponses bg-red-900 rounded-lg p-4 my-2">
           <h3 className="text-white">Pengetahuan Awal</h3>

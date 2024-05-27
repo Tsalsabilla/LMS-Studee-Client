@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { adminLogin, studentLogin, tutorLogin } from "../../Redux/auth/action";
 import coverImage from '/img/cover.png';
 
-//css imports
 import { message, Space, Spin } from "antd";
 import "./Login.css";
 
@@ -13,13 +12,10 @@ const Login = () => {
   const navigate = useNavigate();
   const auth = useSelector((store) => store.auth);
 
-  //alert api
   const [messageApi, contextHolder] = message.useMessage();
 
-  //loading state
   const [loading, setLoading] = useState(false);
 
-  //form state
   const [formData, setFormData] = useState({
     type: "",
     email: "",
@@ -30,7 +26,6 @@ const Login = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // login function
   const handleFormSubmit = (e) => {
     e.preventDefault();
     if (formData.type === "") {
@@ -147,7 +142,6 @@ const Login = () => {
           </div>
 
           <div>
-            {/* login form  */}
             <form onSubmit={handleFormSubmit}>
               <input
                 required
@@ -171,14 +165,12 @@ const Login = () => {
                 name="type"
                 onChange={handleFormChange}
                 className="p-2 my-2"
-                // Anda juga dapat menambahkan kelas Tailwind pada elemen select
               >
                 <option value="">Select user type</option>
                 <option value="admin">Admin</option>
                 <option value="student">Student</option>
                 <option value="tutor">Guest</option>
               </select>
-              {/* <button type="submit" className="p-2 my-2">LOGIN</button> */}
               <div style={{ textAlign: 'center' }}>
                 <button type="submit" className="p-2 my-2">Log in</button>
                 <h3 className="text-gray-700 text-l font-medium" style={{ fontSize: 'medium', fontWeight: 'normal' }}>Don't have an account?</h3>
@@ -189,7 +181,6 @@ const Login = () => {
         </div>
       </div>
 
-      {/* loading indicator */}
       {contextHolder}
       {loading ? (
         <Space
