@@ -98,6 +98,10 @@ Salt_rounds = 5
 
 ![5](https://raw.githubusercontent.com/Tsalsabilla/LMS-Studee-Client/main/src/Assets/quiz.png)
 
+5. Test Result
+![6](https://raw.githubusercontent.com/Tsalsabilla/LMS-Studee-Client/main/src/Assets/test.png)
+
+
 ##  Contributor
 
 - [@Tsalsabilla](https://github.com/Tsalsabilla)
