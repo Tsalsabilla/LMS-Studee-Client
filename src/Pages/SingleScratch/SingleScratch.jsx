@@ -75,7 +75,7 @@ const SingleScratch = () => {
 
         <div class="mx-auto w-full max-w-screen-xl">
           <div class="relative" style={{ paddingTop: "75%" }}>
-            <iframe src="https://quizizz.com/join/pre-game/running/U2FsdGVkX19kEg5%252FnDdKIvDfVk8cUPi%252FLfPxPTMsNARJGDbLFxsWxJOTid%252FYeoH%252FfvBx15GhHTnApKbmPuEIrg%253D%253D/start" allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
+            <iframe src="https://quizizz.com/embed/quiz/664186a682be59c05aef4f93" allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
           </div>
         </div>
 
