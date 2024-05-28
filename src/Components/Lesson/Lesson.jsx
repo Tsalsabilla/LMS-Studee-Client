@@ -24,7 +24,7 @@ const Lesson = ({ data }) => {
         <div>
           <p>{data.title}</p>
           <p>{data.subject}</p>
-          <a target="_blank" href={data.class} className="inline-block bg-red-800 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-2xl">Download</a>
+          <a href={data.class} className="inline-block bg-red-800 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-2xl">Download</a>
         </div>
 
         <div className= "lessonRight">

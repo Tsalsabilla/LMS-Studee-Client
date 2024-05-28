@@ -12,13 +12,13 @@ import logo from "../../Assets/logo.png";
 
 import { BiLogOut } from "react-icons/bi";
 import { TbLayoutGridAdd } from "react-icons/tb";
-import { LuLayoutGrid } from "react-icons/lu";
+import { LuLayoutGrid, LuSettings } from "react-icons/lu";
 import { PiStudent, PiChalkboardTeacher } from "react-icons/pi";
 import { GoChevronDown, GoTrophy, GoHome } from "react-icons/go";
 import { RiAdminLine } from "react-icons/ri";
 import { AiOutlineSchedule, AiOutlineRead, AiOutlinePlayCircle } from "react-icons/ai";
 import { CgGames } from "react-icons/cg";
-import { IoBulbOutline, IoExtensionPuzzleOutline } from "react-icons/io5";
+import { IoBulbOutline, IoDocumentTextOutline, IoExtensionPuzzleOutline } from "react-icons/io5";
 import { MdOutlineAssignment } from "react-icons/md";
 
 import "./Navbar.css";
@@ -84,8 +84,39 @@ const Navbar = ({ children }) => {
   const items = [
     {
       key: "1",
-      label: <span onClick={() => handleLogout()}>Logout</span>,
+      label:
+      <span className="text-center block" style={{ borderBottom: "1px solid rgb(231, 231, 231)" }}>
+      <p>{name}</p>
+      <p> as {userType} </p>
+      </span>,
     },
+    {
+      key: "2",
+      label: (
+        <span className="flex justify-end items-center">
+          Documentation
+          <IoDocumentTextOutline className="text-gray-500 ml-2" />
+        </span>
+      ),
+    },
+    {
+      key: "4",
+      label: (
+        <span className="flex justify-end items-center">
+          Settings
+          <LuSettings className="text-gray-500 ml-2" />
+        </span>
+      ),
+    }
+    // {
+    //   key: "2",
+    //   label: (
+    //     <span className="flex justify-end items-center">
+    //       <BiLogOut className="text-red-500 mr-2" />
+    //       Logout
+    //     </span>
+    //   ),
+    // },
   ];
 
   const handleLogout = () => {
@@ -158,12 +189,6 @@ const Navbar = ({ children }) => {
             <Dropdown menu={{ items }} placement="bottomLeft" arrow>
               <Link href="/" className="profile">
                 <img src={user} />
-                <div>
-                  <p>{name}..</p>
-                  <p>
-                    {userType} <GoChevronDown />
-                  </p>
-                </div>
               </Link>
             </Dropdown>
           </div>

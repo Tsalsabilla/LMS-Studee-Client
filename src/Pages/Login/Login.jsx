@@ -133,8 +133,8 @@ const Login = () => {
     <div className="login">
       <br />
       <div className="loginContainer">
-        <div className="loginImage">
-          <img src={coverImage}/>
+      <div className="loginImage w-2/5">
+          <img src={coverImage} className="w-4/5 mx-auto"/>
         </div>
         <div className="loginDetail">
           <div>

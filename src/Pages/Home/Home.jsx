@@ -8,11 +8,10 @@ import Navbar from "../../Components/Sidebar/Navbar";
 import SalesDiv from "../../Components/SalesDiv/SalesDiv";
 import Header from "../../Components/Header/Header";
 
-import { RiAdminLine } from "react-icons/ri";
-import { BiLogOut, BiUserVoice } from "react-icons/bi";
-import { PiStudentDuotone } from "react-icons/pi";
-import { AiOutlineQuestion } from "react-icons/ai";
-import { TbLayoutGridAdd, TbUsers, TbBrandSpeedtest } from "react-icons/tb";
+import { PiStudent } from "react-icons/pi";
+import { AiOutlineSchedule, AiOutlineRead, AiOutlinePlayCircle } from "react-icons/ai";
+import { IoBulbOutline } from "react-icons/io5";
+import { CgGames } from "react-icons/cg";
 
 import "react-vertical-timeline-component/style.min.css";
 import "./Home.css";
@@ -32,34 +31,34 @@ const Home = () => {
 
   const overviewData = [
     {
-      icon: <RiAdminLine />,
-      title: "Admins",
-      number: dashboard?.admins?.length || 0,
-    },
-    {
-      icon: <PiStudentDuotone />,
+      icon: <PiStudent />,
       title: "Students",
       number: dashboard?.students?.length || 0,
     },
     {
-      icon: <BiUserVoice />,
-      title: "Guests",
-      number: dashboard?.tutors?.length || 0,
+      icon: <AiOutlineSchedule />,
+      title: "Tests",
+      number: dashboard?.tests?.length || 0,
     },
     {
-      icon: <TbLayoutGridAdd />,
-      title: "Contents",
+      icon: <AiOutlineRead />,
+      title: "Lessons",
+      number: dashboard?.lessons?.length || 0,
+    },
+    {
+      icon: <AiOutlinePlayCircle />,
+      title: "Videos",
       number: dashboard?.contents?.length || 0,
     },
     {
-      icon: <TbBrandSpeedtest />,
-      title: "Scratchs",
-      number: dashboard?.scratchs?.length || 0,
+      icon: <IoBulbOutline />,
+      title: "Knowledge",
+      number: dashboard?.doubts?.length || 0,
     },
     {
-      icon: <AiOutlineQuestion />,
-      title: "Doubts",
-      number: dashboard?.doubts?.length || 0,
+      icon: <CgGames />,
+      title: "Quiz",
+      number: dashboard?.scratchs?.length || 0,
     },
   ];
 
