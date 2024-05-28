@@ -3,13 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { createTest, getTestData } from "../../Redux/test/action";
 
-//components
 import Navbar from "../../Components/Sidebar/Navbar";
 import Header from "../../Components/Header/Header";
 import TestBox from "../../Components/Test/TestBox";
 import AddIcon from "../../Components/AddIcon/AddIcon";
 
-//css imports
 import { Button, Drawer, Space, Spin, message } from "antd";
 import "./Test.css";
 
@@ -17,20 +15,16 @@ const Test = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  //redux states
   const {
     data: { isAuthenticated },
   } = useSelector((store) => store.auth);
   const { user } = useSelector((store) => store.auth.data);
   const { test, load } = useSelector((store) => store.test);
 
-  //loading state
   const [loading, setLoading] = useState(false);
 
-  //alert api
   const [messageApi, contextHolder] = message.useMessage();
 
-  //drawer states and functions
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
     setOpen(true);
@@ -39,12 +33,9 @@ const Test = () => {
     setOpen(false);
   };
 
-  //form states and functions
   const initialFormData = {
     title: "",
     class: "",
-    // subject: "",
-    // type: "",
     creator: user?.name,
   };
   const [formData, setFormData] = useState(initialFormData);
@@ -52,17 +43,14 @@ const Test = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  //upload file states
   const [size, setSize] = useState("");
   const [fileType, setFileType] = useState("");
   const [fileUrl, setFileUrl] = useState("");
   const [thumbnailUrl, setThumbnailUrl] = useState("");
 
-  //upload refs
   const UploadRef = useRef();
   const WidgetRef = useRef();
 
-  //upload and add test function
   const handleSubmit = () => {
     for (let keys in formData) {
       if (formData[keys] == "") {
@@ -94,7 +82,6 @@ const Test = () => {
     });
   };
 
-  // cloudinary upload settings
   useEffect(() => {
     UploadRef.current = window.cloudinary;
     WidgetRef.current = UploadRef.current.createUploadWidget(
@@ -136,10 +123,8 @@ const Test = () => {
   return (
     <Navbar>
       <div className="test">
-        {/* header component */}
         <Header Title={"Test"} Address={"Test"} />
 
-        {/* test component */}
         <div className="testData">
           {test?.map((data, i) => {
             return <TestBox data={data} key={i} />;
@@ -153,7 +138,6 @@ const Test = () => {
           ""
         )}
 
-        {/* create test drawer */}
         <Drawer
           title="Create Test"
           width={720}
@@ -181,28 +165,6 @@ const Test = () => {
               <option value="X PPLG 4">X PPLG 4</option>
               <option value="X PPLG 5">X PPLG 5</option>
             </select>
-            {/* <input
-              placeholder="Link Google Form"
-              type="text"
-              name="subject"
-              value={formData.subject}
-              onChange={(e) => handleFormChange(e)}
-            /> */}
-            {/* <select name="subject" onChange={(e) => handleFormChange(e)}>
-              <option value="">Choose Subject</option>
-              <option value="Algoritma dan Pemrograman">Algoritma dan Pemrograman</option>
-              <option value="Physics">Naratif</option>
-              <option value="Chemistry">Pseudocode</option>
-              <option value="Biology">Flowchart</option>
-              <option value="Political science">Pemrograman, Tipe data, Variabel dan Operator</option>
-              <option value="History">Percabangan dan Perulangan</option>
-            </select> */}
-            {/* <select name="type" onChange={(e) => handleFormChange(e)}>
-              <option value="">Choose Test Type</option>
-              <option value="Assignment">Video</option>
-              <option value="Project">Book</option>
-              <option value="Practice">LKPD</option>
-            </select> */}
           </form>
           {size ? (
             <div className="uploadedImgDiv">
@@ -224,7 +186,6 @@ const Test = () => {
             Add Test
           </button>
 
-          {/* drawer loading indicator  */}
           {loading ? (
             <Space
               style={{
@@ -244,7 +205,6 @@ const Test = () => {
           ) : null}
         </Drawer>
 
-        {/* main loading indicator  */}
         {contextHolder}
         {load ? (
           <Space

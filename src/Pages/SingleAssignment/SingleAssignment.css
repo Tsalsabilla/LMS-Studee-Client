@@ -49,9 +49,6 @@
   gap: 10px;
 }
 
-
-/* media queries  */
-
 @media screen and (max-width: 600px) {
   .fileContainer img {
     height: auto;

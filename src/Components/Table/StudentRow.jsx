@@ -8,7 +8,6 @@ const StudentRow = ({ data }) => {
       <td>{data.email}</td>
       <td>{data.class}</td>
       <td>{data.access}</td>
-      {/* <td>{data.totalScratch}</td> */}
     </tr>
   );
 };

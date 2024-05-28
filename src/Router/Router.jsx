@@ -13,7 +13,6 @@ import Assignment from "../Pages/Assignments/Assignment";
 import Test from "../Pages/Tests/Test";
 import SingleContent from "../Pages/SingleContent/SingleContent";
 import SingleAssignment from "../Pages/SingleAssignment/SingleAssignment";
-// import SingleTest from "../Pages/SingleTest/SingleTest";
 import Doubts from "../Pages/Doubts/Doubts";
 import SingleDoubt from "../Pages/SingleDoubt/SingleDoubt";
 import Doubtsx from "../Pages/Doubts/Doubtsx";
@@ -46,7 +45,6 @@ const Router = () => {
         <Route path="/contents" element={<Content />} />
         <Route path="/assignment/:id" element={<SingleAssignment />} />
         <Route path="/assignments" element={<Assignment />} />
-        {/* <Route path="/test/:id" element={<SingleTest />} /> */}
         <Route path="/tests" element={<Test />} />
         <Route path="/doubts" element={<Doubts />} />
         <Route path="/doubt/:id" element={<SingleDoubt />} />

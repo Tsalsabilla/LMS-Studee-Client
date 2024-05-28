@@ -1,7 +1,7 @@
 .testDiv {
   width: 50vw;
   max-width: 400px;
-  height: 30vh; /* Mengatur tinggi menjadi 50% dari tinggi layar */
+  height: 30vh;
   padding: 10px;
   background-color: var(--light);
   border-radius: 12px;
@@ -51,5 +51,5 @@
 .testOption {
   display: flex;
   gap: 5px;
-  justify-content: flex-end; /* Mengatur rata kanan */
+  justify-content: flex-end;
 }

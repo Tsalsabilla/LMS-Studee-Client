@@ -10,7 +10,6 @@ import editImage from '/img/edit.png';
 const TutorRow = ({ data }) => {
   const dispatch = useDispatch();
 
-  //form states
   const initialAdminData = {
     name: data.name,
     access: data.access,
@@ -21,7 +20,6 @@ const TutorRow = ({ data }) => {
     setAdminFormData({ ...adminFormData, [e.target.name]: e.target.value });
   };
 
-  //drawer states
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
     setIsModalOpen(true);

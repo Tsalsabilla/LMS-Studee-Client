@@ -3,13 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getTutorData, tutorRegister } from "../../Redux/tutor/action";
 
-//component imports
 import Navbar from "../../Components/Sidebar/Navbar";
 import Header from "../../Components/Header/Header";
 import AddIcon from "../../Components/AddIcon/AddIcon";
 import TutorRow from "../../Components/Table/TutorRow";
 
-//css imports
 import { Button, Drawer, Space, Spin, message } from "antd";
 import "./Tutor.css";
 
@@ -17,19 +15,15 @@ const Tutor = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  //redux states
   const {
     data: { isAuthenticated },
   } = useSelector((store) => store.auth);
   const { tutors, load } = useSelector((store) => store.tutor);
 
-  //loading state
   const [loading, setLoading] = useState(false);
 
-  //alert api antd
   const [messageApi, contextHolder] = message.useMessage();
 
-  //drawer states
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
     setOpen(true);
@@ -38,7 +32,6 @@ const Tutor = () => {
     setOpen(false);
   };
 
-  //form states
   const initialFormData = {
     name: "",
     email: "",

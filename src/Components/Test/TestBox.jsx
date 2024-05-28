@@ -28,19 +28,16 @@ const TestBox = ({ data }) => {
       <div>
         <div>
           <p>{data.title}</p>
-          {/* <p>{data.subject}</p> */}
           <p>{data.class}</p>
         </div>
         <div>
           {user.userType == "Admin" ? (
             <div className="testOption">
-              {/* <p>{data.type}</p> */}
               <button onClick={() => handleClick(data._id)}><img src={viewImage}/> </button>
               <button onClick={() => handleDelete(data._id)}><img src={deleteImage}/></button>
             </div>
           ) : (
             <div className="testOption">
-              {/* <p>{data.type}</p> */}
               <button onClick={() => handleClick(data._id)}><img src={viewImage}/> </button>
             </div>
           )}

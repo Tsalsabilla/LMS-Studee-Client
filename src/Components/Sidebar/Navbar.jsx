@@ -7,23 +7,20 @@ import { Dropdown } from "antd";
 
 import SidebarItem from "./SideBarItem"
 
-// Image imports
 import user from "../../Assets/useravatar.png";
 import logo from "../../Assets/logo.png";
 
-// Icon imports
 import { BiLogOut } from "react-icons/bi";
 import { TbLayoutGridAdd } from "react-icons/tb";
-import { LuLayoutGrid } from "react-icons/lu";
+import { LuLayoutGrid, LuSettings } from "react-icons/lu";
 import { PiStudent, PiChalkboardTeacher } from "react-icons/pi";
 import { GoChevronDown, GoTrophy, GoHome } from "react-icons/go";
 import { RiAdminLine } from "react-icons/ri";
 import { AiOutlineSchedule, AiOutlineRead, AiOutlinePlayCircle } from "react-icons/ai";
 import { CgGames } from "react-icons/cg";
-import { IoBulbOutline, IoExtensionPuzzleOutline } from "react-icons/io5";
+import { IoBulbOutline, IoDocumentTextOutline, IoExtensionPuzzleOutline } from "react-icons/io5";
 import { MdOutlineAssignment } from "react-icons/md";
 
-// CSS imports
 import "./Navbar.css";
 
 const Navbar = ({ children }) => {
@@ -31,7 +28,6 @@ const Navbar = ({ children }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  //redux state
   const auth = useSelector((store) => store.auth);
   if (!auth.data.isAuthenticated) {
     return navigate("/");
@@ -40,10 +36,8 @@ const Navbar = ({ children }) => {
     user: { userType, name, premium },
   } = useSelector((store) => store.auth.data);
 
-  //Sidebar toggle state
   const [toggle, setToggle] = useState(true);
 
-  //Sidebar menu
   const adminData = [
     { icon: <GoHome />, title: "Dashboard", address: "/home" },
     { icon: <RiAdminLine />, title: "Admin", address: "/admin" },
@@ -56,7 +50,6 @@ const Navbar = ({ children }) => {
       { icon: <IoExtensionPuzzleOutline />, title: "Initial Knowledge", address: "/doubts" },
       { icon: <IoBulbOutline />, title: "Final Knowledge", address: "/doubtsx" },
       { icon: <MdOutlineAssignment />, title: "Assignments", address: "/doubtsz" },
-      // { icon: <MdOutlineAssignment />, title: "Assignments", address: "/assignments" },
       { icon: <CgGames />, title: "Quiz", address: "/scratchs" },
     ]},
     { icon: <GoTrophy />, title: "Grades", address: "/leaderboard" },
@@ -70,7 +63,6 @@ const Navbar = ({ children }) => {
       { icon: <IoExtensionPuzzleOutline />, title: "Initial Knowledge", address: "/doubts" },
       { icon: <IoBulbOutline />, title: "Final Knowledge", address: "/doubtsx" },
       { icon: <MdOutlineAssignment />, title: "Assignments", address: "/doubtsz" },
-      // { icon: <MdOutlineAssignment />, title: "Assignments", address: "/assignments" },
       { icon: <CgGames />, title: "Quiz", address: "/scratchs" },
     ]},
     { icon: <GoTrophy />, title: "Grades", address: "/leaderboard" },
@@ -84,28 +76,55 @@ const Navbar = ({ children }) => {
       { icon: <IoExtensionPuzzleOutline />, title: "Initial Knowledge", address: "/doubts" },
       { icon: <IoBulbOutline />, title: "Final Knowledge", address: "/doubtsx" },
       { icon: <MdOutlineAssignment />, title: "Assignments", address: "/doubtsz" },
-      // { icon: <MdOutlineAssignment />, title: "Assignments", address: "/assignments" },
       { icon: <CgGames />, title: "Quiz", address: "/scratchs" },
     ]},
     { icon: <GoTrophy />, title: "Grades", address: "/leaderboard" },
   ];
 
-  // Dropdown menu
   const items = [
     {
       key: "1",
-      label: <span onClick={() => handleLogout()}>Logout</span>,
+      label:
+      <span className="text-center block" style={{ borderBottom: "1px solid rgb(231, 231, 231)" }}>
+      <p>{name}</p>
+      <p> as {userType} </p>
+      </span>,
     },
+    {
+      key: "2",
+      label: (
+        <span className="flex justify-end items-center">
+          Documentation
+          <IoDocumentTextOutline className="text-gray-500 ml-2" />
+        </span>
+      ),
+    },
+    {
+      key: "4",
+      label: (
+        <span className="flex justify-end items-center">
+          Settings
+          <LuSettings className="text-gray-500 ml-2" />
+        </span>
+      ),
+    }
+    // {
+    //   key: "2",
+    //   label: (
+    //     <span className="flex justify-end items-center">
+    //       <BiLogOut className="text-red-500 mr-2" />
+    //       Logout
+    //     </span>
+    //   ),
+    // },
   ];
 
-  //logout function
   const handleLogout = () => {
     dispatch(authLogout());
   };
   
   return (
     <>
-      {/* Side Bar */}
       <div id="sidebar" className={toggle ? "hide" : ""}>
         <Link href="/" className="logo">
           <div className="logoBox">
@@ -117,7 +136,6 @@ const Navbar = ({ children }) => {
           </div>
         </Link>
 
-        {/* Side bar menu */}
         <ul className="side-menu top">
           {userType === "Tutor"
             ? tutorData?.map((data, i) => {
@@ -140,22 +158,12 @@ const Navbar = ({ children }) => {
               );
               })
             : ""}
-          {/* {userType == "Student" && premium == "false" ? (
-            <Menu
-              Icon={<MdOutlineWorkspacePremium />}
-              Title={"Premium"}
-              Address={"/premium"}
-            />
-          ) : (
-            ""
-          )} */}
           <span onClick={() => handleLogout()}>
             <Menu Icon={<BiLogOut />} Title={"Logout"} Address={""} />
           </span>
         </ul>
       </div>
 
-      {/* Top Bar */}
       <div id="content">
         <nav>
           <div>
@@ -178,19 +186,9 @@ const Navbar = ({ children }) => {
             )}
           </div>
           <div>
-            {/* <Link href="/" className="notification">
-              <BsBell />
-              <span className="num number">4</span>
-            </Link> */}
             <Dropdown menu={{ items }} placement="bottomLeft" arrow>
               <Link href="/" className="profile">
                 <img src={user} />
-                <div>
-                  <p>{name}..</p>
-                  <p>
-                    {userType} <GoChevronDown />
-                  </p>
-                </div>
               </Link>
             </Dropdown>
           </div>

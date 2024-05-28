@@ -3,8 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { deleteScratch } from "../../Redux/scratch/action";
 import "./Scratch.css";
 import startImage from '/img/start.png';
-import questionImage from '/img/question.png';
-import starImage from '/img/star.png';
 import deleteImage from '/img/deletec.png';
 import { useNavigate } from "react-router-dom";
 
@@ -33,12 +31,8 @@ const Scratch = ({ data }) => {
         <div>
           <p>{data.title}</p>
           <p>{data.subject}</p>
-          {/* <p>Class {data.class}</p> */}
-          {/* <p className="scratchTime">{data.totalTime} mins</p> */}
         </div>
         <div className= "scratchRight">
-          {/* <p className="scratchPoint"><img src={questionImage}/>Questions : {data.noOfQuestions}</p>
-          <p className="scratchPoint"><img src={starImage}/>Points : {data.totalPoint}</p> */}
           {userType == "Admin" || userType == "Tutor" ? (
             <>
             <button

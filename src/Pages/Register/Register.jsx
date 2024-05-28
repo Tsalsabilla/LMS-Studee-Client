@@ -10,13 +10,10 @@ const Register = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    //alert api
     const [messageApi, contextHolder] = message.useMessage();
 
-    //loading state
     const [loading, setLoading] = useState(false);
 
-    //form state
     const [formData, setFormData] = useState({
         email: "",
         name: "",
@@ -28,7 +25,6 @@ const Register = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     }
 
-    // handle submit 
     const handleFormSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
@@ -74,7 +70,6 @@ const Register = () => {
             </div>
   
             <div>
-              {/* login form  */}
               <form onSubmit={handleFormSubmit}>
               <input
                   required
@@ -122,7 +117,6 @@ const Register = () => {
           </div>
         </div>
   
-        {/* loading indicator */}
         {contextHolder}
         {loading ? (
           <Space
