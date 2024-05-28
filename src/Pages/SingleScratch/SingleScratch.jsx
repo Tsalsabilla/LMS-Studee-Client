@@ -42,7 +42,7 @@ const SingleScratch = () => {
   return (
     <Navbar>
       <div className="singleContent">
-        <Header Title={"Scratch Details"} Address={"Scratch"} />
+        <Header Title={"Quiz"} Address={"Quiz"} />
 
         <div className="scratchResponses">
           <p>{singleScratch?.title}</p>

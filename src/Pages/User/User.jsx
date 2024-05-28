@@ -15,10 +15,10 @@ const User = () => {
     <>
       <div className="">
         <div className="relative">
-          <div className="header p-2 shadow-lg sm:px-16 px-4 flex justify-between items-center text-white bg-green-500">
+          <div className="header p-2 shadow-lg sm:px-16 px-4 flex justify-between items-center text-white bg-custom-red">
             <h1 className="sm:text-2xl text-lg">
-              <span className="font-bold">
-                {score.length >= 10 ? "Good Job:" : "Opps! try again:"}
+              <span className="font-bold text-gray-200">
+                {score.length >= 2 ? "Good Job:" : "Opps! try again:"}
               </span>{" "}
               <span className="text-gray-200">
                 You score is {score.length} of {userQuiz.length}
@@ -27,7 +27,8 @@ const User = () => {
           </div>
           <button
             onClick={handleRetakeQuiz}
-            className="fixed bottom-6 z-20 right-6 shadow-xl w-24 h-24 text-gray-100 px-4 py-2 bg-red-500 rounded-full flex justify-center items-center"
+            className="fixed bottom-6 z-20 right-6 bg-custom-red text-white shadow-lg w-28 rounded-full px-4 py-2 flex items-center justify-center cursor-pointer text-black hover:transition hover:duration-150 hover:transform hover:translate-y-1"
+            // className="fixed bottom-6 z-20 right-6 shadow-xl w-24 h-24 text-gray-100 px-4 py-2 bg-red-500 rounded-full flex justify-center items-center"
           >
             Close
           </button>

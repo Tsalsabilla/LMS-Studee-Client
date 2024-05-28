@@ -100,7 +100,7 @@ const Home = () => {
           </div>
 
           <div className="charts">
-            <div className="leaderboardData m-0 w-3/4">
+            <div className="leaderboardData m-0 w-full">
             <div className="chartHead bg-#920000 px-4 py-2 rounded-t-lg">
         <p className="text-gray-800 font-bold">Leader Board</p>
     </div>

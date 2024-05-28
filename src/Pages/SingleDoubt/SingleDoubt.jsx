@@ -53,7 +53,7 @@ const SingleDoubt = () => {
   return (
     <Navbar>
       <div className="singleContent">
-        <Header Title={"Doubt Details"} Address={"Doubt"} />
+        <Header Title={"Initial Knowlede"} Address={"Initial"} />
         <div className="singleContentData">
         <div className="fileContainer">
   {singleDoubt?.fileType === "jpg" || singleDoubt?.fileType === "jpeg" || singleDoubt?.fileType === "png"? (
@@ -100,16 +100,16 @@ const SingleDoubt = () => {
         })}
         <div className="doubtResponses bg-white rounded-lg p-4 my-2">
           <form
-            className="responseForm"
-            onSubmit={(e) => handleSubmit(e, "PengetahuanAkhir")}
+          className="responseForm flex flex-row" onSubmit={(e) => handleSubmit(e, "PengetahuanAkhir")}
           >
             <input
               name="desc"
+              className="mx-auto border-custom-red w-3/4"
               value={descPengetahuanAkhir}
               onChange={(e) => setDescPengetahuanAkhir(e.target.value)}
               placeholder="e.g. Salsa | Sistematis, Langkah, Metode, ..."
             />
-            <input type="submit" />
+            <input type="submit" className="bg-custom-red text-white py-2 px-4 rounded-full border-none max-w-md mx-auto w-1/4" />
           </form>
         </div>
 

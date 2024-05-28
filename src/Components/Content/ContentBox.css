@@ -17,39 +17,10 @@
   overflow: hidden;
   margin-bottom: 6px;
 }
-.contentDiv > div:nth-child(2) {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 .contentDiv > div:nth-child(2) p {
   font-size: 14px;
   margin-bottom: 5px;
-}
-
-.contentDiv > div:nth-child(2) button {
-  outline: none;
-  border: none;
-  background-color: #ffffff;
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-  width: 24px;
-  height: 24px;
-  padding: 4px;
-  display: flex;
-  align-items: center;
-  border-radius: 48px;
-}
-
-.contentDiv > div:nth-child(2) button img {
-  width: 100%;
-  height: auto;
-}
-
-.contentDiv > div:nth-child(2) button:hover {
-  transform: translateY(-0.2rem);
-  transition: transform 150ms;
+  text-align: center;
 }
 .contentOption{
   display: flex;

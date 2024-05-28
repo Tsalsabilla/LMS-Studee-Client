@@ -41,7 +41,7 @@ const SingleContent = () => {
   return (
     <Navbar>
       <div className="singleContent">
-        <Header Title={"Content"} Address={"Contents"} />
+        <Header Title={"Video"} Address={"Video"} />
 
         <div className="singleContentData">
           <div className="fileContainer">
@@ -71,24 +71,30 @@ const SingleContent = () => {
 
         <div class="mx-auto w-full max-w-screen-xl">
 
-        <h3 className="text-gray-700 text-l font-medium" style={{ fontSize: 'medium', fontWeight: 'normal' }}>Algoritma</h3>
-          <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
+        <div className="singleContentDetails bg-custom-red rounded-lg p-4 my-2">
+          <h3 className="text-white font-bold text-center">Algoritma</h3>
+        </div>
+        <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
             <iframe src="https://www.youtube.com/embed/fLqHSiJMMyI"
             title="YouTube video player"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
           </div>
 
-          <h3 className="text-gray-700 text-l font-medium" style={{ fontSize: 'medium', fontWeight: 'normal' }}>Naratif dan Pseudocode </h3>
-          <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
+          <div className="singleContentDetails bg-custom-red rounded-lg p-4 my-2">
+          <h3 className="text-white font-bold text-center">Naratif danPseudocode</h3>
+        </div>
+        <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
             <iframe src="https://www.youtube.com/embed/Yw6YscAMe3U"
             title="YouTube video player"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
           </div>
           
-          <h3 className="text-gray-700 text-l font-medium" style={{ fontSize: 'medium', fontWeight: 'normal' }}>Flowchart </h3>
-          <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
+          <div className="singleContentDetails bg-custom-red rounded-lg p-4 my-2">
+          <h3 className="text-white font-bold text-center">Flowchart</h3>
+        </div>
+        <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
             <iframe src="https://www.youtube.com/embed/1S35wmupqn4"
             title="YouTube video player"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

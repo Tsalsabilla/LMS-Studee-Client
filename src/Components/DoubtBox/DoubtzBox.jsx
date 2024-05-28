@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { deleteDoubtz, resolveDoubtz } from "../../Redux/doubt/actionz";
 import viewImage from '/img/view.png';
 import deleteImage from '/img/deletec.png';
+import { FiTrash2 } from "react-icons/fi";
+import { FiEye  } from "react-icons/fi";
 
 import "./DoubtBox.css";
 
@@ -29,16 +31,16 @@ const DoubtzBox = ({ data }) => {
         <img src={data.thumbnailUrl} alt="thumbnail" />
       </div>
       <div>
-        <div>
+      <div class="flex items-center justify-center flex-col">
           <p>{data.title}</p>
           <p>{data.description}</p>
           <p>{data.subject}</p>
         </div>
-        <div>
+        <div class="flex items-center justify-center flex-col">
           {user?.userType == "Admin" || user?.userType == "Tutor" ? (
             <div className="contentOption">
-              <button onClick={() => handleClick(data._id)}> <img src={viewImage}/> </button>
-              <button onClick={() => handleDelete(data._id)}><img src={deleteImage}/></button>
+              <button class="bg-white shadow-lg w-full rounded-full px-4 py-2 flex items-center justify-center cursor-pointer text-black hover:transition hover:duration-150 hover:transform hover:translate-y-1" onClick={() => handleClick(data._id)}><FiEye className="text-yellow-500 mr-2"/> View</button>
+              <button class="bg-white shadow-lg w-full rounded-full px-4 py-2 flex items-center justify-center cursor-pointer text-black hover:transition hover:duration-150 hover:transform hover:translate-y-1" onClick={() => handleDelete(data._id)}><FiTrash2 className="text-red-500 mr-2"/> Delete</button>
             </div>
           ) : (
             <div className="contentOption">
