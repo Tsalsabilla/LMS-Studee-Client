@@ -54,7 +54,7 @@ const SingleDoubtz = () => {
   return (
     <Navbar>
       <div className="singleContent">
-        <Header Title={"Doubt Details"} Address={"Doubtz"} />
+        <Header Title={"Assignment"} Address={"Assignment"} />
         <div className="singleContentData">
         <div className="fileContainer">
   {singleDoubtz?.fileType === "jpg" || singleDoubtz?.fileType === "jpeg" || singleDoubtz?.fileType === "png"? (

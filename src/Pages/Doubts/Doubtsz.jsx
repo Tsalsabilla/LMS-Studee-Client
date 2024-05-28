@@ -125,7 +125,7 @@ const Doubtsz = () => {
   return (
     <Navbar>
       <div className="content">
-        <Header Title={"Knowledge"} Address={"Knowledge"} />
+        <Header Title={"Assignment"} Address={"Assignment"} />
 
         <div className="contentData">
           {doubtz

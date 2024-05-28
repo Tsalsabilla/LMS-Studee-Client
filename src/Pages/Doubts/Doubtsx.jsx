@@ -125,7 +125,7 @@ const Doubtsx = () => {
   return (
     <Navbar>
       <div className="content">
-        <Header Title={"Knowledge"} Address={"Knowledge"} />
+        <Header Title={"Final Knowledge"} Address={"Final"} />
 
         <div className="contentData">
           {doubtx

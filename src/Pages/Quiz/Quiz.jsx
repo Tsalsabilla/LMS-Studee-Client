@@ -194,7 +194,7 @@ const Quiz = () => {
                           <div
                             className={`option w-full relative z-10 py-2 cursor-pointer border-2 border-gray-100 rounded-md bg-gray-50 ${
                               option === selectedOption
-                                ? "shadow-option shadow-pink-500 after:bg-none"
+                                ? "shadow-option shadow-custom-yellow after:bg-none"
                                 : ""
                             }`}
                             onClick={(e) =>
@@ -222,7 +222,7 @@ const Quiz = () => {
                       {currentQuestion >= 2 ? (
                         <button
                           onClick={handleSubmitQuiz}
-                          className="bg-red-500 shadow-lg uppercase w-40 text-white rounded-sm px-4 py-2"
+                          className="bg-custom-red text-white shadow-lg w-28 rounded-full px-4 py-2 flex items-center justify-center cursor-pointer text-black hover:transition hover:duration-150 hover:transform hover:translate-y-1"
                         >
                           Submit
                         </button>
@@ -231,7 +231,7 @@ const Quiz = () => {
                           onClick={() =>
                             handleNextQuestion(questions[currentQuestion])
                           }
-                          className="bg-pink-500 shadow-lg uppercase w-24 text-white rounded-sm px-4 py-2"
+                          className="bg-custom-yellow text-white shadow-lg w-28 rounded-full px-4 py-2 flex items-center justify-center cursor-pointer text-black hover:transition hover:duration-150 hover:transform hover:translate-y-1"
                         >
                           Next
                         </button>

@@ -104,7 +104,7 @@ const Tutor = () => {
   return (
     <Navbar>
       <div className="admin">
-        <Header Title={"Teacher Data"} Address={"Teacher"} />
+        <Header Title={"Guest Data"} Address={"Guest"} />
         <div className="adminData">
           <section className="tableBody">
             <table>
