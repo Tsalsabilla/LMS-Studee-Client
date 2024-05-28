@@ -8,6 +8,7 @@ import Navbar from "../../Components/Sidebar/Navbar";
 import Header from "../../Components/Header/Header";
 
 import { useDispatch, useSelector } from "react-redux";
+import BackendURL from "../../BackendURL";
 
 const Quiz = () => {
   let { score, setScore } = useContext(QuizContext);
@@ -20,7 +21,7 @@ const Quiz = () => {
   let [label] = useState(["A", "B", "C", "D","E"]);
   let [progressBarWidth, setProgressBarWidth] = useState(0);
   const [saveQuiz] = useState([]);
-  let API_URL = 'https://lms-studee-server.vercel.app/test/api/quiz/js';
+  let API_URL = `${BackendURL}/test/api/quiz/js`;
 
   const { singleTest } = useSelector((store) => store.test);
 
