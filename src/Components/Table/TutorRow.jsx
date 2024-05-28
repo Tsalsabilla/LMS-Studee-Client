@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { deleteTutor, editTutor } from "../../Redux/tutor/action";
 
-import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+import { FiEye, FiEyeOff  } from "react-icons/fi";
 import { Modal, message, Popconfirm, Button } from "antd";
 import deleteImage from '/img/deletec.png';
 import editImage from '/img/edit.png';
+import { FiTrash2 } from "react-icons/fi";
+import { FiEdit2 } from "react-icons/fi";
 
 const TutorRow = ({ data }) => {
   const dispatch = useDispatch();
@@ -48,9 +50,9 @@ const TutorRow = ({ data }) => {
       <td>{data.email}</td>
       <td>{data.subject}</td>
       <td style={{ color: data.access == "true" ? "Green" : "Red" }}>
-        {data.access == "true" ? <AiFillEye /> : <AiFillEyeInvisible />}
+      {data.access == "true" ? <FiEye /> : <FiEyeOff  />}
       </td>
-      <td onClick={showModal}><img src={editImage}/></td>
+      <td onClick={showModal}><FiEdit2 className="text-yellow-500"/></td>
       <Modal
         title="Basic Modal"
         open={isModalOpen}
@@ -92,7 +94,7 @@ const TutorRow = ({ data }) => {
         okText="Yes"
         cancelText="No"
       >
-        <td><img src={deleteImage}/></td>
+        <td><FiTrash2 className="text-red-500"/></td>
       </Popconfirm>
     </tr>
   );

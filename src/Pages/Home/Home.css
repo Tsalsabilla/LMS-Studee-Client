@@ -84,14 +84,14 @@
   color: var(--yellow);
 }
 .main .overview-right li:nth-child(3) > div {
-  border: 1px solid var(--blue);
-  border-left: 3px solid var(--blue);
-  color: var(--blue);
+  border: 1px solid var(--red);
+  border-left: 3px solid var(--red);
+  color: var(--red);
 }
 .main .overview-right li:nth-child(4) > div {
-  border: 1px solid var(--green);
-  border-left: 3px solid var(--green);
-  color: var(--green);
+  border: 1px solid var(--red);
+  border-left: 3px solid var(--red);
+  color: var(--red);
 }
 .main .overview-right li:nth-child(5) > div {
   border: 1px solid var(--pink);

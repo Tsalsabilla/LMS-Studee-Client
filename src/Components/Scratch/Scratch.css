@@ -13,10 +13,6 @@
   overflow: hidden;
 }
 
-.scratchRight {
-  width: 50%;
-}
-
 .scratchDiv > div:nth-child(1) {
   border-radius: 10px;
   overflow: hidden;
@@ -44,55 +40,4 @@
   display: flex;
   align-items: center;
   border-radius: 48px;
-}
-
-.startScratch img{
-  width: 100%;
-  height: auto;
-}
-
-.deleteScratch {
-  outline: none;
-  border: none;
-  background-color: #ffffff;
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-  width: 24px;
-  height: 24px;
-  padding: 4px;
-  display: flex;
-  align-items: center;
-  border-radius: 48px;
-}
-
-.deleteScratch img{
-  width: 100%;
-  height: auto;
-}
-
-.startScratch:hover {
-  transform: translateY(-0.2rem);
-  transition: transform 150ms;
-}
-.deleteScratch:hover {
-  transform: translateY(-0.2rem);
-  transition: transform 150ms;
-}
-.scratchPoint {
-  background-color: var(--yellow);
-  padding: 0px 4px;
-  color: white;
-  border-radius: 16px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 24px;
-}
-
-.scratchPoint img{
-  width: 12%;
-  height: auto;
-  margin-right: 4px;
 }
