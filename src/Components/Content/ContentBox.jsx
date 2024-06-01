@@ -42,7 +42,7 @@ const ContentBox = ({ data }) => {
           ) : (
             <div className="contentOption">
               <p>{data.type}</p>
-              <button onClick={() => handleClick(data._id)}><img src={viewImage}/> </button>
+              <button class="bg-white shadow-lg w-full rounded-full px-4 py-2 flex items-center justify-center cursor-pointer text-black hover:transition hover:duration-150 hover:transform hover:translate-y-1" onClick={() => handleClick(data._id)}><FiEye className="text-yellow-500 mr-2"/> View</button>
             </div>
           )}
         </div>

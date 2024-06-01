@@ -54,7 +54,7 @@ const SingleDoubt = () => {
     <Navbar>
       <div className="singleContent">
         <Header Title={"Initial Knowlede"} Address={"Initial"} />
-        <div className="singleContentData">
+        {/* <div className="singleContentData">
         <div className="fileContainer">
   {singleDoubt?.fileType === "jpg" || singleDoubt?.fileType === "jpeg" || singleDoubt?.fileType === "png"? (
     <img src={singleDoubt?.fileUrl} alt="" />
@@ -71,7 +71,7 @@ const SingleDoubt = () => {
   )}
 </div>
 
-        </div>
+        </div> */}
 
         <div className="doubtResponses">
           <p>{singleDoubt?.title}</p>
@@ -83,7 +83,7 @@ const SingleDoubt = () => {
           <h3 className="text-white">Pengetahuan Awal</h3>
         </div>
 
-        <div className="doubtResponses bg-white rounded-lg p-4 my-2">
+        <div className="doubtResponses bg-white bg-opacity-50 rounded-lg p-4 my-2">
           <h3 className="text-black">Setelah menonton video, masing-masing siswa silahkan untuk menuliskan lima kata kunci yang mencerminkan inti dari seluruh materi yang dibahas dalam video pembelajaran!</h3>
         </div>
 
@@ -98,20 +98,18 @@ const SingleDoubt = () => {
             </div>
           );
         })}
-        <div className="doubtResponses bg-white rounded-lg p-4 my-2">
           <form
-          className="responseForm flex flex-row" onSubmit={(e) => handleSubmit(e, "PengetahuanAkhir")}
+          className="responseForm flex flex-row p-4 my-2" onSubmit={(e) => handleSubmit(e, "PengetahuanAkhir")}
           >
             <input
               name="desc"
-              className="mx-auto border-custom-red w-3/4"
+              className="mx-auto border-none w-3/4 px-4"
               value={descPengetahuanAkhir}
               onChange={(e) => setDescPengetahuanAkhir(e.target.value)}
-              placeholder="e.g. Salsa | Sistematis, Langkah, Metode, ..."
+              placeholder="e.g. Salsa | Sistematis, Langkah, Metode, Input,Proses"
             />
             <input type="submit" className="bg-custom-red text-white py-2 px-4 rounded-full border-none max-w-md mx-auto w-1/4" />
           </form>
-        </div>
 
         {load ? (
           <Space

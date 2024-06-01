@@ -55,7 +55,7 @@ const SingleDoubtz = () => {
     <Navbar>
       <div className="singleContent">
         <Header Title={"Assignment"} Address={"Assignment"} />
-        <div className="singleContentData">
+        {/* <div className="singleContentData">
         <div className="fileContainer">
   {singleDoubtz?.fileType === "jpg" || singleDoubtz?.fileType === "jpeg" || singleDoubtz?.fileType === "png"? (
     <img src={singleDoubtz?.fileUrl} alt="" />
@@ -72,9 +72,9 @@ const SingleDoubtz = () => {
   )}
 </div>
 
-        </div>
+        </div> */}
 
-        <div className="doubtResponses">
+<div className="doubtResponses bg-white bg-opacity-50 rounded-lg p-4 my-2">
           <p>{singleDoubtz?.title}</p>
           <p>{singleDoubtz?.subject}</p>
           <p>{singleDoubtz?.description}</p>
@@ -84,7 +84,7 @@ const SingleDoubtz = () => {
           <h3 className="text-white">Fase Aplikasi</h3>
         </div>
 
-        <div className="doubtResponses bg-white rounded-lg p-4 my-2">
+        <div className="doubtResponses bg-white bg-opacity-50 rounded-lg p-4 my-2">
           <h3 className="text-black">Ubahlah kalimat Naratif pada studi kasus pembuatan kopi latte menjadi Pseudocode dan Flowchart! <br />
 Membuat Kopi latte<br />
 Langkah-1: Menyiapkan kopi, susu, gula, gelas, sendok, dan air panas <br />
@@ -98,20 +98,19 @@ bercampur dengan air. <br />
 Langkah-8: Menghidangkan kopi latte yang sudah siap.</h3>
         </div>
 
-        <div className="doubtResponses bg-white rounded-lg p-4 my-2">
           <form
-            className="responseForm"
+            className="responseForm flex flex-row p-4 my-2"
             onSubmit={(e) => handleSubmit(e, "PengetahuanAkhir")}
             >
             <input
               name="desc"
+              className="mx-auto border-none w-3/4 px-4"
               value={descPengetahuanAkhir}
               onChange={(e) => setDescPengetahuanAkhir(e.target.value)}
               placeholder="e.g. Kelompok 1 | https://drive.google.com"
               />
-            <input type="submit" />
+            <input type="submit" className="bg-custom-red text-white py-2 px-4 rounded-full border-none max-w-md mx-auto w-1/4" />
           </form>
-        </div>
 
         {singleDoubtz?.response?.map((data, i) => {
           if (user?.userType === "Admin") {

@@ -128,7 +128,7 @@ const Home = () => {
                 </table>
               </section>
             </div>
-            <div className="pieChart w-1/4 bg-white border border-gray-200 rounded-lg shadow-md float-left">
+            <div className="pieChart w-1/4 border border-gray-200 rounded-lg shadow-md float-left">
     <div className="chartHead bg-#920000 px-4 py-2 rounded-t-lg">
         <p className="text-gray-800 font-bold">Announcement</p>
     </div>

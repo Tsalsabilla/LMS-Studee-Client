@@ -44,13 +44,13 @@ const SingleScratch = () => {
       <div className="singleContent">
         <Header Title={"Quiz"} Address={"Quiz"} />
 
-        <div className="scratchResponses">
+        <div className="scratchResponses bg-white bg-opacity-50 rounded-lg p-4 my-2">
           <p>{singleScratch?.title}</p>
           <p>{singleScratch?.subject}</p>
           <p>{singleScratch?.description}</p>
         </div>
 
-        <div class="mx-auto w-full max-w-screen-xl">
+        <div class="mx-auto w-full max-w-screen-md">
           <div class="relative" style={{ paddingTop: "75%" }}>
             <iframe src="https://quizizz.com/embed/quiz/664186a682be59c05aef4f93" allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
           </div>
@@ -68,25 +68,24 @@ const SingleScratch = () => {
           );
         })}
 
-        <div className="scratchResponses">
-          <p>Form Score</p>
-          <form className="responseForm" onSubmit={(e) => handleSubmit(e)}>
+          <form className="responseForm flex flex-row p-4 my-2" onSubmit={(e) => handleSubmit(e)}>
             <input
               name="desc"
+              className="mx-auto border-none w-3/4 px-4"
               value={desc}
               onChange={(e) => setDesc(e.target.value)}
               placeholder="Screenshoot score"
             />
             <input
               name="numberInput"
+              className="mx-auto border-none w-3/4 px-4"
               type="number"
               value={numberValue}
               onChange={(e) => setNumberValue(e.target.value)}
               placeholder="Score"
             />
-            <input type="submit" />
+            <input type="submit" className="bg-custom-red text-white py-2 px-4 rounded-full border-none max-w-md mx-auto w-1/4" />
           </form>
-        </div>
 
         {load ? (
           <Space

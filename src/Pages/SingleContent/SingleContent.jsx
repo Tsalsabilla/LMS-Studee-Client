@@ -43,7 +43,7 @@ const SingleContent = () => {
       <div className="singleContent">
         <Header Title={"Video"} Address={"Video"} />
 
-        <div className="singleContentData">
+        {/* <div className="singleContentData">
           <div className="fileContainer">
             {singleContent?.fileType == "jpg" ||
             singleContent?.fileType == "jpeg" ||
@@ -61,7 +61,7 @@ const SingleContent = () => {
               </video>
             )}
           </div>
-        </div>
+        </div> */}
 
         <div className="singleContentDetails">
           <p>{singleContent?.title}</p>
@@ -69,7 +69,7 @@ const SingleContent = () => {
           <p>{singleContent?.subject}</p>
         </div>
 
-        <div class="mx-auto w-full max-w-screen-xl">
+        <div class="mx-auto w-full max-w-screen-md">
 
         <div className="singleContentDetails bg-custom-red rounded-lg p-4 my-2">
           <h3 className="text-white font-bold text-center">Algoritma</h3>

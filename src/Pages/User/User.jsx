@@ -1,7 +1,8 @@
-import { useContext } from "react";
 import QuizContext from "../../contexts/QuizContext";
+import { useContext, useEffect, useState } from "react";
 
 const User = () => {
+  let [label] = useState(["A", "B", "C", "D","E"]);
   const { userQuiz } = useContext(QuizContext);
   const score = userQuiz.filter((quiz) => {
     return quiz.userAnswer === quiz.correctAnswer;
@@ -15,7 +16,7 @@ const User = () => {
     <>
       <div className="">
         <div className="relative">
-          <div className="header p-2 shadow-lg sm:px-16 px-4 flex justify-between items-center text-white bg-custom-red">
+          <div className="header p-2 shadow-lg sm:px-16 px-4 text-white bg-custom-red text-center">
             <h1 className="sm:text-2xl text-lg">
               <span className="font-bold text-gray-200">
                 {score.length >= 2 ? "Good Job:" : "Opps! try again:"}
@@ -43,7 +44,7 @@ const User = () => {
                 return (
                   <div className="sm:w-[75%] px-4 m-auto" key={index}>
                     <div>
-                      <h1 className="sm:text-2xl text-lg font-bold mb-4 text-gray-600 flex">
+                      <h1 className="sm:text-xl text-lg font-small mb-4 text-black flex">
                         <span className="mr-2">{index + 1}.</span>{" "}
                         <span>{question.question}</span>
                       </h1>
@@ -62,11 +63,11 @@ const User = () => {
                             className="option flex gap-2 my-2 items-center"
                             key={index}
                           >
-                            <div className="p-2 bg-green-50 text-gray-600 border-2 font-bold border-green-100 w-10 flex justify-center items-center rounded-full h-10">
-                              {index + 1}
+                            <div className="p-2 bg-white text-gray-600 font-small w-10 flex justify-center items-center rounded-full h-10">
+                            {label[index]}
                             </div>
                             <div
-                              className={`option w-full relative z-10 py-2 border-2 border-gray-100 rounded-md                              
+                              className={`option w-full relative z-10 py-2 rounded-full                              
                               ${
                                 question.attempt === false &&
                                 question.correctAnswer === option

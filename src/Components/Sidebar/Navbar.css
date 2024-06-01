@@ -4,7 +4,7 @@
   left: 0;
   width: 280px;
   height: 100%;
-  background: white;
+  background: rgba(255, 255, 255);
   z-index: 2000;
   font-family: var(--lato);
   transition: 0.5s ease-out;
@@ -68,7 +68,7 @@
 
 #content nav {
   height: 75px;
-  background: white;
+  background: rgba(255, 255, 255);
   padding: 0 24px;
   display: flex;
   align-items: center;
