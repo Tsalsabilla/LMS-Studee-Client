@@ -130,7 +130,7 @@ const Content = () => {
             return <ContentBox data={data} key={i} />;
           })}
         </div>
-        {user?.userType !== "Student" ? (
+        {user?.userType === "Admin" ? (
           <div onClick={showDrawer}>
             <AddIcon />
           </div>

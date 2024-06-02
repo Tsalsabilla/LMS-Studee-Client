@@ -53,6 +53,7 @@ const Navbar = ({ children }) => {
       { icon: <CgGames />, title: "Quiz", address: "/scratchs" },
     ]},
     { icon: <GoTrophy />, title: "Grades", address: "/leaderboard" },
+    { icon: <GoTrophy />, title: "Landing Page", address: "/lessonsx" }
   ];
   const studentData = [
     { icon: <GoHome />, title: "Dashboard", address: "/home" },
@@ -100,7 +101,7 @@ const Navbar = ({ children }) => {
       ),
     },
     {
-      key: "4",
+      key: "3",
       label: (
         <span className="flex justify-end items-center">
           Settings
@@ -109,14 +110,9 @@ const Navbar = ({ children }) => {
       ),
     }
     // {
-    //   key: "2",
-    //   label: (
-    //     <span className="flex justify-end items-center">
-    //       <BiLogOut className="text-red-500 mr-2" />
-    //       Logout
-    //     </span>
-    //   ),
-    // },
+    //   key: "4",
+    //   label: <span  className="font-sans">Logout</span>,
+    // }
   ];
 
   const handleLogout = () => {

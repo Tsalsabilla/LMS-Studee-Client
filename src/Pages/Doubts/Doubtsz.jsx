@@ -136,7 +136,7 @@ const Doubtsz = () => {
         </div>
 
         <div>
-          {user?.userType == "Admin" || user?.userType == "Tutor" ? (
+        {user?.userType === "Admin" ? (
             <div onClick={showDrawer}>
             <AddIcon />
           </div>
