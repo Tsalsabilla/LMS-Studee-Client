@@ -173,8 +173,11 @@ const Login = () => {
               </select>
               <div style={{ textAlign: 'center' }}>
                 <button type="submit" className="p-2 my-2">Log in</button>
-                <h3 className="text-gray-700 text-l font-medium" style={{ fontSize: 'medium', fontWeight: 'normal' }}>Don't have an account?</h3>
-                <button onClick={() => navigate('/register')} className="p-2 my-2" style={{ backgroundColor: '#FF869E' }}>Sign up</button>
+                <h3 className="text-gray-700 text-l font-medium" style={{ fontSize: 'medium', fontWeight: 'normal' }}>Or</h3>
+                <div className="flex flex-row">
+                <button onClick={() => navigate('/register')} className="p-2 my-2" style={{ backgroundColor: 'white', color: '#920000', marginRight: '20px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'}}>Sign up</button>
+                <button onClick={() => navigate('/')} className="p-2 my-2" style={{ backgroundColor: 'white', color: '#920000', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}>Home</button>
+                </div>
               </div>
             </form>
           </div>

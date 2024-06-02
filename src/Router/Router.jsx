@@ -8,6 +8,7 @@ import Student from "../Pages/Student/Student";
 import Scratchs from "../Pages/Scratchs/Scratchs";
 import SingleScratch from "../Pages/SingleScratch/SingleScratch";
 import Lessons from "../Pages/Lessons/Lessons";
+import Lessonsx from "../Pages/Lessons/Lessonsx";
 import Content from "../Pages/Contents/Content";
 import Assignment from "../Pages/Assignments/Assignment";
 import Test from "../Pages/Tests/Test";
@@ -32,7 +33,7 @@ const Router = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/tutor" element={<Tutor />} />
@@ -40,6 +41,7 @@ const Router = () => {
         <Route path="/scratchs" element={<Scratchs />} />
         <Route path="/scratch/:id" element={<SingleScratch />} />
         <Route path="/lessons" element={<Lessons />} />
+        <Route path="/" element={<Lessonsx />} />
         <Route path="/leaderboard" element={<LeaderBoard />} />
         <Route path="/content/:id" element={<SingleContent />} />
         <Route path="/contents" element={<Content />} />

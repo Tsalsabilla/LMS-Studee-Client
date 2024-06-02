@@ -48,6 +48,6 @@ html {
 }
 
 body {
-  background: var(--grey);
   overflow-x: hidden;
+  background: radial-gradient(circle at top left, #fff4d4,#ffffff, #ffd6de);
 }

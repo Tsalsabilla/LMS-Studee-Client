@@ -120,7 +120,7 @@ const Scratchs = () => {
             return <Scratch data={data} key={i} />;
           })}
         </div>
-        {user?.userType !== "Student" ? (
+        {user?.userType === "Admin" ? (
           <div onClick={showDrawer}>
             <AddIcon />
           </div>

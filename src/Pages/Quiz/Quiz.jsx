@@ -214,7 +214,7 @@ const Quiz = () => {
                       );
                     })}
                   </div>
-                  <div className="footer">
+                  <div className="footer bg-transparent shadow-none px-2 py-2">
                     <div className="progress">
                       <div className="progress-bar"></div>
                     </div>
