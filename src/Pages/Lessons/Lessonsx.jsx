@@ -12,6 +12,7 @@ import deleteImage from '/img/deletec.png';
 import logo from "../../Assets/logo.png";
 import ava from "../../Assets/useravatar.png";
 import coverImage from '/img/cover.png';
+import ava_salsa from '/img/ava_salsa.png';
 import { FaInstagram } from "react-icons/fa";
 import { FiYoutube } from "react-icons/fi";
 import { IoCallOutline } from "react-icons/io5";
@@ -19,6 +20,7 @@ import { IoLocationOutline } from "react-icons/io5";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { IoLogoInstagram } from "react-icons/io";
 import { CiMail } from "react-icons/ci";
+import { MdNavigateNext } from "react-icons/md";
 
 const Lessonsx = () => {
   const [open, setOpen] = useState(false);
@@ -157,11 +159,10 @@ const Lessonsx = () => {
           <div className="hero-information" data-aos="fade-left" data-aos-delay="500">
             <h1>Transforming Education, Empowering Futures</h1>
             <p>
-              Our platform is a boundless garden of knowledge, a place where your aspirations take
-              root and flourish.
+            Studee delivers a fun and easy learning experience through rich interactive multimedia, <br/>real-time feedback, and drag-and-drop quizzes. It utilizes the Needham Model <br/>to ensure every student learns effectively and reaches their full potential.
             </p>
             <button>
-              <a href="../html/login_page.html">Start Your Journey</a>
+              <a href="../html/login_page.html">Sign Up Now! </a>
             </button>
           </div>
         </div>
@@ -182,19 +183,24 @@ const Lessonsx = () => {
                   data-aos-easing="ease-out-cubic"
                   data-aos-duration="2000"
                 >
-                  <img src="../img/salsa.png" alt="Salsa" />
+                  <img src={ava_salsa} alt="Salsa" />
                   <h3>Tsalsabilla Nurfitriyatna Putri</h3>
                   <h2>Fullstack Developer</h2>
                   <p>Universitas Pendidikan Indonesia</p>
                   <p>Computer Science Education</p>
-                  <div className="inFlex">
-                    <a  target="_blank" href="http://linkedin.com/in/tsalsabillanf">
-                    <TiSocialLinkedinCircular className="text-gray-600 mr-2"/>
+                  <div className="inFlex mt-2 flex justify-center w-full cursor-pointer text-black">
+                    <a  className="hover:transition hover:duration-150 hover:transform hover:translate-y-1" target="_blank" href="http://linkedin.com/in/tsalsabillanf">
+                    <TiSocialLinkedinCircular className="text-gray-600 mr-4 h-8 w-6"/>
                     </a>
-                    <a  target="_blank" href="mailto:tsalsabilla569@gmail.com">
-                    <CiMail className="text-gray-600 mr-2"/>
+                    <a  className="hover:transition hover:duration-150 hover:transform hover:translate-y-1" target="_blank" href="mailto:tsalsabilla569@gmail.com">
+                    <CiMail className="text-gray-600 h-8 w-6"/>
                     </a>
                   </div>
+                </div>
+                <div className="profile-text w-2/3 rounded-lg px-8 py-3 text-left	">
+                <h1 className="title py-2 mt-4">Developer Profile</h1>
+                <p>I'm Salsa, deeply passionate about frontend development with a strong focus on best practices. My expertise spans the entire frontend development spectrum, from design and code implementation to deployment. With a proven track record in end-to-end project management and stakeholder engagement, I bring a unique blend of technical proficiency in MERN stack (MongoDb, Express, React, Node.Js) as well as being a proficient management skills. I see myself as your frontend developer, committed to supporting your company’s frontend projects who is not only creative but also attention to detail.</p>
+                <a target="_blank" href="https://drive.google.com/file/d/1_xOxlyqG0c_euccaBZnFkS1IINASUuY2/view" class="rounded-full py-2 flex items-center cursor-pointer text-custom-red hover:transition hover:duration-150 hover:transform hover:translate-y-1 mt-2 mb-4">Curiculum Vitae <MdNavigateNext/></a>
                 </div>
                 {/* end about us bottom salsa */}
               </div>
@@ -206,41 +212,38 @@ const Lessonsx = () => {
           {/* leaderboard */}
           <div className="credential">
           <div className="leaderboard" data-aos="fade-down" data-aos-delay="500">
-            <div className="congrats-to-our" id="congrats-to-our">
-              Congrats to Our
-            </div>
             <h1 className="title">Credits</h1>
             <p>This website has been made using the following assets</p>
             <p className="font-bold">Photos</p>
-            <p>(https://www.freepik.com/)</p>
+            <p>https://www.freepik.com/</p>
             <p className="font-bold">Book</p>
-            <p>(https://buku.kemdikbud.go.id/katalog/informatika-untuk-smkmak-kelas-x-semester-2)</p>
+            <p>https://buku.kemdikbud.go.id/katalog/informatika-untuk-smkmak-kelas-x-semester-2</p>
             <p className="font-bold">Videos</p>
-            <p>(https://www.youtube.com/watch?v=fLqHSiJMMyI)</p>
-            <p>(https://www.youtube.com/watch?v=1S35wmupqn4)</p>
-            <p>(https://www.youtube.com/watch?v=zbSzPA9xTLo&list=PL3uuG4lYbnOyBfw6cgmCWQSZDntAoExpJ&index=4
-)</p>
-            <p>(https://www.youtube.com/watch?v=8DL_Bax4mro
-)</p>
-            <p>(https://www.youtube.com/watch?v=0sFh-rALd2Q&list=PL3uuG4lYbnOyBfw6cgmCWQSZDntAoExpJ&index=5
-)</p>
-            <p>(https://www.youtube.com/watch?v=G-c0KnAgucc&list=PL3uuG4lYbnOyBfw6cgmCWQSZDntAoExpJ&index=13
-)</p>
-            <p>(https://www.youtube.com/watch?v=VSL19lCLqHk&list=PL3uuG4lYbnOyBfw6cgmCWQSZDntAoExpJ&index=14
-)</p>
-            <p>(https://www.youtube.com/watch?v=_lxIFFLFdBk&list=PL3uuG4lYbnOyBfw6cgmCWQSZDntAoExpJ&index=15
-)</p>
-            <p>(https://www.youtube.com/watch?v=5jbYsYj1-v0&list=PL3uuG4lYbnOyBfw6cgmCWQSZDntAoExpJ&index=16
-)</p>
-            <p>(https://www.youtube.com/watch?v=5lO9YdC48uw&list=PL3uuG4lYbnOyBfw6cgmCWQSZDntAoExpJ&index=17
-)</p>
-            <p>(https://www.youtube.com/watch?v=hVzmJwyMH2Q&list=PL3uuG4lYbnOyBfw6cgmCWQSZDntAoExpJ&index=20
-)</p>
-            <p>(https://www.youtube.com/watch?v=ctxtCv7plVc&list=PL3uuG4lYbnOyBfw6cgmCWQSZDntAoExpJ&index=21
-)</p>
+            <p>https://www.youtube.com/watch?v=fLqHSiJMMyI</p>
+            <p>https://www.youtube.com/watch?v=1S35wmupqn4</p>
+            <p>https://www.youtube.com/watch?v=zbSzPA9xTLo&list=PL3uuG4lYbnOyBfw6cgmCWQSZDntAoExpJ&index=4
+</p>
+            <p>https://www.youtube.com/watch?v=8DL_Bax4mro
+</p>
+            <p>https://www.youtube.com/watch?v=0sFh-rALd2Q&list=PL3uuG4lYbnOyBfw6cgmCWQSZDntAoExpJ&index=5
+</p>
+            <p>https://www.youtube.com/watch?v=G-c0KnAgucc&list=PL3uuG4lYbnOyBfw6cgmCWQSZDntAoExpJ&index=13
+</p>
+            <p>https://www.youtube.com/watch?v=VSL19lCLqHk&list=PL3uuG4lYbnOyBfw6cgmCWQSZDntAoExpJ&index=14
+</p>
+            <p>https://www.youtube.com/watch?v=_lxIFFLFdBk&list=PL3uuG4lYbnOyBfw6cgmCWQSZDntAoExpJ&index=15
+</p>
+            <p>https://www.youtube.com/watch?v=5jbYsYj1-v0&list=PL3uuG4lYbnOyBfw6cgmCWQSZDntAoExpJ&index=16
+</p>
+            <p>https://www.youtube.com/watch?v=5lO9YdC48uw&list=PL3uuG4lYbnOyBfw6cgmCWQSZDntAoExpJ&index=17
+</p>
+            <p>https://www.youtube.com/watch?v=hVzmJwyMH2Q&list=PL3uuG4lYbnOyBfw6cgmCWQSZDntAoExpJ&index=20
+</p>
+            <p>https://www.youtube.com/watch?v=ctxtCv7plVc&list=PL3uuG4lYbnOyBfw6cgmCWQSZDntAoExpJ&index=21
+</p>
 
-<p>(
-https://www.youtube.com/watch?v=kH8bkgogfD0&list=PL3uuG4lYbnOyBfw6cgmCWQSZDntAoExpJ&index=22)</p>
+<p>
+https://www.youtube.com/watch?v=kH8bkgogfD0&list=PL3uuG4lYbnOyBfw6cgmCWQSZDntAoExpJ&index=22</p>
           </div>
           <div className="table-container" data-aos="fade-up" data-aos-delay="500">
             <div id="highScores" className="flex-center flex-column">
