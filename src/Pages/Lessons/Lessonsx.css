@@ -331,6 +331,7 @@ button:hover{
 
 .profile-text{
   background: rgba(255, 255, 255, 0.5);
+  width: 75%;
 }
 
 .credential{
@@ -720,7 +721,7 @@ hr{
     padding-right: 2rem;
   }
 
-  .menu1, .menu2, .menu3, .menu4, .nav_profile, .nav_logout{
+  .menu1, .menu2, .menu3, .menu4, .nav_logout{
     display: none;
   }
 
@@ -791,7 +792,7 @@ hr{
 /* end media ipad */
 
 /* media iphone */
-@media (max-width: 414px) {
+@media (max-width: 431px) {
   /* iphone navigation bar */
   .dropbtn img{
     width: 40px;
@@ -935,6 +936,46 @@ hr{
   .bottom-copyright{
     font-size: 10px;
   }
+
+  nav{
+    width: 84%;
+  }
+
+  .maskot img{
+    height: 24px;
+    margin-right: 10px;
+  }
+
+  .nav_profile img{
+    height: 28px;
+    width: 28px;;
+  }
+
+  .main-form img {
+    width: 120px;
+    height: 120px;
+    margin-top: -128px;
+    margin-left: 52px;
+}
+.main-form {
+  height: 208px;
+  margin-bottom: 20px;
+}
+.main-center {
+  padding: 0px 120px;
+}
+
+.profile-text{
+  width: 260px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.leaderboard p {
+  font-size: 12px;
+  width: 80%;
+  text-align: center;
+}
   /* iphone footer section */
 }
 /* end media iphone */
