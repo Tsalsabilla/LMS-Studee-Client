@@ -200,7 +200,7 @@ const Lessonsx = () => {
                 <div className="profile-text w-2/3 rounded-lg px-8 py-3 text-left	">
                 <h1 className="title py-2 mt-4">Developer Profile</h1>
                 <p>I'm Salsa, deeply passionate about frontend development with a strong focus on best practices. My expertise spans the entire frontend development spectrum, from design and code implementation to deployment. With a proven track record in end-to-end project management and stakeholder engagement, I bring a unique blend of technical proficiency in MERN stack (MongoDb, Express, React, Node.Js) as well as being a proficient management skills. I see myself as your frontend developer, committed to supporting your company’s frontend projects who is not only creative but also attention to detail.</p>
-                <a target="_blank" href="https://drive.google.com/file/d/1_xOxlyqG0c_euccaBZnFkS1IINASUuY2/view" class="rounded-full py-2 flex items-center cursor-pointer text-custom-red hover:transition hover:duration-150 hover:transform hover:translate-y-1 mt-2 mb-4">curriculum vitae<MdNavigateNext/></a>
+                <a target="_blank" href="https://drive.google.com/file/d/1_xOxlyqG0c_euccaBZnFkS1IINASUuY2/view" class="rounded-full py-2 flex items-center cursor-pointer text-custom-red hover:transition hover:duration-150 hover:transform hover:translate-y-1 mt-2 mb-4">Curriculum Vitae<MdNavigateNext/></a>
                 </div>
                 {/* end about us bottom salsa */}
               </div>
