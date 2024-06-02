@@ -126,10 +126,33 @@ const Lessons = () => {
       <div className="lessons">
         {contextHolder}
         <Header Title={"Lesson"} Address={"Lesson"} />
+        <div className="singleContentDetails bg-custom-red rounded-lg p-4 my-2">
+          <h3 className="text-white font-bold text-center">Modul Ajar</h3>
+        </div>
         <div className="lessonData">
           {lesson?.map((data, i) => {
             return <Lesson data={data} key={i} />;
           })}
+        </div>
+        <div className="singleContentDetails bg-custom-red rounded-lg p-4 my-2">
+          <h3 className="text-white font-bold text-center">Capaian Pembelajaran</h3>
+        </div>
+        <div className="singleContentDetails bg-white bg-opacity-50 rounded-lg p-4 my-2">
+          <p className="text-black text-left">Pada akhir fase E, peserta didik mampu memahami validitas sumber data, memahami konsep struktur data dan algoritma standar, menerapkan proses komputasi yang dilakukan manusia secara mandiri atau berkelompok untuk mendapatkan data yang bersih, benar, dan terpercaya, serta menerapkan struktur data dan algoritma standar untuk menghasilkan berbagai solusi dalam menyelesaikan persoalan yang mengandung himpunan data berstruktur kompleks dengan volume tidak kecil, dan menuliskan solusi rancangan program sederhana dalam format Pseudocode yang dekat dengan bahasa komputer; mampu memahami model dan mensimulasikan dinamika Input Proses Output dalam sebuah komputer Von Neumann, serta memahami peran sistem operasi.</p>
+          <br></br>
+          <p className="text-black text-left">1. Peserta didik dapat mendefinisikan pengertian mengenai Algoritma standar<br/>
+2. Peserta didik dapat menjelaskan mengenai Algoritma standar <br/>
+3. Peserta didik dapat menerapkan contoh yang benar terkait Pseudocode<br/>
+4. Peserta didik dapat menerapkan contoh yang benar terkait Flowchart<br/>
+</p>
+<p className="text-black text-left">5. Peserta didik dapat mendefinisikan pengertian mengenai Pemrograman <br/>
+6. Peserta didik dapat mengimplementasikan Tipe Data<br/>
+7. Peserta didik dapat memecahkan pola penyelesaian masalah Tipe Data<br/>
+8. Peserta didik dapat mendefinisikan Percabangan if <br/>
+</p>
+<p className="text-black text-left">
+9. Peserta didik dapat membangun program algoritma dan pemrograman sederhana yang menerapkan konsep Percabangan if<br/>
+</p>
         </div>
         {user?.userType === "Admin" ? (
           <div onClick={showDrawer}>
