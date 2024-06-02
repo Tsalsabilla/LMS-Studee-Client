@@ -33,7 +33,7 @@ const Router = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/tutor" element={<Tutor />} />
@@ -41,7 +41,7 @@ const Router = () => {
         <Route path="/scratchs" element={<Scratchs />} />
         <Route path="/scratch/:id" element={<SingleScratch />} />
         <Route path="/lessons" element={<Lessons />} />
-        <Route path="/lessonsx" element={<Lessonsx />} />
+        <Route path="/" element={<Lessonsx />} />
         <Route path="/leaderboard" element={<LeaderBoard />} />
         <Route path="/content/:id" element={<SingleContent />} />
         <Route path="/contents" element={<Content />} />

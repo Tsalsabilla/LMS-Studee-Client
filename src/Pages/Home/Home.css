@@ -1,7 +1,3 @@
-.app{
-  background: radial-gradient(circle at top left, #fff4d4,#ffffff, #ffd6de);
-}
-
 .main {
   width: 100%;
   max-height: calc(100vh - 75px);

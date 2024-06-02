@@ -53,7 +53,7 @@ const Navbar = ({ children }) => {
       { icon: <CgGames />, title: "Quiz", address: "/scratchs" },
     ]},
     { icon: <GoTrophy />, title: "Grades", address: "/leaderboard" },
-    { icon: <GoTrophy />, title: "Landing Page", address: "/lessonsx" }
+    // { icon: <GoTrophy />, title: "Landing Page", address: "/" }
   ];
   const studentData = [
     { icon: <GoHome />, title: "Dashboard", address: "/home" },

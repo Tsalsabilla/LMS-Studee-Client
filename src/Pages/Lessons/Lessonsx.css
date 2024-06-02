@@ -1,7 +1,6 @@
 .lessonsx {
   width: 100%;
   overflow-y: auto;
-  background: radial-gradient(circle at top left, #fff9e8, #ffffff, #FF869E);
 }
 .lessonsx::-webkit-scrollbar {
   display: none;
@@ -78,22 +77,24 @@
 /* navigation bar */
 nav{
   padding: 0px 120px;
-  width: 100%;
+  width: 96%;
   height: 80px;
-  background-color: rgba(255, 255, 255, 0.75);
-  border-radius: 0px;
+  box-shadow: rgba(151, 170, 210, 0.2) 0px 7px 29px 0px;
+  background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   z-index: 10;
   top: 0;
-  color: var(--red);
   text-align: center;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  margin-top: 20px;
+  margin-left: 32px;
+  border-radius: 20px;
 }
 
 /* navigation bar left */
@@ -254,11 +255,11 @@ button:hover{
 /* hero section*/
 .hero-section{
   width: 100%;
-  padding: 160px 120px 80px 120px;
+  padding: 140px 120px 40px 120px;
   display: flex;
   flex-direction: column;
   color: var(--red);
-  background-color: #ffffff;
+  background: radial-gradient(circle at top, #ffd6de 16%, #ffffff 40%);
   border-radius: 0px 0px 160px 160px;
   align-items: center;
   justify-content: center;
@@ -306,7 +307,7 @@ button:hover{
   font-size: 20px;
   font-style: normal;
   line-height: normal;
-  width: 240px;
+  width: 160px;
   height: 40px;
   border-radius: 40px;
   background: var(--red);

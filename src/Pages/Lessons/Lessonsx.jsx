@@ -146,7 +146,7 @@ const Lessonsx = () => {
           </div>
           <div className="nav_right">
             
-            <div class="nav_profile">
+            <div  onClick={() => navigate('/login')} class="nav_profile cursor-pointer">
               <img src={ava} alt="ava"/>
       </div>
           </div>
@@ -161,9 +161,10 @@ const Lessonsx = () => {
             <p>
             Studee delivers a fun and easy learning experience through rich interactive multimedia, <br/>real-time feedback, and drag-and-drop quizzes. It utilizes the Needham Model <br/>to ensure every student learns effectively and reaches their full potential.
             </p>
-            <button>
+            {/* <button>
               <a href="../html/login_page.html">Sign Up Now! </a>
-            </button>
+            </button> */}
+            <button onClick={() => navigate('/login')} className="p-2 my-2" style={{ backgroundColor: '#920000' }}>Get Started</button>
           </div>
         </div>
 
