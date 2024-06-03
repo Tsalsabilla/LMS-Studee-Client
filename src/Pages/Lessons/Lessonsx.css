@@ -322,13 +322,6 @@ button:hover{
 .homeCenter{
 }
 
-.leaderboard{
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  padding-top: 40px;
-}
-
 .profile-text{
   background: rgba(255, 255, 255, 0.5);
   width: 75%;
@@ -749,9 +742,6 @@ hr{
   /* end ipad hero section */
 
   /* ipad leaderboard */
-  .leaderboard {
-    margin-top: 40px; 
-  }
   /* end ipad leaderboard */
 
   /* ipad about us */
