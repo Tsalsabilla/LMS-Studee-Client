@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { createLesson, getLessonData } from "../../Redux/lesson/action";
 import { useNavigate } from "react-router-dom";
 import deleteImage from '/img/deletec.png';
+import doneImage from '/img/done.png';
 
 const Lessons = () => {
   const [open, setOpen] = useState(false);
@@ -65,6 +66,14 @@ const Lessons = () => {
 
   const removeQuestion = (i) => {
     setAllQuestions(allQuestions.filter((elem, index) => index != i));
+  };
+
+  const handleResolve = (id) => {
+    dispatch(resolveLesson(id));
+  };
+
+  const deleteLessonFunc = (id) => {
+    dispatch(deleteLesson(id));
   };
 
   const submitLesson = () => {
@@ -127,32 +136,43 @@ const Lessons = () => {
         {contextHolder}
         <Header Title={"Lesson"} Address={"Lesson"} />
         <div className="singleContentDetails bg-custom-red rounded-lg p-4 my-2">
-          <h3 className="text-white font-bold text-center">Modul Ajar</h3>
+          <h3 className="text-white font-bold text-center">Buku</h3>
         </div>
         <div className="lessonData">
-          {lesson?.map((data, i) => {
-            return <Lesson data={data} key={i} />;
-          })}
+          {lesson
+            ?.filter((elem) => elem.resolved == "Yes")
+            .map((data, i) => {
+              return <Lesson data={data} key={i} />;
+            })}
+        </div>
+        <div className="singleContentDetails bg-custom-red rounded-lg p-4 my-2">
+          <h3 className="text-white font-bold text-center">Lembar Kerja Peserta Didik (LKPD)</h3>
+        </div>
+        <div className="lessonData">
+          {lesson?.filter((elem) => elem.resolved == "No")
+            .map((data, i) => {
+              return <Lesson data={data} key={i} />;
+            })}
         </div>
         <div className="singleContentDetails bg-custom-red rounded-lg p-4 my-2">
           <h3 className="text-white font-bold text-center">Tujuan Pembelajaran</h3>
         </div>
         <div className="singleContentDetails bg-white bg-opacity-50 rounded-lg p-4 my-2">
           <p className="text-black text-left">Pada akhir fase E, peserta didik mampu memahami validitas sumber data, memahami konsep struktur data dan algoritma standar, menerapkan proses komputasi yang dilakukan manusia secara mandiri atau berkelompok untuk mendapatkan data yang bersih, benar, dan terpercaya, serta menerapkan struktur data dan algoritma standar untuk menghasilkan berbagai solusi dalam menyelesaikan persoalan yang mengandung himpunan data berstruktur kompleks dengan volume tidak kecil, dan menuliskan solusi rancangan program sederhana dalam format Pseudocode yang dekat dengan bahasa komputer; mampu memahami model dan mensimulasikan dinamika Input Proses Output dalam sebuah komputer Von Neumann, serta memahami peran sistem operasi.</p>
-          <br></br>
-          <p className="text-black text-left">1. Peserta didik dapat mendefinisikan pengertian mengenai Algoritma standar<br/>
-2. Peserta didik dapat menjelaskan mengenai Algoritma standar <br/>
-3. Peserta didik dapat menerapkan contoh yang benar terkait Pseudocode<br/>
-4. Peserta didik dapat menerapkan contoh yang benar terkait Flowchart<br/>
-</p>
-<p className="text-black text-left">5. Peserta didik dapat mendefinisikan pengertian mengenai Pemrograman <br/>
-6. Peserta didik dapat mengimplementasikan Tipe Data<br/>
-7. Peserta didik dapat memecahkan pola penyelesaian masalah Tipe Data<br/>
-8. Peserta didik dapat mendefinisikan Percabangan if <br/>
-</p>
-<p className="text-black text-left">
-9. Peserta didik dapat membangun program algoritma dan pemrograman sederhana yang menerapkan konsep Percabangan if<br/>
-</p>
+          <br />
+          <p className="text-black text-left">1. Peserta didik dapat mendefinisikan pengertian mengenai Algoritma standar<br />
+  2. Peserta didik dapat menjelaskan mengenai Algoritma standar <br />
+  3. Peserta didik dapat menerapkan contoh yang benar terkait Pseudocode<br />
+  4. Peserta didik dapat menerapkan contoh yang benar terkait Flowchart<br />
+  </p>
+  <p className="text-black text-left">5. Peserta didik dapat mendefinisikan pengertian mengenai Pemrograman <br />
+  6. Peserta didik dapat mengimplementasikan Tipe Data<br />
+  7. Peserta didik dapat memecahkan pola penyelesaian masalah Tipe Data<br />
+  8. Peserta didik dapat mendefinisikan Percabangan if <br />
+  </p>
+  <p className="text-black text-left">
+  9. Peserta didik dapat membangun program algoritma dan pemrograman sederhana yang menerapkan konsep Percabangan if<br />
+  </p>
         </div>
         {user?.userType === "Admin" ? (
           <div onClick={showDrawer}>
@@ -202,11 +222,11 @@ const Lessons = () => {
               onChange={(e) => handleFormChange(e)}
             />
           </form>
-          <br></br>
+          <br />
           <button className="Submit" onClick={() => submitLesson()}>
             Add Lesson
           </button>
-
+  
           <Drawer
             title="Lesson Questions"
             width={320}
@@ -214,7 +234,7 @@ const Lessons = () => {
             onClose={onChildrenDrawerClose}
             open={childrenDrawer}
           >
-            <p>Number of questions required : {formData.noOfQuestions || 0} </p>
+            <p>Number of questions required: {formData.noOfQuestions || 0} </p>
             {allQuestions.length == 0 ? (
               <p>No questions added yet.</p>
             ) : (
@@ -222,14 +242,16 @@ const Lessons = () => {
                 return (
                   <div key={i} className="questionDiv">
                     <h4>
-                      {i + 1} .{ques.question}
+                      {i + 1}. {ques.question}
                     </h4>
                     <p>a. {ques.option1}</p>
                     <p>b. {ques.option2}</p>
                     <p>c. {ques.option3}</p>
                     <p>d. {ques.option4}</p>
                     <p>e. {ques.option5}</p>
-                    <button onClick={() => removeQuestion(i)}><img src={deleteImage}/></button>
+                    <button onClick={() => removeQuestion(i)}>
+                      <img src={deleteImage} />
+                    </button>
                   </div>
                 );
               })
@@ -246,7 +268,7 @@ const Lessons = () => {
                 left: "0",
                 display: "flex",
                 justifyContent: "center",
-                alignItem: "center",
+                alignItems: "center",
               }}
             >
               <Spin size="large"></Spin>
@@ -264,7 +286,7 @@ const Lessons = () => {
               left: "0",
               display: "flex",
               justifyContent: "center",
-              alignItem: "center",
+              alignItems: "center",
             }}
           >
             <Spin size="large"></Spin>
@@ -272,7 +294,7 @@ const Lessons = () => {
         ) : null}
       </div>
     </Navbar>
-  );
+  );  
 };
 
 export default Lessons;

@@ -59,6 +59,29 @@ export default function lessonReducer(state = initialState, { type, payload }) {
         load: false,
         error: true,
       };
+      case types.RESOLVE_LESSON_REQUEST:
+      return {
+        ...state,
+        load: true,
+        error: false,
+      };
+    case types.RESOLVE_LESSON_SUCCESS:
+      return {
+        ...state,
+        lesson: state.lesson.map((elem) => {
+          if (elem._id == payload.id) {
+            return payload.lesson;
+          }
+          return elem;
+        }),
+        load: false,
+      };
+    case types.RESOLVE_LESSON_ERROR:
+      return {
+        ...state,
+        load: false,
+        error: true,
+      };
     default:
       return state;
   }
