@@ -61,3 +61,24 @@ export const deleteLesson = (lessonId) => async (dispatch) => {
     });
   }
 };
+
+//resolve
+export const resolveLesson = (lessonId) => async (dispatch) => {
+  try {
+    dispatch({ type: types.RESOLVE_LESSON_REQUEST });
+    const res = await axios.patch(`${url}/lesson/${lessonId}`, {
+      resolved: "Yes",
+    });
+    dispatch({
+      type: types.RESOLVE_LESSON_SUCCESS,
+      payload: { id: lessonId, lesson: res.data.lesson },
+    });
+  } catch (error) {
+    dispatch({
+      type: types.RESOLVE_LESSON_ERROR,
+      payload: {
+        message: "error",
+      },
+    });
+  }
+};
