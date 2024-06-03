@@ -259,7 +259,7 @@ https://www.youtube.com/watch?v=kH8bkgogfD0&list=PL3uuG4lYbnOyBfw6cgmCWQSZDntAoE
           {/* footer logo */}
           <div className="nav-left">
             <div className="maskot">
-              <a href="../html/home_page.html">
+              <a>
                 <img src={logo} alt="Logo" />
               </a>
             </div>
@@ -296,20 +296,20 @@ https://www.youtube.com/watch?v=kH8bkgogfD0&list=PL3uuG4lYbnOyBfw6cgmCWQSZDntAoE
             <div className="bottom-right">
               <div className="bottom-head"></div>
               <div className="socmed">
-                <a href="https://instagram.com/kebudayaan.jatim?igshid=MzRlODBiNWFlZA==">
+                <a target="_blank" href="https://instagram.com/tsalsabillanf">
                   <FaInstagram className="text-gray-600 mr-2"/>
                 </a>
-                <a href="https://youtube.com/shorts/7jvhVZJnySA?feature=shared">
+                <a target="_blank" href="https://youtube.com/shorts/7jvhVZJnySA?feature=shared">
                   <FiYoutube className="text-gray-600 mr-2"/>                </a>
               </div>
             </div>
             <div className="bottom-left">
               <div className="bottom-head"></div>
               <div className="call">
-                <a href="https://adammukti.github.io/Tiktok/?by=anto">
+                <a target="_blank" href="https://adammukti.github.io/Tiktok/?by=anto">
                 <IoCallOutline className="text-gray-600 mr-2"/>
                 </a>
-                <a href="https://adammukti.github.io/Tiktok/?by=anto">
+                <a target="_blank" href="https://adammukti.github.io/Tiktok/?by=anto">
                   <p>(021) 212 1212</p>
                 </a>
               </div>
@@ -317,10 +317,10 @@ https://www.youtube.com/watch?v=kH8bkgogfD0&list=PL3uuG4lYbnOyBfw6cgmCWQSZDntAoE
             <div className="bottom-center">
               <div className="bottom-head"></div>
               <div className="loc">
-                <a href="https://www.google.com/maps/place/41%C2%B018'14.1%22N+81%C2%B054'06.1%22W/@41.3039759,-81.9029918,17.68z/data=!4m4!3m3!8m2!3d41.3039167!4d-81.9016944?entry=ttu">
+                <a target="_blank" href="https://www.google.com/maps/place/41%C2%B018'14.1%22N+81%C2%B054'06.1%22W/@41.3039759,-81.9029918,17.68z/data=!4m4!3m3!8m2!3d41.3039167!4d-81.9016944?entry=ttu">
                 <IoLocationOutline className="text-gray-600 mr-2"/>
                 </a>
-                <a href="https://www.google.com/maps/place/41%C2%B018'14.1%22N+81%C2%B054'06.1%22W/@41.3039759,-81.9029918,17.68z/data=!4m4!3m3!8m2!3d41.3039167!4d-81.9016944?entry=ttu">
+                <a target="_blank" href="https://www.google.com/maps/place/41%C2%B018'14.1%22N+81%C2%B054'06.1%22W/@41.3039759,-81.9029918,17.68z/data=!4m4!3m3!8m2!3d41.3039167!4d-81.9016944?entry=ttu">
                   <p>Studee Street No.12 Seoul, Korea</p>
                 </a>
               </div>
