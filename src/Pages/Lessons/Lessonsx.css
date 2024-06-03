@@ -5,6 +5,11 @@
 .lessonsx::-webkit-scrollbar {
   display: none;
 }
+
+.credits{
+  text-align: center;
+  padding-top: 40px;
+}
 .lessonxData {
   margin: 25px 20px;
   padding: 20px;
@@ -961,11 +966,13 @@ hr{
   padding-right: 0px;
 }
 
-.leaderboard p {
+.credits{
   font-size: 12px;
-  width: 80%;
   text-align: center;
+  padding: 40px 40px 0px 40px;
+  margin-top: 40px;
 }
+
   /* iphone footer section */
 }
 /* end media iphone */

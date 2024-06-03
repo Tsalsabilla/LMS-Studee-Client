@@ -212,7 +212,7 @@ const Lessonsx = () => {
 
           {/* leaderboard */}
           <div className="credential">
-          <div className="leaderboard" data-aos="fade-down" data-aos-delay="500">
+          <div className="credits" data-aos="fade-down" data-aos-delay="500">
             <h1 className="title">Credits</h1>
             <p>This website has been made using the following assets</p>
             <p className="font-bold">Photos</p>
