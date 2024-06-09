@@ -136,25 +136,6 @@ const Lessons = () => {
         {contextHolder}
         <Header Title={"Lesson"} Address={"Lesson"} />
         <div className="singleContentDetails bg-custom-red rounded-lg p-4 my-2">
-          <h3 className="text-white font-bold text-center">Buku</h3>
-        </div>
-        <div className="lessonData">
-          {lesson
-            ?.filter((elem) => elem.resolved == "Yes")
-            .map((data, i) => {
-              return <Lesson data={data} key={i} />;
-            })}
-        </div>
-        <div className="singleContentDetails bg-custom-red rounded-lg p-4 my-2">
-          <h3 className="text-white font-bold text-center">Lembar Kerja Peserta Didik (LKPD)</h3>
-        </div>
-        <div className="lessonData">
-          {lesson?.filter((elem) => elem.resolved == "No")
-            .map((data, i) => {
-              return <Lesson data={data} key={i} />;
-            })}
-        </div>
-        <div className="singleContentDetails bg-custom-red rounded-lg p-4 my-2">
           <h3 className="text-white font-bold text-center">Tujuan Pembelajaran</h3>
         </div>
         <div className="singleContentDetails bg-white bg-opacity-50 rounded-lg p-4 my-2">
@@ -173,6 +154,25 @@ const Lessons = () => {
   <p className="text-black text-left">
   9. Peserta didik dapat membangun program algoritma dan pemrograman sederhana yang menerapkan konsep Percabangan if<br />
   </p>
+        </div>
+        <div className="singleContentDetails bg-custom-red rounded-lg p-4 my-2">
+          <h3 className="text-white font-bold text-center">Source</h3>
+        </div>
+        <div className="lessonData">
+          {lesson
+            ?.filter((elem) => elem.resolved == "Yes")
+            .map((data, i) => {
+              return <Lesson data={data} key={i} />;
+            })}
+        </div>
+        <div className="singleContentDetails bg-custom-red rounded-lg p-4 my-2">
+          <h3 className="text-white font-bold text-center">Lembar Kerja Peserta Didik (LKPD)</h3>
+        </div>
+        <div className="lessonData">
+          {lesson?.filter((elem) => elem.resolved == "No")
+            .map((data, i) => {
+              return <Lesson data={data} key={i} />;
+            })}
         </div>
         {user?.userType === "Admin" ? (
           <div onClick={showDrawer}>
