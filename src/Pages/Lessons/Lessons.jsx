@@ -156,7 +156,7 @@ const Lessons = () => {
   </p>
         </div>
         <div className="singleContentDetails bg-custom-red rounded-lg p-4 my-2">
-          <h3 className="text-white font-bold text-center">Source</h3>
+          <h3 className="text-white font-bold text-center">Bahan Bacaan</h3>
         </div>
         <div className="lessonData">
           {lesson
