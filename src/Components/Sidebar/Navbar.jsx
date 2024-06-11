@@ -20,6 +20,8 @@ import { AiOutlineSchedule, AiOutlineRead, AiOutlinePlayCircle } from "react-ico
 import { CgGames } from "react-icons/cg";
 import { IoBulbOutline, IoDocumentTextOutline, IoExtensionPuzzleOutline } from "react-icons/io5";
 import { MdOutlineAssignment } from "react-icons/md";
+import { CiMenuBurger } from "react-icons/ci";
+import { MdOutlineMenuOpen } from "react-icons/md";
 
 import "./Navbar.css";
 
@@ -45,7 +47,7 @@ const Navbar = ({ children }) => {
     { icon: <PiStudent />, title: "Students", address: "/student" },
     { icon: <AiOutlineSchedule />, title: "Test", address: "/tests" },
     { icon: <AiOutlineRead />, title: "Lessons", address: "/lessons" },
-    { icon: <TbLayoutGridAdd />, title: "Activities", childrens: [
+    { icon: <MdOutlineMenuOpen />, title: "Activities", childrens: [
       { icon: <AiOutlinePlayCircle />, title: "Videos", address: "/contents" },
       { icon: <IoExtensionPuzzleOutline />, title: "Initial Knowledge", address: "/doubts" },
       { icon: <IoBulbOutline />, title: "Final Knowledge", address: "/doubtsx" },
@@ -59,7 +61,7 @@ const Navbar = ({ children }) => {
     { icon: <GoHome />, title: "Dashboard", address: "/home" },
     { icon: <AiOutlineSchedule />, title: "Test", address: "/tests" },
     { icon: <AiOutlineRead />, title: "Lessons", address: "/lessons" },
-    { icon: <TbLayoutGridAdd />, title: "Activities", childrens: [
+    { icon: <MdOutlineMenuOpen />, title: "Activities", childrens: [
       { icon: <AiOutlinePlayCircle />, title: "Videos", address: "/contents" },
       { icon: <IoExtensionPuzzleOutline />, title: "Initial Knowledge", address: "/doubts" },
       { icon: <IoBulbOutline />, title: "Final Knowledge", address: "/doubtsx" },
@@ -72,7 +74,7 @@ const Navbar = ({ children }) => {
     { icon: <GoHome />, title: "Dashboard", address: "/home" },
     { icon: <AiOutlineSchedule />, title: "Test", address: "/tests" },
     { icon: <AiOutlineRead />, title: "Lessons", address: "/lessons" },
-    { icon: <TbLayoutGridAdd />, title: "Activities", childrens: [
+    { icon: <MdOutlineMenuOpen />, title: "Activities", childrens: [
       { icon: <AiOutlinePlayCircle />, title: "Videos", address: "/contents" },
       { icon: <IoExtensionPuzzleOutline />, title: "Initial Knowledge", address: "/doubts" },
       { icon: <IoBulbOutline />, title: "Final Knowledge", address: "/doubtsx" },
@@ -163,7 +165,7 @@ const Navbar = ({ children }) => {
       <div id="content">
         <nav>
           <div>
-            <LuLayoutGrid
+            <CiMenuBurger
               className="menuIcon"
               onClick={() => setToggle(!toggle)}
             />
