@@ -135,8 +135,10 @@ const Lessons = () => {
       <div className="lessons">
         {contextHolder}
         <Header Title={"Lesson"} Address={"Lesson"} />
-        <div className="singleContentDetails bg-custom-red rounded-lg p-4 my-2">
+        <div className="flex flex-row justify-center">
+        <div className="singleContentDetails bg-custom-red rounded-full p-4 my-2 w-2/6 d-flex justify-content-center" >
           <h3 className="text-white font-bold text-center">Tujuan Pembelajaran</h3>
+        </div>
         </div>
         <div className="singleContentDetails bg-white bg-opacity-50 rounded-lg p-4 my-2">
           <p className="text-black text-left">Pada akhir fase E, peserta didik mampu memahami validitas sumber data, memahami konsep struktur data dan algoritma standar, menerapkan proses komputasi yang dilakukan manusia secara mandiri atau berkelompok untuk mendapatkan data yang bersih, benar, dan terpercaya, serta menerapkan struktur data dan algoritma standar untuk menghasilkan berbagai solusi dalam menyelesaikan persoalan yang mengandung himpunan data berstruktur kompleks dengan volume tidak kecil, dan menuliskan solusi rancangan program sederhana dalam format Pseudocode yang dekat dengan bahasa komputer; mampu memahami model dan mensimulasikan dinamika Input Proses Output dalam sebuah komputer Von Neumann, serta memahami peran sistem operasi.</p>
@@ -155,9 +157,13 @@ const Lessons = () => {
   9. Peserta didik dapat membangun program algoritma dan pemrograman sederhana yang menerapkan konsep Percabangan if<br />
   </p>
         </div>
-        <div className="singleContentDetails bg-custom-red rounded-lg p-4 my-2">
+
+        <div className="flex flex-row justify-center">
+        <div className="singleContentDetails bg-custom-red rounded-full p-4 my-2 w-2/6 d-flex justify-content-center" >
           <h3 className="text-white font-bold text-center">Bahan Bacaan</h3>
         </div>
+        </div>
+
         <div className="lessonData">
           {lesson
             ?.filter((elem) => elem.resolved == "Yes")
@@ -165,9 +171,13 @@ const Lessons = () => {
               return <Lesson data={data} key={i} />;
             })}
         </div>
-        <div className="singleContentDetails bg-custom-red rounded-lg p-4 my-2">
+
+        <div className="flex flex-row justify-center">
+        <div className="singleContentDetails bg-custom-red rounded-full p-4 my-2 w-2/6 d-flex justify-content-center" >
           <h3 className="text-white font-bold text-center">Lembar Kerja Peserta Didik (LKPD)</h3>
         </div>
+        </div>
+
         <div className="lessonData">
           {lesson?.filter((elem) => elem.resolved == "No")
             .map((data, i) => {

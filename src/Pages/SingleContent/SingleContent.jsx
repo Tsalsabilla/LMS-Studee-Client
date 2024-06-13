@@ -69,7 +69,7 @@ const SingleContent = () => {
           <p>{singleContent?.subject}</p>
         </div>
 
-        <div class="mx-auto w-full max-w-screen-md">
+        <div class="mx-auto w-full">
 
         <div className="singleContentDetails bg-custom-red rounded-lg p-4 my-2">
           <h3 className="text-white font-bold text-center">Algoritma</h3>
