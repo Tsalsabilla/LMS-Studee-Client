@@ -69,11 +69,14 @@ const SingleContent = () => {
           <p>{singleContent?.subject}</p>
         </div>
 
-        <div class="mx-auto w-full">
+        <div class="mx-auto w-full max-w-screen-md">
 
-        <div className="singleContentDetails bg-custom-red rounded-lg p-4 my-2">
+        <div className="flex flex-row justify-center">
+        <div className="singleContentDetails bg-custom-red rounded-full p-4 my-2 w-2/6 d-flex justify-content-center mb-4" >
           <h3 className="text-white font-bold text-center">Algoritma</h3>
         </div>
+        </div>
+
         <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
             <iframe src="https://www.youtube.com/embed/fLqHSiJMMyI"
             title="YouTube video player"
@@ -81,19 +84,25 @@ const SingleContent = () => {
             allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
           </div>
 
-          <div className="singleContentDetails bg-custom-red rounded-lg p-4 my-2">
-          <h3 className="text-white font-bold text-center">Naratif danPseudocode</h3>
+        <div className="flex flex-row justify-center">
+        <div className="singleContentDetails bg-custom-red rounded-full p-4 my-2 w-2/6 d-flex justify-content-center mb-4" >
+          <h3 className="text-white font-bold text-center">Naratif dan Pseudocode</h3>
         </div>
+        </div>
+
         <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
             <iframe src="https://www.youtube.com/embed/Yw6YscAMe3U"
             title="YouTube video player"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
           </div>
-          
-          <div className="singleContentDetails bg-custom-red rounded-lg p-4 my-2">
+
+        <div className="flex flex-row justify-center">
+        <div className="singleContentDetails bg-custom-red rounded-full p-4 my-2 w-2/6 d-flex justify-content-center mb-4" >
           <h3 className="text-white font-bold text-center">Flowchart</h3>
         </div>
+        </div>
+
         <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
             <iframe src="https://www.youtube.com/embed/1S35wmupqn4"
             title="YouTube video player"

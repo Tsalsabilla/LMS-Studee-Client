@@ -56,9 +56,12 @@ const SingleScratch = () => {
           </div>
         </div>
 
-        <div className="scratchResponses bg-red-900 rounded-lg p-4 my-2">
-          <h3 className="text-white">Scratch Result</h3>
+        <div className="flex flex-row justify-center">
+        <div className="scratchResponses bg-custom-red rounded-full p-4 my-2 w-2/6 d-flex justify-content-center mt-4" >
+          <h3 className="text-white font-bold text-center">Quiz Result</h3>
         </div>
+        </div>
+
         {singleScratch?.response?.map((data, i) => {
           return (
             <div key={i} className="scratchResponses">

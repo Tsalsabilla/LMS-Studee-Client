@@ -80,8 +80,10 @@ const SingleDoubtz = () => {
           <p>{singleDoubtz?.description}</p>
         </div>
 
-        <div className="doubtResponses bg-red-900 rounded-lg p-4 my-2">
-          <h3 className="text-white">Fase Aplikasi</h3>
+        <div className="flex flex-row justify-center">
+        <div className="doubtResponses bg-custom-red rounded-full p-4 my-2 w-2/6 d-flex justify-content-center" >
+          <h3 className="text-white font-bold text-center">Fase Aplikasi</h3>
+        </div>
         </div>
 
         <div className="doubtResponses bg-white bg-opacity-50 rounded-lg p-4 my-2">
