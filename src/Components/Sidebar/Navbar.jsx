@@ -88,29 +88,29 @@ const Navbar = ({ children }) => {
     {
       key: "1",
       label:
-      <span className="text-center block" style={{ borderBottom: "1px solid rgb(231, 231, 231)" }}>
+      <span className="text-center block">
       <p>{name}</p>
       <p> as {userType} </p>
       </span>,
     },
-    {
-      key: "2",
-      label: (
-        <span className="flex justify-end items-center">
-          Documentation
-          <IoDocumentTextOutline className="text-gray-500 ml-2" />
-        </span>
-      ),
-    },
-    {
-      key: "3",
-      label: (
-        <span className="flex justify-end items-center">
-          Settings
-          <LuSettings className="text-gray-500 ml-2" />
-        </span>
-      ),
-    }
+    // {
+    //   key: "2",
+    //   label: (
+    //     <span className="flex justify-end items-center">
+    //       Documentation
+    //       <IoDocumentTextOutline className="text-gray-500 ml-2" />
+    //     </span>
+    //   ),
+    // },
+    // {
+    //   key: "3",
+    //   label: (
+    //     <span className="flex justify-end items-center">
+    //       Settings
+    //       <LuSettings className="text-gray-500 ml-2" />
+    //     </span>
+    //   ),
+    // }
     // {
     //   key: "4",
     //   label: <span  className="font-sans">Logout</span>,
