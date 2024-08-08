@@ -110,6 +110,149 @@ const SingleContent = () => {
             allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
           </div>
 
+          <div className="flex flex-row justify-center">
+        <div className="singleContentDetails bg-custom-red rounded-full p-4 my-2 w-2/6 d-flex justify-content-center mb-4" >
+          <h3 className="text-white font-bold text-center">Tipe Data</h3>
+        </div>
+        </div>
+
+        <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
+            <iframe src="https://www.youtube.com/embed/zbSzPA9xTLo&list"
+            title="YouTube video player"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
+          </div>
+
+          <div className="flex flex-row justify-center">
+        <div className="singleContentDetails bg-custom-red rounded-full p-4 my-2 w-2/6 d-flex justify-content-center mb-4" >
+          <h3 className="text-white font-bold text-center">Variabel</h3>
+        </div>
+        </div>
+
+        <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
+            <iframe src="https://www.youtube.com/embed/0sFh-rALd2Q&list"
+            title="YouTube video player"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
+          </div>
+
+          <div className="flex flex-row justify-center">
+        <div className="singleContentDetails bg-custom-red rounded-full p-4 my-2 w-2/6 d-flex justify-content-center mb-4" >
+          <h3 className="text-white font-bold text-center">Operator</h3>
+        </div>
+        </div>
+
+        <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
+            <iframe src="https://www.youtube.com/embed/8DL_Bax4mro"
+            title="YouTube video player"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
+          </div>
+
+          <div className="flex flex-row justify-center">
+        <div className="singleContentDetails bg-custom-red rounded-full p-4 my-2 w-2/6 d-flex justify-content-center mb-4" >
+          <h3 className="text-white font-bold text-center">Percabangan If</h3>
+        </div>
+        </div>
+
+        <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
+            <iframe src="https://www.youtube.com/embed/G-c0KnAgucc&list"
+            title="YouTube video player"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
+          </div>
+
+          <div className="flex flex-row justify-center">
+        <div className="singleContentDetails bg-custom-red rounded-full p-4 my-2 w-2/6 d-flex justify-content-center mb-4" >
+          <h3 className="text-white font-bold text-center">Percabangan If-Else</h3>
+        </div>
+        </div>
+
+        <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
+            <iframe src="https://www.youtube.com/embed/VSL19lCLqHk&list"
+            title="YouTube video player"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
+          </div>
+
+          <div className="flex flex-row justify-center">
+        <div className="singleContentDetails bg-custom-red rounded-full p-4 my-2 w-2/6 d-flex justify-content-center mb-4" >
+          <h3 className="text-white font-bold text-center">Percabangan If-Else-If</h3>
+        </div>
+        </div>
+
+        <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
+            <iframe src="https://www.youtube.com/embed/_lxIFFLFdBk&list"
+            title="YouTube video player"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
+          </div>
+
+          <div className="flex flex-row justify-center">
+        <div className="singleContentDetails bg-custom-red rounded-full p-4 my-2 w-2/6 d-flex justify-content-center mb-4" >
+          <h3 className="text-white font-bold text-center">Percabangan Nested If</h3>
+        </div>
+        </div>
+
+        <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
+            <iframe src="https://www.youtube.com/embed/5jbYsYj1-v0&list"
+            title="YouTube video player"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
+          </div>
+
+          <div className="flex flex-row justify-center">
+        <div className="singleContentDetails bg-custom-red rounded-full p-4 my-2 w-2/6 d-flex justify-content-center mb-4" >
+          <h3 className="text-white font-bold text-center">Percabangan Switch Case</h3>
+        </div>
+        </div>
+
+        <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
+            <iframe src="https://www.youtube.com/embed/5lO9YdC48uw&list"
+            title="YouTube video player"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
+          </div>
+
+          <div className="flex flex-row justify-center">
+        <div className="singleContentDetails bg-custom-red rounded-full p-4 my-2 w-2/6 d-flex justify-content-center mb-4" >
+          <h3 className="text-white font-bold text-center">Perulangan For</h3>
+        </div>
+        </div>
+
+        <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
+            <iframe src="https://www.youtube.com/embed/hVzmJwyMH2Q&list"
+            title="YouTube video player"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
+          </div>
+
+          <div className="flex flex-row justify-center">
+        <div className="singleContentDetails bg-custom-red rounded-full p-4 my-2 w-2/6 d-flex justify-content-center mb-4" >
+          <h3 className="text-white font-bold text-center">Perulangan While</h3>
+        </div>
+        </div>
+
+        <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
+            <iframe src="https://www.youtube.com/embed/ctxtCv7plVc&list"
+            title="YouTube video player"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
+          </div>
+
+          <div className="flex flex-row justify-center">
+        <div className="singleContentDetails bg-custom-red rounded-full p-4 my-2 w-2/6 d-flex justify-content-center mb-4" >
+          <h3 className="text-white font-bold text-center">Perulangan Do-While</h3>
+        </div>
+        </div>
+
+        <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
+            <iframe src="https://www.youtube.com/embed/kH8bkgogfD0&list"
+            title="YouTube video player"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
+          </div>
+
         </div>
 
 
