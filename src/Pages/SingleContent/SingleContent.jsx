@@ -117,7 +117,7 @@ const SingleContent = () => {
         </div>
 
         <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
-            <iframe src="https://www.youtube.com/embed/zbSzPA9xTLo&list"
+            <iframe src="https://www.youtube.com/embed/zbSzPA9xTLo&list=PL3uuG4lYbnOyBfw6cgmCWQSZDntAoExpJ&index=4"
             title="YouTube video player"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
