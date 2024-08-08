@@ -117,7 +117,7 @@ const SingleContent = () => {
         </div>
 
         <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
-            <iframe src="https://www.youtube.com/embed/zbSzPA9xTLo&list=PL3uuG4lYbnOyBfw6cgmCWQSZDntAoExpJ&index=4"
+            <iframe src="https://www.youtube.com/embed/zbSzPA9xTLo"
             title="YouTube video player"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
@@ -130,7 +130,7 @@ const SingleContent = () => {
         </div>
 
         <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
-            <iframe src="https://www.youtube.com/embed/0sFh-rALd2Q&list"
+            <iframe src="https://www.youtube.com/embed/0sFh-rALd2Q"
             title="YouTube video player"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
@@ -156,7 +156,7 @@ const SingleContent = () => {
         </div>
 
         <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
-            <iframe src="https://www.youtube.com/embed/G-c0KnAgucc&list"
+            <iframe src="https://www.youtube.com/embed/G-c0KnAgucc"
             title="YouTube video player"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
@@ -169,7 +169,7 @@ const SingleContent = () => {
         </div>
 
         <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
-            <iframe src="https://www.youtube.com/embed/VSL19lCLqHk&list"
+            <iframe src="https://www.youtube.com/embed/VSL19lCLqHk"
             title="YouTube video player"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
@@ -182,7 +182,7 @@ const SingleContent = () => {
         </div>
 
         <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
-            <iframe src="https://www.youtube.com/embed/_lxIFFLFdBk&list"
+            <iframe src="https://www.youtube.com/embed/_lxIFFLFdBk"
             title="YouTube video player"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
@@ -195,7 +195,7 @@ const SingleContent = () => {
         </div>
 
         <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
-            <iframe src="https://www.youtube.com/embed/5jbYsYj1-v0&list"
+            <iframe src="https://www.youtube.com/embed/5jbYsYj1-v0"
             title="YouTube video player"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
@@ -208,7 +208,7 @@ const SingleContent = () => {
         </div>
 
         <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
-            <iframe src="https://www.youtube.com/embed/5lO9YdC48uw&list"
+            <iframe src="https://www.youtube.com/embed/5lO9YdC48uw"
             title="YouTube video player"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
@@ -221,7 +221,7 @@ const SingleContent = () => {
         </div>
 
         <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
-            <iframe src="https://www.youtube.com/embed/hVzmJwyMH2Q&list"
+            <iframe src="https://www.youtube.com/embed/hVzmJwyMH2Q"
             title="YouTube video player"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
@@ -234,7 +234,7 @@ const SingleContent = () => {
         </div>
 
         <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
-            <iframe src="https://www.youtube.com/embed/ctxtCv7plVc&list"
+            <iframe src="https://www.youtube.com/embed/ctxtCv7plVc"
             title="YouTube video player"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
@@ -247,7 +247,7 @@ const SingleContent = () => {
         </div>
 
         <div class="relative" style={{ paddingTop: "75%", marginBottom: "20px"}}>
-            <iframe src="https://www.youtube.com/embed/kH8bkgogfD0&list"
+            <iframe src="https://www.youtube.com/embed/kH8bkgogfD0"
             title="YouTube video player"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
