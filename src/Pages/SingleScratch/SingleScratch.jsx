@@ -50,9 +50,15 @@ const SingleScratch = () => {
           <p>{singleScratch?.description}</p>
         </div>
 
+        {/* <div class="mx-auto w-full max-w-screen-md">
+          <div class="relative" style={{ paddingTop: "75%" }}>
+            <iframe src="https://quizizz.com/join?gc=79066276" allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
+          </div>
+        </div> */}
+
         <div class="mx-auto w-full max-w-screen-md">
           <div class="relative" style={{ paddingTop: "75%" }}>
-            <iframe src="https://quizizz.com/embed/quiz/664186a682be59c05aef4f93" allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
+            <iframe src="https://quizizz.com/embed/quiz/662e65b04238ea3b136ab4c1" allowtransparency="true" className="absolute inset-0 w-full h-full" frameBorder="0" scrolling="yes" allowFullScreen></iframe>
           </div>
         </div>
 
