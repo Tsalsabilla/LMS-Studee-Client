@@ -86,21 +86,16 @@ const SingleDoubtz = () => {
         </div>
         </div>
 
-        <div className="doubtResponses bg-white bg-opacity-50 rounded-lg p-4 my-2">
-          <h3 className="text-black">Ubahlah kalimat Naratif pada studi kasus pembuatan kopi latte menjadi Pseudocode dan Flowchart! <br />
-Membuat Kopi latte<br />
-Langkah-1: Menyiapkan kopi, susu, gula, gelas, sendok, dan air panas <br />
-Langkah-2: Membuka bungkus kopi kemudian menuangkannya ke dalam gelas. <br />
-Langkah-3: Membuka bungkus susu kemudian menuangkannya ke dalam gelas. <br />
-Langkah-4: Menambah satu sendok gula ke dalam gelas. <br />
-Langkah-5: Menuangkan air panas ke dalam gelas. <br />
-Langkah-6: Aduk hingga bercampur. <br />
-Langkah-7: Jika kurang manis, silakan tambahkan lagi gulanya kemudian aduk lagi sampai <br />
-bercampur dengan air. <br />
-Langkah-8: Menghidangkan kopi latte yang sudah siap.</h3>
+        <div className="doubtResponses bg-white bg-opacity-50 rounded-lg p-4 my-2 flex justify-center items-center">
+        <iframe src="/img/LKPD_Pertemuan_1.pdf" width="60%" height="560"></iframe>
+        </div>
 
-<iframe src="/img/LKPD_Pertemuan_1.pdf" width="100%" height="600"></iframe>
+        <div className="doubtResponses bg-white bg-opacity-50 rounded-lg p-4 my-2 flex justify-center items-center">
+        <iframe src="/img/LKPD_Pertemuan_2.pdf" width="60%" height="560"></iframe>
+        </div>
 
+        <div className="doubtResponses bg-white bg-opacity-50 rounded-lg p-4 my-2 flex justify-center items-center">
+        <iframe src="/img/LKPD_Pertemuan_3.pdf" width="60%" height="560"></iframe>
         </div>
 
           <form
