@@ -98,6 +98,9 @@ Langkah-6: Aduk hingga bercampur. <br />
 Langkah-7: Jika kurang manis, silakan tambahkan lagi gulanya kemudian aduk lagi sampai <br />
 bercampur dengan air. <br />
 Langkah-8: Menghidangkan kopi latte yang sudah siap.</h3>
+
+<iframe src="/img/LKPD_Pertemuan_1.pdf" width="100%" height="600"></iframe>
+
         </div>
 
           <form
