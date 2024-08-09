@@ -128,7 +128,7 @@ const Quiz = () => {
             <Spiner />
           ) : (
             <div className="py-6">
-              {currentQuestion > 2 ? (
+              {currentQuestion > 29 ? (
                 window.location.replace("/user")
               ) : (
                 <div className="quiz h-full md:px-16 px-8 flex gap-4 flex-col justify-center">
@@ -219,7 +219,7 @@ const Quiz = () => {
                       <div className="progress-bar"></div>
                     </div>
                     <div className="buttons flex justify-end gap-2">
-                      {currentQuestion >= 2 ? (
+                      {currentQuestion >= 29 ? (
                         <button
                           onClick={handleSubmitQuiz}
                           className="bg-custom-red text-white shadow-lg w-28 rounded-full px-4 py-2 flex items-center justify-center cursor-pointer text-black hover:transition hover:duration-150 hover:transform hover:translate-y-1"
