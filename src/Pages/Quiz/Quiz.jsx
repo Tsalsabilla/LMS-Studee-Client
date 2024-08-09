@@ -31,7 +31,7 @@ const Quiz = () => {
         const data = await axios.get(API_URL);
         let quizShuffle = data.data
           .sort(() => 0.5 - Math.random())
-          .slice(0, 20);
+          .slice(0, 30);
         setQuestions(quizShuffle);
         setIsLoading(false);
       } catch (error) {
@@ -131,7 +131,7 @@ const Quiz = () => {
               {currentQuestion > 29 ? (
                 window.location.replace("/user")
               ) : (
-                <div className="quiz h-full md:px-16 px-8 flex gap-4 flex-col justify-center">
+                <div className="quiz h-full md:px-2 px-8 flex gap-4 flex-col justify-center">
                   <div className="max-md:flex hidden">
                     <div className="bar shadow-inner w-full bg-white flex border rounded-3xl">
                       <div
@@ -168,7 +168,7 @@ const Quiz = () => {
                       })}
                     </div>
                   </div>
-                  <div className="question">
+                  <div className="question md:px-16">
                     <h1 className="md:text-xl flex text-black font-small leading-[1.6] mb-4">
                       <span className=""></span>{" "}
                       {questions[currentQuestion].question}
@@ -181,7 +181,7 @@ const Quiz = () => {
                         />
                       )}
                   </div>
-                  <div className="options flex flex-col gap-4">
+                  <div className="options flex flex-col gap-4 md:px-16">
                     {questions[currentQuestion].options.map((option, index) => {
                       return (
                         <div
