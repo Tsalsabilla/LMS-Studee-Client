@@ -175,34 +175,41 @@ const Lessons = () => {
         </div>
 
         <div className="flex flex-row justify-center">
-        <div className="singleContentDetails bg-custom-red rounded-full p-4 my-2 w-2/6 d-flex justify-content-center" >
-          <h3 className="text-white font-bold text-center">Materi Pertemuan 1</h3>
-        </div>
-        </div>
+    <div className="singleContentDetails bg-custom-red rounded-full p-4 my-2 w-2/6 d-flex justify-content-center">
+        <h3 className="text-white font-bold text-center">Materi Pertemuan 1</h3>
+    </div>
+</div>
 
-        <div className="doubtResponses bg-white bg-opacity-50 rounded-lg p-4 my-2 flex justify-center items-center align-center w-3/5">
-        <iframe src="/img/Materi_Week_1_Algoritma.pdf" width="100%" height="460" style={{ margin: '10px' }}></iframe> 
-        </div>
+<div className="flex justify-center">
+    <div className="doubtResponses bg-white bg-opacity-50 rounded-lg p-4 my-2 flex justify-center items-center w-3/5">
+        <iframe src="/img/Materi_Week_1_Algoritma.pdf" width="100%" height="460" style={{ margin: '10px' }}></iframe>
+    </div>
+</div>
 
-        <div className="flex flex-row justify-center ">
-        <div className="singleContentDetails bg-custom-red rounded-full p-4 my-2 w-2/6 d-flex justify-content-center" >
-          <h3 className="text-white font-bold text-center">Materi Pertemuan 2</h3>
-        </div>
-        </div>
+<div className="flex flex-row justify-center">
+    <div className="singleContentDetails bg-custom-red rounded-full p-4 my-2 w-2/6 d-flex justify-content-center">
+        <h3 className="text-white font-bold text-center">Materi Pertemuan 2</h3>
+    </div>
+</div>
 
-        <div className="doubtResponses bg-white bg-opacity-50 rounded-lg p-4 my-2 flex flex-col justify-center items-center w-3/5">
-        <iframe src="/img/Materi_Week_2_Pemrograman.pdf" width="100%" height="460" style={{ margin: '10px' }}></iframe> 
-        </div>
+<div className="flex justify-center">
+    <div className="doubtResponses bg-white bg-opacity-50 rounded-lg p-4 my-2 flex justify-center items-center w-3/5">
+        <iframe src="/img/Materi_Week_2_Pemrograman.pdf" width="100%" height="460" style={{ margin: '10px' }}></iframe>
+    </div>
+</div>
 
-        <div className="flex flex-row justify-center">
-        <div className="singleContentDetails bg-custom-red rounded-full p-4 my-2 w-2/6 d-flex justify-content-center" >
-          <h3 className="text-white font-bold text-center">Materi Pertemuan 3</h3>
-        </div>
-        </div>
+<div className="flex flex-row justify-center">
+    <div className="singleContentDetails bg-custom-red rounded-full p-4 my-2 w-2/6 d-flex justify-content-center">
+        <h3 className="text-white font-bold text-center">Materi Pertemuan 3</h3>
+    </div>
+</div>
 
-        <div className="doubtResponses bg-white bg-opacity-50 rounded-lg p-4 my-2 flex flex-col justify-center items-center w-3/5">
+<div className="flex justify-center">
+    <div className="doubtResponses bg-white bg-opacity-50 rounded-lg p-4 my-2 flex justify-center items-center w-3/5">
         <iframe src="/img/Materi_Week_3_Percabangan_dan_Perulangan.pdf" width="100%" height="460"></iframe>
-        </div>
+    </div>
+</div>
+
 
         <div className="lessonData">
           {lesson?.filter((elem) => elem.resolved == "No")
