@@ -135,12 +135,34 @@ const Home = () => {
     <div className="pieBox p-4">
         <div className="pieData">
         <span className="block font-bold text-left">
-              Exciting New Learning Opportunities!</span>
+              WEEK 1</span>
             <p className="text-sm text-gray-600 text-left">
-                Dear Learners,
-                We are thrilled to announce the launch of exciting new learning opportunities on our Studee!
-                Get ready to embark on a journey of knowledge and skill enhancement like never before.
+            ❗ Masing-masing siswa diusahakan untuk mempersiapkan sarana dan prasarana untuk mendukung kelancaran pembelajaran : <br/>
+            1. laptop (disarankan) atau handphone <br/>
+            2. ⁠baterai laptop/handphone yang cukup <br/>
+            3. ⁠koneksi internet yg stabil <br/>
+            4. ⁠posisi meja dan bangku menyesuaikan kelompok dari 1-6 <br/>
+            Terimakasih dan selamat beraktivitas...
             </p>
+
+            <br/>
+        
+            <span className="block font-bold text-left">
+              WEEK 2</span>
+            <p className="text-sm text-gray-600 text-left">
+            ❗ Deadline pengumpulan LKPD W1 Jumat, 14/06/2024 23:59<br/>
+            Terimakasih dan selamat beraktivitas...
+            </p>
+
+            <br/>
+
+            <span className="block font-bold text-left">
+              WEEK 3</span>
+            <p className="text-sm text-gray-600 text-left">
+            ❗ Deadline pengumpulan LKPD W2 Jumat, 21/06/2024 23:59<br/>
+            Terimakasih dan selamat beraktivitas...
+            </p>
+
         </div>
     </div>
 </div>
