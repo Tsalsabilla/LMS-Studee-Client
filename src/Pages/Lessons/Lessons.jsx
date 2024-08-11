@@ -141,8 +141,6 @@ const Lessons = () => {
         </div>
         </div>
         <div className="singleContentDetails bg-white bg-opacity-50 rounded-lg p-4 my-2">
-          <p className="text-black text-left">Pada akhir fase E, peserta didik mampu memahami validitas sumber data, memahami konsep struktur data dan algoritma standar, menerapkan proses komputasi yang dilakukan manusia secara mandiri atau berkelompok untuk mendapatkan data yang bersih, benar, dan terpercaya, serta menerapkan struktur data dan algoritma standar untuk menghasilkan berbagai solusi dalam menyelesaikan persoalan yang mengandung himpunan data berstruktur kompleks dengan volume tidak kecil, dan menuliskan solusi rancangan program sederhana dalam format Pseudocode yang dekat dengan bahasa komputer; mampu memahami model dan mensimulasikan dinamika Input Proses Output dalam sebuah komputer Von Neumann, serta memahami peran sistem operasi.</p>
-          <br />
           <p className="text-black text-left">1. Peserta didik dapat mendefinisikan pengertian mengenai Algoritma standar<br />
   2. Peserta didik dapat menjelaskan mengenai Algoritma standar <br />
   3. Peserta didik dapat menerapkan contoh yang benar terkait Pseudocode<br />
